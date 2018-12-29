@@ -1,0 +1,95 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Illustration of a function}}{7}{figure.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces Assigning an element $\{21\} \in B$ to $\{1\} \in A$}}{7}{figure.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces A linear and a quadratic function}}{8}{figure.3}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Function $y = 2x + 1$}}}{8}{figure.3}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Function $y = x^2$}}}{8}{figure.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Inverse function}}{8}{figure.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces The inverse $f^{-1}$ is not unique, thus not a function.}}{9}{figure.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Graphical construction of the inverse function}}{9}{figure.6}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\tmspace +\thickmuskip {.2777em} f(x)=2\tmspace +\thinmuskip {.1667em}x+1 \tmspace +\thickmuskip {.2777em} \rightarrow \tmspace +\thickmuskip {.2777em} f^{-1}(x)=\frac {1}{2}(x-1)$}}}{9}{figure.6}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\tmspace +\thickmuskip {.2777em} f(x)=x^2 \tmspace +\thickmuskip {.2777em} \rightarrow \tmspace +\thickmuskip {.2777em} f^{-1}(x)=\pm \sqrt {x}$}}}{9}{figure.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces Unit circle}}{10}{figure.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Graphical construction (the roots are $x=-1$ and $x=-2$)}}{11}{figure.8}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Step 1: $y=x^2+3x+2$}}}{11}{figure.8}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Step 2: $y=x^2+3x+2=0$}}}{11}{figure.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Graphical construction (the roots are $x=-3, x=0$ and $x=1$)}}{11}{figure.9}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Step 1: $y=x^3+2x^2-3x$}}}{11}{figure.9}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Step 2: $y=x^3+2x^2-3x=0$}}}{11}{figure.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Graphical construction (the roots are $x=-3, x=0$ and $x=1$)}}{12}{figure.10}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Step 1: $y=x^4+2x^3-3x^2$}}}{12}{figure.10}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Step 2: $y=x^4+2x^3-3x^2=0$}}}{12}{figure.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Vertical and horizontal shift of $y=x^2$}}{12}{figure.11}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Horizontal shift by $x_0=2: y=(x-2)^2$}}}{12}{figure.11}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Vertical shift by $y_0=2: y = x^2+2$}}}{12}{figure.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces The most common trigonometric functions}}{13}{figure.12}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {The functions $y\tmspace -\thinmuskip {.1667em}=\tmspace -\thinmuskip {.1667em}\qopname \relax o{sin}{x}$ and \unhbox \voidb@x \hbox {$y\tmspace -\thinmuskip {.1667em}=\tmspace -\thinmuskip {.1667em}\qopname \relax o{cos}{x}$}}}}{13}{figure.12}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {The functions $y\tmspace -\thinmuskip {.1667em}=\tmspace -\thinmuskip {.1667em}\qopname \relax o{tan}{x}$ and $y\tmspace -\thinmuskip {.1667em}=\tmspace -\thinmuskip {.1667em}\qopname \relax o{cot}{x}$. Note that these are $\pi $-periodic}}}{13}{figure.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Exponential functions}}{14}{figure.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Hyperbolic functions}}{15}{figure.14}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$y=\qopname \relax o{sinh}{x}\tmspace +\thickmuskip {.2777em}$ and $\tmspace +\thickmuskip {.2777em}y=x+\frac {1}{3!}\tmspace +\thinmuskip {.1667em}x^3$}}}{15}{figure.14}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$y=\qopname \relax o{cosh}{x}\tmspace +\thickmuskip {.2777em}$ and $\tmspace +\thickmuskip {.2777em}y=1+\frac {1}{2!}\tmspace +\thinmuskip {.1667em}x^2$}}}{15}{figure.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces The logarithmic functions $y=\qopname \relax o{ln}(x)$, $y=\unhbox \voidb@x \hbox {lg}(x)$, $y=\unhbox \voidb@x \hbox {ld}(x)$, and $y=-\qopname \relax o{ln}(x)$.}}{16}{figure.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces The inverse of the trigonometric functions}}{16}{figure.16}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Arc sine, and arc cosine}}}{16}{figure.16}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Arc tangent, and arc cotangent}}}{16}{figure.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Superposition of lines and functions}}{17}{figure.17}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Superposition of $f_1(x)\tmspace -\thinmuskip {.1667em}=\tmspace -\thinmuskip {.1667em}-x \unhbox \voidb@x \hbox { and } f_2(x)\tmspace -\thinmuskip {.1667em}=\tmspace -\thinmuskip {.1667em}1$}}}{17}{figure.17}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Superposition of $f_1(x)\tmspace -\thinmuskip {.1667em}=\tmspace -\thinmuskip {.1667em}-2x \unhbox \voidb@x \hbox { and } f_2(x)\tmspace -\thinmuskip {.1667em}=\tmspace -\thinmuskip {.1667em}x^3$}}}{17}{figure.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Modulation of functions}}{17}{figure.18}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$e^{-x}$ is the envelope function of $\qopname \relax o{cos}10x$}}}{17}{figure.18}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\qopname \relax o{cos}10x$ is modulated with $\qopname \relax o{sin}x$}}}{17}{figure.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces The slope of a curve is found from its derivative.}}{18}{figure.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces Slope as h$\rightarrow 0$.}}{19}{figure.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces Area $A$ enclosed by the horizontal axis and a horizontal line.}}{22}{figure.21}
+\contentsline {figure}{\numberline {22}{\ignorespaces Area enclosed by the function $f(x)$ and the horizontal axis.}}{22}{figure.22}
+\contentsline {figure}{\numberline {23}{\ignorespaces Definite integrals as areas under curves}}{23}{figure.23}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Definite integral of $y=x^2$}}}{23}{figure.23}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Definite integral of $y=x^3$}}}{23}{figure.23}
+\contentsline {figure}{\numberline {24}{\ignorespaces Due to symmetry the integral $\tmspace +\thickmuskip {.2777em} \DOTSI \intop \ilimits@ _{-1}^1 x^2 \tmspace +\thinmuskip {.1667em} \qopname \relax o{sin}3x\tmspace +\medmuskip {.2222em}dx\tmspace +\thickmuskip {.2777em}$ vanishes}}{26}{figure.24}
+\contentsline {figure}{\numberline {25}{\ignorespaces Definite integrals that involve infinities}}{28}{figure.25}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\DOTSI \intop \ilimits@ _1^{\infty } x^{-2} \tmspace +\thinmuskip {.1667em} dx = 1$}}}{28}{figure.25}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\DOTSI \intop \ilimits@ _0^2 x^{-\frac {1}{2}} \tmspace +\thinmuskip {.1667em} dx = 2\tmspace +\thinmuskip {.1667em}\sqrt {2}$}}}{28}{figure.25}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$\DOTSI \intop \ilimits@ _0^{\infty } e^{-x} \tmspace +\thinmuskip {.1667em} dx = 1$}}}{28}{figure.25}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$\DOTSI \intop \ilimits@ _1^{\infty } x^{-1} \tmspace +\thinmuskip {.1667em} dx = \infty $}}}{28}{figure.25}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$\DOTSI \intop \ilimits@ _0^2 x^{-1} \tmspace +\thinmuskip {.1667em} dx = \infty $}}}{28}{figure.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces Definite integrals over functions with no antiderivatives}}{29}{figure.26}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\DOTSI \intop \ilimits@ _{-\infty }^{\infty } e^{-x^2}\tmspace +\thinmuskip {.1667em}dx=\sqrt {\pi }$}}}{29}{figure.26}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\DOTSI \intop \ilimits@ _{-\infty }^{\infty }{\frac {\qopname \relax o{sin}x}{x}}\tmspace +\thinmuskip {.1667em}dx=\pi $}}}{29}{figure.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces The vector $(1,2)$ is an arrow from the origin to the point $x=1$ and $y=2$.}}{30}{figure.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces Addition and subtraction of vectors}}{30}{figure.28}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {The sum of two vectors $\overrightarrow { c}=\overrightarrow { a}+\overrightarrow { b}$}}}{30}{figure.28}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {The difference between two vectors $\overrightarrow { c}=\overrightarrow { a}-\overrightarrow { b}$}}}{30}{figure.28}
+\contentsline {figure}{\numberline {29}{\ignorespaces $\overrightarrow { a_1}+\overrightarrow { a_2}+\ldots + \overrightarrow { a_5}=\overrightarrow { 0}$}}{31}{figure.29}
+\contentsline {figure}{\numberline {30}{\ignorespaces The multiplication of a vector with a scalar $\overrightarrow { b}=-2\tmspace +\thinmuskip {.1667em}\overrightarrow { a}$}}{31}{figure.30}
+\contentsline {figure}{\numberline {31}{\ignorespaces Collinear and coplanar vectors}}{32}{figure.31}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Collinear vectors define a line}}}{32}{figure.31}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Two non-collinear vectors span a plane}}}{32}{figure.31}
+\contentsline {figure}{\numberline {32}{\ignorespaces Scalar Product}}{33}{figure.32}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Projection of $\overrightarrow { b}$ on $\overrightarrow { a}$}}}{33}{figure.32}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {If $\alpha >90^0$ then $\qopname \relax o{cos}\alpha < 0$ and the scalar product is negative}}}{33}{figure.32}
+\contentsline {figure}{\numberline {33}{\ignorespaces Scalar product for parallel and orthogonal vectors}}{33}{figure.33}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {The dot product has is maximal value in the case $\alpha = 0 \tmspace +\thickmuskip {.2777em} \rightarrow \qopname \relax o{cos}\alpha =1$}}}{33}{figure.33}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {For $\alpha = 90^{\circ }$ the scalar product vanishes because $\qopname \relax o{cos}\alpha =0$}}}{33}{figure.33}
+\contentsline {figure}{\numberline {34}{\ignorespaces Vectors in 3-dimensional space}}{34}{figure.34}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\overrightarrow { a}$ and $\overrightarrow { b}$ span a plane}}}{34}{figure.34}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {A plane defined by a point and its normal vector}}}{34}{figure.34}
+\contentsline {figure}{\numberline {35}{\ignorespaces Rotation and scaling of a vector}}{35}{figure.35}
+\contentsline {figure}{\numberline {36}{\ignorespaces Basis vectors.}}{37}{figure.36}
+\contentsline {figure}{\numberline {37}{\ignorespaces Coordinate transformations: Translation and Rotation}}{38}{figure.37}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Translation of the coordinate system}}}{38}{figure.37}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Rotation of the coordinate system}}}{38}{figure.37}
+\contentsline {figure}{\numberline {38}{\ignorespaces Polar coordinates}}{39}{figure.38}
+\contentsline {figure}{\numberline {39}{\ignorespaces Eigenvalues and eigenvectors}}{44}{figure.39}
+\contentsline {figure}{\numberline {40}{\ignorespaces Determining eigenvalues and eigenvectors }}{45}{figure.40}
+\contentsline {figure}{\numberline {41}{\ignorespaces Representation of a complex number}}{46}{figure.41}
+\contentsline {figure}{\numberline {42}{\ignorespaces Adding two complex numbers}}{47}{figure.42}
+\contentsline {figure}{\numberline {43}{\ignorespaces The complex number $z$ and its complex conjugate $z^*$}}{48}{figure.43}
+\contentsline {figure}{\numberline {44}{\ignorespaces $f(x)=2\tmspace +\thinmuskip {.1667em}\qopname \relax o{sin}(x-\frac {\pi }{3})\tmspace +\thickmuskip {.2777em}$ expressed as $\tmspace +\thickmuskip {.2777em}f(x)=-\sqrt {3}\qopname \relax o{cos}x + \qopname \relax o{sin}x$}}{50}{figure.44}
+\contentsline {figure}{\numberline {45}{\ignorespaces Superposition of two functions with different frequencies and phases}}{50}{figure.45}
+\contentsline {figure}{\numberline {46}{\ignorespaces Decomposition of a non periodic function}}{52}{figure.46}
+\contentsline {figure}{\numberline {47}{\ignorespaces The power spectrum for $f(x)=x^2$}}{53}{figure.47}
+\contentsline {figure}{\numberline {48}{\ignorespaces A finite non periodic time series is periodically contained}}{53}{figure.48}
+\contentsline {figure}{\numberline {49}{\ignorespaces Gibbs' phenomenon}}{54}{figure.49}
+\contentsline {figure}{\numberline {50}{\ignorespaces Power spectra of a random signal and a sine wave}}{55}{figure.50}
+\contentsline {figure}{\numberline {51}{\ignorespaces Approximation of a curve at a point $x_0$ with the tangent at $x_0$}}{56}{figure.51}
+\contentsline {figure}{\numberline {52}{\ignorespaces Steps of a Taylor expansion of $\qopname \relax o{sin}x$ around $x_0=0$}}{57}{figure.52}

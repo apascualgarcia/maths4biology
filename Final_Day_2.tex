@@ -1,0 +1,404 @@
+
+% \setcounter{page}{12}
+
+\section{Differential and Integral Calculus}\label{diff}
+First derivatives of simple functions were studied by Galileo
+Galilei (1564-1642) and Johannes Kepler (1571-1630). A systematic
+theory of differential calculus was developed by Isaac Newton
+(1643-1727) and Gottfried Wilhelm Leibniz (1646-1710).
+
+\subsection{Difference Quotient}
+The difference quotient becomes the differential in the limit
+$h\rightarrow 0$ and describes the slope of a function $y=f(x)$
+at a given point $x$.
+\bnn y'(x)=\frac{dy}{dx}=\underset{h\rightarrow0}{\lim} \frac{y(x+h) - y(x)}{h} \enn
+
+\begin{figure}[!h]
+    \centerline{\epsfxsize=10cm \epsfysize=9cm \epsfbox{matlab/fig18.eps}} \svs
+    \caption{The slope of a curve is found from its derivative.} \label{fig20}
+\end{figure} \vs
+
+\begin{figure}[!h]
+    \centerline{\epsfxsize=10cm \epsfbox{matlab/fig19.eps}} \svs
+    \caption{Slope as h$\rightarrow 0$.} \label{fig21}
+\end{figure} \svs
+
+{\bf Notation:} The limit value of the difference quotient is called the
+derivative of a function $f(x)$. Derivatives are denoted by
+\bnn y'(x)\;,\;\frac{dy}{dx}\;,\;\frac{df}{dx}\;,\;\frac{d}{dx}f(x) \qquad
+\mbox{or sometimes in physics:} \;\; \dot{y}(t) \enn
+
+{\bf Note:} Here we consider first-order derivatives only.
+
+\vs
+{\bf Example:}  $\qquad y = f(x) =x^2$
+\bnn
+y'\,=\,\frac{dy}{dx}=\underset{h\rightarrow 0}{\lim} \frac{(x+h)^2-x^2}{h}
+\,=\,\underset{h\rightarrow 0}{\lim} \frac{x^2 +2hx +h^2 -x^2}{h}
+\,=\,\underset{h\rightarrow 0}{\lim} \frac{2hx+h^2}{h} = 2x
+\enn \vs
+
+\subsection{Derivatives of Elementary Functions}
+
+\subsubsection{Polynomials}
+\vspace*{-2mm}\bnn y=x^2 \quad \rightarrow \quad \frac{dy}{dx}=2x
+\qquad \qquad \qquad \mbox{more general:} \quad
+y=x^n \quad \rightarrow \quad \frac{dy}{dx}=nx^{n-1} \enn
+
+\subsubsection{Trigonometric functions}
+\vspace*{-2mm}\bnn
+y=\sin x \quad \rightarrow \quad \frac{dy}{dx}=\cos x \qquad \qquad \qquad
+y=\cos x \quad \rightarrow \qquad \frac{dy}{dx}=-\sin x
+\enn
+
+\subsubsection{Exponential functions}
+\vspace*{-2mm}\bnn y=e^x \quad \rightarrow \quad \frac{dy}{dx}=e^x \enn
+
+\subsubsection{Hyperbolic functions}
+\vspace*{-2mm}\bnn
+y=\sinh x \quad \rightarrow \quad \frac{dy}{dx}=\cosh x \qquad \qquad \qquad
+y=\cosh x \quad \rightarrow \quad \frac{dy}{dx}=\sinh x
+\enn
+
+\subsubsection{Logarithms}
+\vspace*{-2mm}\bnn y=\ln x \quad \rightarrow \quad \frac{dy}{dx}=\frac{1}{x} \enn
+
+\subsection{The Basic Rules for Calculating Derivatives}
+If the derivatives of two functions $u(x)$ and $v(x)$ exist on an interval
+$a<x<b$, then the derivatives of their combinations exist as well, i.e.
+\bnn
+u+v, \quad \alpha \, u \;\; \mbox{with} \;\; \alpha \in \mathbb{R}, \quad
+u\,v, \quad \frac{u}{v} \;\; \mbox{if} \;\; v(x)\not=0 \;\; \mbox{for} \;\; a<x<b
+\enn
+{\bf Rules:}
+\bnn \begin{array}{cc} \svs
+\qquad (u + v)'=\frac{d}{dx}\{u+v\}=u' + v' & \qquad\qquad \mbox{\bf derivatives are additive} \qquad\qquad \\ \svs
+\qquad (\alpha \, u)'=\frac{d}{dx}\{\alpha \, u\}=\alpha \, u' & 
+\qquad\qquad \mbox{\bf multiplication with a scalar} \qquad\qquad \\ \svs
+\qquad (u\,v)'=\frac{d}{dx}\{u\,v\}= u'\,v+u\,v'  & \qquad\qquad \mbox{\bf product rule} \qquad\qquad \\ \svs
+\qquad (\frac{u}{v})'=\frac{d}{dx}\{\frac{u}{v}\}=\frac{u'\,v - u\,v'}{v^2} & \qquad\qquad \mbox{\bf quotient rule} \qquad\qquad
+\end{array} \enn
+
+{\bf Examples:}
+\bnn \frac{d}{dx}\{x^{17}+\cos x\} = 17x^{16}-\sin x \enn
+\bnn \frac{d}{dx}\{35 \cosh x\}=35 \frac{d}{dx}\,\cosh x=35 \sinh x \enn
+\bnn \frac{d}{dx}\{\cos x e^x\} = - \sin x e^x +\cos x e^x = e^x (\cos x - \sin x) \enn
+\bnn \frac{d}{dx}\{\frac{\cos x}{e^x}\} = \frac{-\sin x \, e^x - \cos x \, e^x}{e^{2x}}
+    =\frac{-e^x \, (\sin x +\cos x)}{e^{2x}}= -\frac{\sin x + \cos x}{e^x} \enn \svs
+
+
+\subsection{The Chain Rule}
+If $u(x)$ and $v(x)$ have derivatives and the image of $v(x)$ is part of the source set of $u(x)$, 
+then $u(v(x))$ has a derivative. 
+
+To understand what this complicated sentence means, consider 
+$\ln(\cos x)$. Here $u(x)=\ln x$ and $v(x)=\cos x$. The source set of $\cos x$ are all real numbers
+$[-\infty, \infty]$, the image set of the cosine are the numbers in the interval [-1, 1], and the source 
+set of the logarithm are all positive real numbers $]0, \infty]$. Therefore the image set of the cosine 
+and the source set of the logarithm overlap in the interval $]0, 1]$. The source set of $\cos x$ that corresponds
+to the image set $]0, 1]$ is given by all numbers where $\cos x$ is positive, i.e. $]-\frac{\pi}{2}, -\frac{\pi}{2}[$,
+$]\frac{3\,\pi}{2}, -\frac{5\,\pi}{2}[$, etc., and the function $\ln(\cos x)$ exists and has a derivative for 
+these values of $x$.
+\bnn [u(v(x))]'=\frac{d}{dx}\{u(v(x))\}= \frac{d\,u(v)}{dv}\;\frac{d\,v(x)}{dx} \qquad\qquad \mbox{\bf chain rule} \enn
+
+{\bf Examples:}
+\bnn f(x)=\cos(\alpha x) \quad \rightarrow \quad u(v)=\cos v \quad \mbox{and} \quad v(x)=\alpha x \enn
+\bnn \frac{d}{dx}\,\cos \alpha x=\frac{d\,\cos \alpha x}{d\,\alpha x}\;\frac{d\,\alpha x}{dx}
+   =(-\sin \alpha x)\,\alpha = -\alpha \sin \alpha x \enn
+
+\bnn f(x)=(2x+5)^3\quad \rightarrow \quad u(v)=v^3 \quad \mbox{and} \quad v(x)=2x+5 \enn
+\bnn \frac{d}{dx}\,(2x+5)^3=\frac{d\,(2x+5)^3}{d\,(2x+5)}\,\frac{d\,(2x+5)}{dx}=3\,(2x+5)^2\;2=6\,(2x+5)^2 \enn
+
+\subsection{Selected problems (the page from hell):}
+{\bf Important note: Now we can take the derivative of ANY analytic function !!!}
+
+\bnn f(x)=e^{\ln x} \quad \rightarrow \quad u(v)=e^v \quad \mbox{and} \quad v(x)=\ln x \enn
+\bnn f'(x)=e^{\ln x}\,\frac{1}{x}=x\,\frac{1}{x}=1 \qquad \mbox{of course we started with}
+  \quad f(x)=x \;\; \rightarrow \;\; f'(x)=1
+\enn \svs
+
+\bnn f(x)=\sqrt{\sin(3\,\alpha^2\,x^5)} = [\sin(3\,\alpha^2\,x^5)]^\frac{1}{2}=u(v(w(x))) \\
+   \hspace*{3cm} \rightarrow \quad u(v)=v^\frac{1}{2} \quad v(w)=\sin(3\,\alpha^2\,x^5)
+   \quad w(x)=3\,\alpha^2\,x^5 \enn
+\bnn f'(x)=\frac{d\,u(v(w(x)))}{dv}\,\frac{d\,v(w(x))}{dw}\,\frac{d\,w(x)}{dx}
+   =\frac{1}{2}\,[\sin(3\,\alpha^2\,x^5)]^{\frac{1}{2}-1} \; \cos(3\,\alpha^2\,x^5) \;
+      3\,\alpha\,5\,x^{5-1} \\
+   \hspace*{3cm} = \frac{15\,\alpha\,x^4\,\cos(3\alpha^2x^5)}{2\sqrt{\sin(3\alpha^2x^5)}}
+      \qquad \mbox{who guessed this result ???}
+\enn \svs
+
+\bnn
+ f(x)=\frac{3x^2+\cos kx}{\cosh x} \quad \rightarrow \quad
+ f'(x)=\frac{(6x-k\sin kx)\cosh x + (3x^2+\cos kx)\sinh x}{\cosh^2x}
+\enn
+
+\hspace*{4cm}Also quite ugly, but technically correct !!! \vs
+
+\bnn
+f(x)=\cos^2 kx = \cos kx \, \cos kx \quad \rightarrow \quad f'(x)=2\,\cos kx (-\sin kx)\, k
+   =-2k\,\cos kx \sin kx \\
+   \hspace*{2cm} \mbox{or} \quad \rightarrow \quad (-\sin kx)\,k\,\cos kx+\cos kx (-\sin kx)\,k
+       = -2k\,\cos kx \sin kx
+\enn \svs
+
+\bnn
+f(x)=y=(x^5+e^{\cos kx})^{1/2} \quad \rightarrow \quad
+  y'=\frac{1}{2}(x^5+e^{\cos kx})^{-1/2}\,(5\,x^4+e^{\cos kx}(-k\,\sin kx)) \\
+    \hspace*{8cm} = \frac{5\,x^4-k\,\sin 2kx \, e^{\cos kx}}{2\,(x^5+e^{\cos kx})^{1/2}}
+\enn \svs
+
+\bnn
+y=x^x=e^{x\ln x} \quad (\mbox{remember:} \; a^x=e^{x\ln a}) \quad \rightarrow \quad
+y'=e^{x\ln x} \, (\ln x + 1) = x^x (\ln x + 1)
+\enn \vs
+
+
+\subsection{Integral Calculus: Definite Integrals}
+How do you determine the area $A$ enclosed by a function $f(x)$
+and the horizontal axis. It is simple if $f(x)=f_0=const$. \vs
+\begin{figure}[!h]
+    \centerline{\epsfxsize=12cm \epsfbox{matlab/fig20.eps}}
+    \caption{Area $A$ enclosed by the horizontal axis and a horizontal line.} \label{fig22}
+\end{figure} \vs
+
+For the general case, divide the area $A$ into subareas
+$A_{\nu}$ between $x_{\nu-1}$ and $x_{\nu}$. \vs
+\begin{figure}[!h]
+    \centerline{\epsfxsize=12cm  \epsfbox{matlab/fig21.eps}}
+    \caption{Area enclosed by the function $f(x)$ and the horizontal axis.} \label{fig23}
+\end{figure} \vs
+
+Then the subarea $A_{\nu}$ may be approximated by
+$A_{\nu}=f(\xi_{\nu}) ( x_{\nu}-x_{\nu-1} )$ for $x_{\nu-1}<\xi_{\nu}<x_{\nu}$.
+There exists always a $\xi_{\nu}$ such that this is true.
+
+Reconstruct the area $A$ as follows:
+\bnn
+A=\sum_{\nu=1}^N=A_{\nu}=\sum_{\nu=1}^N f(\xi_{\nu})\underbrace{(x_{\nu} - x_{\nu-1})}_{\Delta x}
+\enn
+
+This sum is called the {\em Riemann sum}. The limit of the Riemann sum is the area $A$ and defines the integral.
+\bnn
+A=\underset{N\rightarrow\infty}{\lim} \sum_{\nu=1}^N f(\xi_{\nu})\Delta x=\int_{x=a}^{x=b} \: f(x)\: dx
+\enn
+
+The area enclosed by $f(x)$ and the horizontal $x$-axis over an interval $x \in [a,b]$ is given by
+definite integral
+\bnn 
+\int_a^b \: f(x)\, dx= F(x)\! \left.\frac{}{}\right|_{x=a}^{x=b} \,
+= F(x)\! \left.\frac{}{}\right|_a^b \,= F(b)-F(a) 
+\enn
+
+where $F(x)$ is called the {\em anti-derivative} of $f(x)$ and
+\bnn f(x) = \frac{dF(x)}{dx} = F'(x) \qquad\mbox{or, which is equivalent,}\qquad F(x)=\int \: f(x)\, dx+\mbox{const} \enn
+Integration is to some extend the inverse operation of differentiation. \vs
+
+{\bf Examples:}
+
+\svs\begin{figure}[!h]
+    \centering
+    \subfigure[Definite integral of $y=x^2$]{\epsfxsize=7cm \epsfbox{matlab/fig22a.eps}}
+    \hspace*{0.5cm}
+    \subfigure[Definite integral of $y=x^3$]{\epsfxsize=7cm  \epsfbox{matlab/fig22b.eps}} \svs
+    \caption{Definite integrals as areas under curves}  \label{fig24}
+\end{figure} \svs
+
+\begin{description}
+\item[{\bf a)}]
+The shaded area is given by
+\bnn A=\int_{-1}^1 f(x)\,dx= F(1)-F(-1) \enn
+We know $f(x)=x^2=F'(x)$. Now we guess $F(x)=1/3x^3+c$.
+
+\bnn A= F(1)-F(-1)=\frac{1}{3} 1^3 + c - \{ \frac{1}{3} (-1)^3 + c \} = \frac{2}{3} \enn \vs
+
+\item[{\bf b)}]
+Again, the shaded area is given by
+\bnn A=\int_{-1}^1 f(x)\,dx=F(1)-F(-1)\enn
+We guess $F(x)=\frac{1}{4}x^4+c$ and find
+\bnn A=\int_{-1}^1 f(x)\,dx=F(1)-F(-1) = \frac{1}{4}1^4 + c - \{ \frac{1}{4} (-1)^4 + c \} =0 \enn
+
+Why does the area $A$ vanish? It actually consists of two areas, $A_1$ and $A_2$, which both have
+the same size, but opposite sign $A_1=-A_2$.
+\bnn A_1=F(0)-F(-1)=\frac{1}{4}0^4+c - \frac{1}{4}(-1)^4-c=-\frac{1}{4}=-A_2 \enn
+\end{description}
+
+{\bf Note:} In an integral the area {\em below} the x-axis is counted negative. In order to calculate the shaded area
+we have to evaluate all pieces between intersections of the curve with the horizontal axis separately and add up their
+magnitudes. Here: $A=\abs{A_1}+\abs{A_2}=\abs{-\frac{1}{4}}+\abs{\frac{1}{4}}=\frac{1}{2}$. \vs
+
+\subsection{Methods of Integration}
+{\bf Properties of integrals:}
+\bnn \int_a^b f(x) \,dx = \int_a^c f(x) \:dx + \int_c^b f(x) \,dx \enn
+\bnn \int_a^b f(x) \,dx = F(b)-F(a)=-(F(a)-F(b))=- \int_b^a f(x) \,dx \enn
+\bnn \int_a^b (f_1(x)+f_2(x)) \:dx = \int_a^b \: f_1(x) \,dx + \int_a^b f(x)_2\,dx \enn
+\bnn \int_a^b  c \, f(x) \,dx=c \,\int_a^b f(x) \,dx \qquad \mbox{where $c$ is a constant} \enn \vs
+
+{\bf Approach (in order of preference):}
+\begin{itemize}
+\item {\bf Guess:} Find $F(x)$ such that $\frac{dF(x)}{dx} = f(x)$. For polynomials: $F(a\,x^n)=\frac{a}{n+1}\,x^{n+1}$.
+\vspace*{2mm} \\ Note: Here $n$ can be negative or any rational number except -1. \\
+\item {\bf Tables:} $F(x)$ can be looked up in mathematical tables of anti-derivatives and/or definite integrals
+which can be found in e.g. Bronshteyn, Semendjajew or Gradsteyn.\\
+\item {\bf Partial integration:} Corresponds to the product rule but only works for special cases.
+\bnn \int f(x)\, g(x)dx = F(x)\, g(x)-\int \: F(x)\, g'(x)\,dx \enn
+\bnn
+\int_a^b x\, \cosh x \, dx = \underbrace{x}_{g}\underbrace{\sinh x}_{F} \, \arrowvert_a^b
+   - \int_a^b\underbrace{\sinh x}_{F} \underbrace{1}_{g'}\, dx
+   = b\sinh b - a \sinh a - (\cosh b - \cosh a)
+\enn \svs
+\item {\bf Substitution:} Corresponds to the chain rule but again only works for special cases.
+
+\bnn
+\int_{x=a}^{x=b} f(\phi(x)) \, \phi'(x)\, dx = \int_{u=\phi(a)}^{u=\phi(b)} f(u)\, du \qquad \mbox{where}\qquad u=\phi(x)
+\enn \vs
+\bnn \int_0^{\pi} \cos^2 x \; \sin x \, dx \quad \mbox{substitute:} \quad u=\cos x=\phi(x) \enn \vs
+\bnn
+  u'=\frac{du}{dx}=-\sin x = \phi'(x) \quad \rightarrow \quad
+  du = -\sin x dx = \phi'(x) dx \quad \rightarrow\quad dx = -\frac{du}{\sin x}
+\enn \vs
+
+Substitute the integral:
+\bnn
+\int_{x=0}^{x=\pi} \cos^2 x \; \sin x \, \frac{-du}{\sin x}=-\int_{x=0}^{x=\pi} \cos^2 x \,du=-\int_{x=0}^{x=\pi} u^2 \,du
+\enn \vs
+
+Express the boundaries in terms of $u$:
+\bnn x=0 \quad \rightarrow\quad u=\cos 0=1 \qquad\qquad\qquad\qquad x=\pi \quad \rightarrow\quad u=\cos \pi =-1 \enn \svs
+
+Insert them and perform the integration:
+\bnn
+\int_0^{\pi} \cos^2 x \; \sin x \, dx
+   =-\int_{u=1}^{u=-1} u^2 \, du = -\frac{1}{3}u^3 \! \left.\frac{}{}\right|_1^{-1} 
+   = -\frac{1}{3}(-1)^3 + \frac{1}{3}1^3=\frac{2}{3}
+\enn
+\end{itemize} \vs
+
+\subsection{Symmetries}
+A function $f(x)$ is called an {\em even function} if $f(-x)=f(x)$; a function $g(x)$ is called an {\em odd function}
+if $g(-x)=-g(x)$. The product of two even functions or the product of two odd functions is an even function; the product
+of an odd and an even function is an odd function.
+
+The integral over a symmetric interval around $x=0$ of an odd function vanishes.
+ 
+\bnn 
+\int_{-a}^{b=a} g(x) \, dx = \int_{-a}^{b=a} f(x) \, g(x) \: dx = 0 \qquad
+\mbox{if} \;\; f(-x)=f(x) \quad \mbox{and} \quad g(-x)=-g(x) 
+\enn
+
+{\bf Example:}
+\bnn \int_{-1}^1 \underbrace{x^2}_{f(x)} \underbrace{\sin 3x}_{g(x)}\: dx= 0 \enn
+
+\begin{figure}[!h]
+    \centerline{\epsfxsize=12cm \epsfysize=8cm  \epsfbox{matlab/fig23.eps}} \svs
+    \caption{Due to symmetry the integral $\; \int_{-1}^1 x^2 \, \sin 3x\:dx\;$ vanishes} \label{fig26}
+\end{figure} \vs \svs
+
+\subsection{Orthogonality of trigonometric functions}
+The cosine is an even function $\cos (-x)=\cos x$, and the sine is an odd function \mbox{$\sin(-x)=-\sin x$.}
+Moreover, these trigonometric functions are $2\pi$-periodic, hence it is sufficient to consider integration
+over windows of $2\pi$ only.
+\bnn
+\int_0^{2\pi}\underbrace{\sin x \, \cos x}_{\frac{1}{2}\sin 2x} \, dx
+    = \frac{1}{2} \int_0^{2\pi}\sin 2x \, dx = -1/4\cos 2x \! \left.\frac{}{}\right|_0^{2\pi} = 0 \quad \mbox{or equivalent:} \;\;
+     \int_{-\pi}^{\pi} \sin x \, \cos x\, dx = 0
+\enn
+
+\bnn
+\int_{-\pi}^{\pi} \sin 2x \, \sin x \, dx = 2\int_{-\pi}^{\pi} \underbrace{\sin^2 x}_{u^2} \; \underbrace{\cos x \, dx}_{du}
+    = 2 \int_{u=0}^{u=0} u^2 \: du = 0
+\enn
+Here we used the substitution $u=\sin x$ and $du=\cos x \, dx$ with the boundaries $x=\pi \rightarrow u=0$
+and $x=-\pi \rightarrow u=0$. \svs
+
+{\bf More general cases:}
+\bnn \int_{-\pi}^{\pi} \cos mx \, \cos nx \, dx=\int_{-\pi}^{\pi} \sin mx \, \sin nx \, dx = \pi \, \delta_{mn} \enn
+\bnn \int_{-\pi}^{\pi} \cos mx \sin nx \, dx = 0 \;\; \forall \;\; m,\,n \qquad\mbox{where "$\forall$" means "for all"} \enn
+
+$\delta_{mn}$ is called the {\em Kronecker delta} which is defined as $\delta_{mn}=1$ if $m=n$ and $\delta_{mn}=0$ else.
+
+\subsection{Integrals to Infinity}
+If one or both boundaries of an integral are infinite this does not mean that the area under this curve
+cannot be finite. A trivial example is given by the integral from $-\infty$ to $+\infty$ over an odd function.
+This integral vanishes, as seen above, independent of the function as long as it is odd.
+
+A nontrivial example is 
+\bnn 
+\int_1^{\infty} \frac{1}{x^2} \; dx = - \left. \frac{-1}{x} \right|_1^{\infty} 
+    = -( \underbrace{\frac{1}{\infty}}_{=0} - \frac{1}{1}) = 1 
+\enn
+however
+\bnn
+\int_1^{\infty} \frac{1}{x} \; dx = \ln x \left. \frac{}{} \! \right|_1^{\infty} 
+    = \ln \infty - \underbrace{\ln 1}_{=0} = \infty 
+\enn \svs
+
+In the same way even if a function has a singularity like $\frac{1}{\sqrt{x}}$ for $x \rightarrow 0$, 
+the area can still be finite
+\bnn
+\int_0^2 x^{-\frac{1}{2}} \; dx = 2\, x^{\frac{1}{2}} \left. \frac{}{} \! \right|_0^2
+    = 2\, \sqrt{x} \left. \frac{}{} \! \right|_0^2 
+    = 2\,(\sqrt{2} - \sqrt{0}) = 2\,\sqrt{2} 
+\enn
+but again
+\bnn
+\int_0^2 x^{-1} \; dx = \int_0^2 \frac{1}{x} \; dx = \ln x \left. \frac{}{} \! \right|_0^2
+    = \ln 2 - \underbrace{\ln 0}_{=-\infty} = \infty 
+\enn \svs
+
+And finally an exponential function
+\bnn
+\int_0^{\infty} e^{-x} \; dx = -e^{-x} \left. \frac{}{} \! \right|_0^{\infty}
+    = -(\underbrace{e^{-\infty}}_{=0}-\underbrace{e^0}_{=1}) = 1 
+\enn
+
+\begin{figure}[!h]
+    \centering
+    \subfigure[$\int_1^{\infty} x^{-2} \, dx = 1$]{\epsfxsize=4.5cm \epsfbox{matlab/fig23_1a.eps}}
+    \hspace*{0.5cm}
+    \subfigure[$\int_0^2 x^{-\frac{1}{2}} \, dx = 2\,\sqrt{2}$]{\epsfxsize=4.5cm \epsfbox{matlab/fig23_1b.eps}} 
+    \hspace*{0.5cm}
+    \subfigure[$\int_0^{\infty} e^{-x} \, dx = 1$]{\epsfxsize=4.5cm \epsfbox{matlab/fig23_1c.eps}} \\ \vs
+    \hspace*{0.5cm}
+    \subfigure[$\int_1^{\infty} x^{-1} \, dx = \infty$]{\epsfxsize=4.5cm \epsfbox{matlab/fig23_1d.eps}}
+    \hspace*{0.5cm}
+    \subfigure[$\int_0^2 x^{-1} \, dx = \infty$]{\epsfxsize=4.5cm \epsfbox{matlab/fig23_1e.eps}} \svs
+    \caption{Definite integrals that involve infinities}  \label{fig24}
+\end{figure} \vs
+
+\subsection{Functions with no Antiderivative}
+As we have seen, it quite straightforward to calculate the derivatives of quite complicated
+"monsters" of functions. On the other hand, it is much more difficult to find antiderivatives.
+To make things worse there are certain functions with very important applications for which
+an antiderivative does not exist, i.e. it cannot be expressed in terms of elementary functions.
+
+One of these simple functions which do not have an antiderivative is $f(x)=e^{-x^2}$. This 
+is very inconvenient because this function is the famous bell-shaped Gaussian which rules the
+entire field of statistics, because the probability that an event occurs within a certain interval
+of a parameter is given by area under this curve. This area unfortunately cannot be calculated
+using a pocket calculator that has only elementary functions. The definite integral can be 
+found numerically or looked up in tables, and it also has a name: the "error function" erf$(x)$
+\bnn  
+\mbox{erf}(x)=\frac{2}{\sqrt{\pi}} \, \int_0^x e^{-u^2} \, du  \qquad\qquad \mbox{note:}\qquad
+\int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
+\enn  \svs
+
+A second example of such a function with no antiderivative is the so-called "integral sine" Si$(x)$
+\bnn 
+\mbox{Si}(x)=\int_0^x \frac{\sin u}{u} \, du  \qquad\qquad \mbox{note:}\qquad
+\int_{-\infty}^{\infty} \frac{\sin x}{x} \, dx = \pi
+\enn  
+\begin{figure}[t]
+    \centerline{
+    \subfigure[$\int_{-\infty}^{\infty} e^{-x^2}\,dx=\sqrt{\pi}$]{\epsfxsize=7cm \epsfbox{matlab/fig23_2a.eps}}
+    \hspace*{0.5cm}
+    \subfigure[$\int_{-\infty}^{\infty}{\frac{\sin x}{x}}\,dx=\pi$]{\epsfxsize=7cm \epsfbox{matlab/fig23_2b.eps}}} \svs 
+    \caption{Definite integrals over functions with no antiderivatives}  \label{fig24}
+\end{figure}
+
+
+
+
+
+
+
+  

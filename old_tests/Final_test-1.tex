@@ -1,0 +1,135 @@
+\documentclass[11pt]{article}
+\usepackage{makeidx}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage{wrapfig}
+\usepackage{here}
+\usepackage{graphicx}
+\usepackage[centertags]{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{subfigure}
+\usepackage{here}
+
+\addtolength{\topmargin}{-2.5cm} \addtolength{\textheight}{4.5cm}
+\addtolength{\oddsidemargin}{-2cm} \addtolength{\textwidth}{3.8cm}
+\addtolength{\evensidemargin}{-2cm}
+
+\begin{document}
+\renewcommand\floatpagefraction{.9}
+\renewcommand\topfraction{.9}
+\renewcommand\bottomfraction{.9}
+\renewcommand\textfraction{.1}
+\setcounter{totalnumber}{50} \setcounter{topnumber}{50}
+\setcounter{bottomnumber}{50} \floatsep 20 pt \intextsep 5 pt
+\abovecaptionskip 0 pt
+\belowcaptionskip 0 pt
+
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\ba}{\begin{array}}
+\newcommand{\ea}{\end{array}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\bes}{\begin{eqnarray*}}
+\newcommand{\ees}{\end{eqnarray*}}
+\newcommand{\vs}{\vspace*{0.5cm}}
+\newcommand{\svs}{\vspace*{0.25cm}}
+
+\newcommand{\abs}[1]{\mid \! #1\! \mid}
+\renewcommand{\b}[1]{\mbox{{\bf #1}}}
+\renewcommand{\vec}[1]{\protect\overrightarrow{ #1}}
+\newcommand{\mat}[1]{\mbox{\boldmath $#1$}}
+
+\long\def\bform#1\eform{\begin{equation}
+   \begin{minipage}{\eqbreite}\vskip .1cm
+   \let\\ = \thcr
+   \halign{$\displaystyle{##}$ \hfil
+  && $\displaystyle{##}$\hfil\cr#1\cr}
+   \vskip .3cm \end{minipage}
+\end{equation}}
+\def\thcr{\cr\noalign{\vskip.3cm}}
+\newlength{\eqbreite}\setlength{\eqbreite}{\textwidth}
+\addtolength{\eqbreite}{-1.5cm}
+
+\long\def\bnn#1\enn{$$\begin{minipage}{\eqbreite}
+\vskip .1cm \let\\ = \thcr \halign{$\displaystyle{##}$
+\hfil && $\dispaystyle{##}$\hfil \cr#1 \cr}
+\vskip.3cm \end{minipage}$$}
+
+\parindent 0 in
+\parskip .37 cm
+
+\input epsf 
+
+\pagestyle{empty}
+
+\LARGE
+\begin{center}
+\underline{\textbf{ Complex Systems Boot Camp }}
+\end{center}
+
+\begin{flushleft}
+\large \verb"ISC6930"\hspace{5.1cm} \textsc{Section}\#1  \hspace{4.cm} \textsc{Date:} \ldots\ldots. \\
+\vspace*{.3cm} \large \textsc{Name:}
+\ldots\ldots\ldots\ldots\ldots\ldots\hspace{1.85cm} SS\#:
+\ldots\ldots\ldots\ldots\ldots\ldots\hspace{2cm}\textsc{Points:} \ldots\ldots\\
+\line(1,0){455}
+\end{flushleft}
+
+\normalsize
+\textbf{1)} Sketch the polynomial functions:
+\bnn\begin{array}{lll}
+\mbox{a)}\quad p(x) = x^2  \qquad  & \mbox{b)} \quad  p(x) =( x - 2)^2  \qquad   & \mbox{c)} \quad   p(x) = (x + 4)^2 \vs \\ 
+\mbox{d)}\quad p(x)=x^2-9  \qquad  & \mbox{e)} \quad  p(x)=\frac{1}{2}\,x^{2}  \qquad & \mbox{f)}\quad p(x) =3\,(x-2)^2 \vs \\
+\mbox{g)}\quad p(x) = 3\,(x - 2)^2 - 5  \qquad & \mbox{h)}\quad  p(x) = -2\,x^2  \qquad & \mbox{i)}\quad  p(x) = -x^2 + 5 \svs\\
+\mbox{j)}\quad p(x) = x^3+x^2-6\,x \quad & \mbox{k)}\quad  p(x)=(x + 4)^3  \qquad   & \mbox{l)}\quad   p(x)=x-x^3
+\end{array} \enn
+
+\textbf{2)} Which of the graphs in the problem (1) have the same
+exact shape even though they lie in \\
+\hspace*{4mm} different locations of the coordinate plane.
+
+\textbf{3)} Without graphing determine whether the polynomial
+$-2\,x^{10} + \pi \, x^{7} - e \, x^2 + 6$ opens up or down.
+
+\textbf{4)} Without graphing determine whether the polynomial
+$-2\,x^7 - x^2 + 6$ rises to left or right.
+
+\textbf{5)} What are the roots  of the polynomial: 
+$\pi \, (x - e)^5 \, (x + 3)^2\,(4x - 11)\,x$
+
+\textbf{6)} Sketch the trigonometric functions:
+\bnn \begin{array}{lll}
+\mbox{a)}\quad f(x)=-\sin x \qquad & \mbox{b)}\quad f(x)=2\,\sin x \qquad & \mbox{c)}\qquad f(x)=\frac{1}{2}\,\sin x \svs \\
+\mbox{d)}\quad f(x)=\sin x\; (x-\frac{\pi}{4})\qquad & \mbox{e)}\quad f(x)=\sin2x \qquad  & \mbox{f)}\quad f(x)=\sin x\;(2\,x + \frac{\pi}{2}) \svs \\
+\mbox{g)} \quad f(x)=3+\sin x  \quad                &                                   & 
+\end{array}\enn
+
+\textbf{7)} Find the amplitude, period, frequency and phase of
+$ f(x) = \sqrt{26} \, \sin(\pi \, x + \frac{\pi^2}{3})$.
+
+\textbf{8)} Describe how the graph of
+ $f(x) = 6 \, \cos(\frac{1}{3}\,x + \frac{\pi}{9}) - 7$ can be obtained geometrically from the \\
+ \hspace*{4mm} graph of the function $f(x) = \cos x$.
+
+\textbf{9)} The graph of $f(x) = \pi \, \cos 7x$ is the same as the
+graph of: $\; \mbox{a)}\;\; \pi\, \sin(-7x)  \quad  \mbox{b)} \;\; \pi \, \cos (-7x)$
+
+\textbf{10)} Sketch\hspace*{1cm}$ f(x) = x + \sin x$
+
+\textbf{11)} Sketch\hspace*{1cm}$ f(x) = e^{2\,x}$.
+
+\textbf{12)} Sketch\hspace*{1cm}$ f(x) = 3 - e^x$.
+
+\textbf{13)} Sketch\hspace*{1cm}$ f(x) = \ln(x + 2)$.
+
+\textbf{14)} Describe how the graph of
+$f(x) = 2 \, \sinh(x - 3)$ can be obtained geometrically from the graph \\
+\hspace*{7mm} of the function $f(x) = \sinh x$.
+
+\textbf{15) }Calculate $\quad \mbox{a)} \quad \ln \, e^{\pi} \qquad
+\mbox{b)}\quad \ln 1$.
+
+\end{document}

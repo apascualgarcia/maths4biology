@@ -1,0 +1,169 @@
+\documentclass[11pt]{article}
+\usepackage{makeidx}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage{wrapfig}
+\usepackage{here}
+\usepackage{graphicx}
+\usepackage[centertags]{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{subfigure}
+\usepackage{here}
+
+\addtolength{\topmargin}{-2.cm} \addtolength{\textheight}{4cm}
+\addtolength{\oddsidemargin}{-2cm} \addtolength{\textwidth}{3.5cm}
+\addtolength{\evensidemargin}{-2cm}
+
+
+\begin{document}
+\renewcommand\floatpagefraction{.9}
+\renewcommand\topfraction{.9}
+\renewcommand\bottomfraction{.9}
+\renewcommand\textfraction{.1}
+\setcounter{totalnumber}{50} \setcounter{topnumber}{50}
+\setcounter{bottomnumber}{50} \floatsep 20 pt \intextsep 5 pt
+\abovecaptionskip 0 pt
+\belowcaptionskip 0 pt
+
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\ba}{\begin{array}}
+\newcommand{\ea}{\end{array}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\bes}{\begin{eqnarray*}}
+\newcommand{\ees}{\end{eqnarray*}}
+\newcommand{\vs}{\vspace*{0.5cm}}
+\newcommand{\svs}{\vspace*{0.25cm}}
+
+\newcommand{\abs}[1]{\mid \! #1\! \mid}
+\renewcommand{\b}[1]{\mbox{{\bf #1}}}
+\renewcommand{\vec}[1]{\protect\overrightarrow{ #1}}
+\newcommand{\mat}[1]{\mbox{\boldmath $#1$}}
+
+\long\def\bform#1\eform{\begin{equation}
+   \begin{minipage}{\eqbreite}\vskip .1cm
+   \let\\ = \thcr
+   \halign{$\displaystyle{##}$ \hfil
+  && $\displaystyle{##}$\hfil\cr#1\cr}
+   \vskip .3cm \end{minipage}
+\end{equation}}
+\def\thcr{\cr\noalign{\vskip.3cm}}
+\newlength{\eqbreite}\setlength{\eqbreite}{\textwidth}
+\addtolength{\eqbreite}{-1.5cm}
+
+\long\def\bnn#1\enn{$$\begin{minipage}{\eqbreite}
+\vskip .1cm \let\\ = \thcr \halign{$\displaystyle{##}$
+\hfil && $\dispaystyle{##}$\hfil \cr#1 \cr}
+\vskip.3cm \end{minipage}$$}
+
+\parindent 0 in  \parskip .37 cm
+
+\input epsf 
+
+\pagestyle{plain}
+
+\LARGE
+\begin{center}
+\underline{\textbf{ Complex Systems Boot Camp }}
+\end{center}
+
+\begin{flushleft}
+\large \verb"ISC6930"\hspace{5.1cm} \textsc{Section}\#4  \hspace{4.cm} \textsc{Date:} \ldots\ldots. \\
+\vspace*{.3cm} \large \textsc{Name:}
+\ldots\ldots\ldots\ldots\ldots\ldots\hspace{1.85cm} SS\#:
+\ldots\ldots\ldots\ldots\ldots\ldots\hspace{2cm}\textsc{Points:} \ldots\ldots\\
+\line(1,0){455}
+\end{flushleft}
+
+ \normalsize
+
+ \textbf{1)} A matrix operates upon a vector and produces another vector.
+ The figure below shows the operation of the matrix 
+$\mat{M} = \left( \begin{array}{cc} 1 & 0.5 \\ 0.5 & 1 \end{array} \right)$.
+ Each cross (x) is an input vector to the matrix, and the circle (o) is the corresponding output vector.
+
+\begin{figure}[!ht]
+   \centerline{\epsfxsize=12cm  \epsfbox{fig/eigentest1.eps}} \svs
+\end{figure}
+
+\hspace*{4mm} a) On the figure, sketch the approximate directions of
+the eigenvectors of the matrix. \\
+\hspace*{9mm} Hint: Imagine a line from the origin to each input vector, 
+and see if the output vector lies\\
+\hspace*{9mm} on that line. 
+
+\hspace*{4mm} b) Estimate the eigenvalues corresponding to the
+approximate eigenvectors. \\
+\hspace*{9mm} Hint: Once you determine the direction
+of an eigenvector, the eigenvalue is simply the ratio \\
+\hspace*{9mm} of the length of the output vector (i.e. its distance 
+from the origin) to the length of the \\
+\hspace*{9mm} input vector.
+
+\hspace*{4mm} c) Calculate the eigenvalues and eigenvectors of the
+matrix $\mat{M}$. Show your work. 
+
+\hspace*{4mm} d) On the figure, sketch the directions of the
+eigenvectors you found in Question c), and \\
+\hspace*{9mm} mark them with an "e" (for "exact"). \vs
+
+\newpage
+\textbf{2)} Find the determinants of the following matrices. Show
+your work.
+
+\hspace*{4mm} a) $\quad \left( \begin{array}{cc} 1 & -2 \\ 3 & 7 \end{array} \right)$
+\hspace*{9mm} b) $\quad \left( \begin{array}{cc} 2 & -3 \\ -4 & 5 \end{array} \right)$
+\hspace*{9mm} c) $\quad \left( \begin{array}{ccc} 7 & 2 & 0 \\ 0 & 1 & 6 \\ 11 & 3 & 2 \end{array} \right)$
+
+\textbf{3)} Convert the following numbers to the exponential form
+$r\,e^{i\theta}$:
+
+\hspace*{4mm} a) $\quad 3 \qquad$ b) $\quad 4\,i \qquad$ c) $\quad 3 + 4\,i \qquad $  
+d) $\quad 3 - 4\,i$ \svs
+
+\hspace*{4mm} Convert the following numbers to the Cartesian form a+ib:
+
+\hspace*{4mm} 
+e) $\quad 7\,e^2 \qquad $  
+f) $\quad e^i \qquad$ 
+g) $\quad e^{i\,\pi}\qquad $ 
+h) $\quad e^{-i\,(\pi/2)} \qquad $ 
+i) $\quad 2\,e^{i\,(\pi/3)} $ \vs 
+
+\textbf{4)} Calculate the result of the following additions and
+subtractions. You can express the results \\
+\hspace*{4mm} in either Cartesian or
+exponential form. Hint: To add or subtract numbers in exponential \\
+\hspace*{4mm} form, first convert them to Cartesian notation.
+
+$\begin{array}{llll}
+\hspace*{1cm} a)\quad 10\,i    &+\quad 14\,i   \svs   &  \hspace*{1cm} b)\quad 6 - i\,\pi &+\quad 17  \svs\\
+\hspace*{1cm} c)\quad 3 - 4\,i   &+\quad -3+4\,i \svs &  \hspace*{1cm} d)\quad 2\,e^{i\,(\pi/3)} &+\quad 3\,e^{i\pi} \svs\\
+ \end{array}$ \vs
+
+\textbf{5)} Calculate the result of the following operations.
+You can express the result in either artesian \\
+\hspace*{5mm} or exponential
+form. Hint: Some of these operations are much easier if you first
+convert the
+\hspace*{5mm} numbers to exponential form.
+
+$\begin{array}{llll}
+\hspace*{1cm} a)\quad 3\,i   & * \;\; -4\,i  \svs & \hspace*{3cm} b)\quad 5\,i   & *\quad 12     \svs\\
+\hspace*{1cm} c)\quad 5-3\,i & * \;\; -6\,i  \svs & \hspace*{3cm} d)\quad 6+2\,i & *\quad 7-4\,i \svs \\
+\hspace*{1cm} e)\quad 3-4\,i & * \;\; 3-4\,i \svs & \hspace*{3cm} f)\quad 3+4\,i & *\quad 3-4\,i \svs \\
+\hspace*{1cm} g)\quad 3 + 4\, i & /\quad 3 - 4\,i  &&
+\end{array}$ \vs
+
+
+\textbf{5)} Compute the complex conjugates of the following numbers. You
+can express the result \\
+\hspace*{5mm} in either Cartesian or exponential form.
+
+\hspace*{5mm} a) $\quad 14 \; \qquad$ b) $\quad 7\,e^{i\,(\pi/4)} \qquad$ c) $\quad 7+10\,i \qquad$
+d) $\quad 12\,i \qquad$ e) $\quad \frac{2}{3} \, e^{i\,(\pi/2)}$
+
+\end{document}

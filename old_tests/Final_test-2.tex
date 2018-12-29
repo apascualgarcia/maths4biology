@@ -1,0 +1,115 @@
+\documentclass[11pt]{article}
+\usepackage{makeidx}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage{wrapfig}
+\usepackage{here}
+\usepackage{graphicx}
+\usepackage[centertags]{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{subfigure}
+\usepackage{here}
+
+\addtolength{\topmargin}{-2.cm} \addtolength{\textheight}{4cm}
+\addtolength{\oddsidemargin}{-2cm} \addtolength{\textwidth}{3.5cm}
+\addtolength{\evensidemargin}{-2cm}
+
+
+\begin{document}
+\renewcommand\floatpagefraction{.9}
+\renewcommand\topfraction{.9}
+\renewcommand\bottomfraction{.9}
+\renewcommand\textfraction{.1}
+\setcounter{totalnumber}{50} \setcounter{topnumber}{50}
+\setcounter{bottomnumber}{50} \floatsep 20 pt \intextsep 5 pt
+\abovecaptionskip 0 pt
+\belowcaptionskip 0 pt
+
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\ba}{\begin{array}}
+\newcommand{\ea}{\end{array}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\bes}{\begin{eqnarray*}}
+\newcommand{\ees}{\end{eqnarray*}}
+\newcommand{\vs}{\vspace*{0.5cm}}
+\newcommand{\svs}{\vspace*{0.25cm}}
+
+\newcommand{\abs}[1]{\mid \! #1\! \mid}
+\renewcommand{\b}[1]{\mbox{{\bf #1}}}
+\renewcommand{\vec}[1]{\protect\overrightarrow{ #1}}
+\newcommand{\mat}[1]{\mbox{\boldmath $#1$}}
+
+\long\def\bform#1\eform{\begin{equation}
+   \begin{minipage}{\eqbreite}\vskip .1cm
+   \let\\ = \thcr
+   \halign{$\displaystyle{##}$ \hfil
+  && $\displaystyle{##}$\hfil\cr#1\cr}
+   \vskip .3cm \end{minipage}
+\end{equation}}
+\def\thcr{\cr\noalign{\vskip.3cm}}
+\newlength{\eqbreite}\setlength{\eqbreite}{\textwidth}
+\addtolength{\eqbreite}{-1.5cm}
+
+\long\def\bnn#1\enn{$$\begin{minipage}{\eqbreite}
+\vskip .1cm \let\\ = \thcr \halign{$\displaystyle{##}$
+\hfil && $\dispaystyle{##}$\hfil \cr#1 \cr}
+\vskip.3cm \end{minipage}$$}
+
+\parindent 0 in  \parskip .37 cm
+
+\input epsf 
+
+\pagestyle{empty}
+
+\LARGE
+\begin{center}
+\underline{\textbf{ Complex Systems Boot Camp }}
+\end{center}
+
+\begin{flushleft}
+\large \verb"ISC6930"\hspace{5.1cm} \textsc{Section}\#2  \hspace{4.cm} \textsc{Date:} \ldots\ldots. \\
+\vspace*{.3cm} \large \textsc{Name:}
+\ldots\ldots\ldots\ldots\ldots\ldots\hspace{1.85cm} SS\#:
+\ldots\ldots\ldots\ldots\ldots\ldots\hspace{2cm}\textsc{Points:} \ldots\ldots\\
+\line(1,0){455}
+\end{flushleft}
+
+\normalsize
+\textbf{1)} Find the derivative of the function $ f(x) = x^{2} - x$
+using the difference quotient. \vs
+
+\textbf{2)} Find the derivative of the following functions with respect to $x$:
+\bnn \begin{array}{lcl}
+   \quad \mbox{a)}\quad f(x)=x^{2} - x^{-\frac{1}{2}} \qquad && \quad \mbox{b)}\quad f(x) = 3\sin x +  \cos x\vs \\
+   \quad \mbox{c)}\quad f(x)=e^{x} + 2\,\ln x \qquad && \quad  \mbox{d)}\quad f(x) = x\,e^{x} \vs \\
+   \quad \mbox{e)}\quad f(x)=\frac{x^{2} + 3}{x + 2} \qquad &&  \quad \mbox{f)} \quad f(x) = \sin(x^2 - x) \vs \\
+                                                 & \mbox{Now don't panic!} & \vs \\
+   \quad \mbox{g)}\quad f(x)=e^{3\,x\,\cos2x} \qquad &&  \quad \mbox{h)}\quad f(x)=\ln\{\sin(3x^4 - 3) \sin x \} \vs \\
+   \quad \mbox{i)}\quad f(x)=\frac{\sqrt{\sin^2x -x^3}}{x^2+3}  \qquad 
+       &&  \quad \mbox{j)}\quad f(x)=\frac{2\,\cos^2x-2+2\,\sin^2x+x^2\,\sin 3\,x}{\sqrt{4-4\,\cos^2 3\,x}}
+ \end{array} \enn \svs
+
+\textbf{3)} Plot the function $f(x) = x - x^{2}$. \svs \\ \svs
+\hspace*{4mm} Calculate the derivatives at the following points: $x = 0.2,\; 0.5,\; 0.7$. \\ \vs
+\hspace*{4mm} What does the sign of the derivative at these points tell you about the nature of the function?
+
+\textbf{4)} Plot $f(x) = \sin x$. Calculate $\; \int_{0}^{2\pi} \sin x \, dx \;\;$ from the graph you have drawn. \vs
+
+\textbf{5)} Evaluate the following indefinite integrals:
+
+$\begin{array}{l}
+   \quad \mbox{a)}\quad \int\,(2\,x + \frac{1}{2}) x^{-\frac{2}{3}} \vspace*{.25cm}\\
+   \quad \mbox{b)}\quad \int\,(3\,\sin x + \cos x)\,dx\vspace*{.25cm}\\
+\end{array}$ \\
+\hspace*{4.5mm} Compare these results with the solutions of $2\, \mbox{a)}$ and $2\, \mbox{b)}$. \vs
+
+\textbf{6)} Evaluate $\quad \int_{0}^{2\pi} \sin^{3} x \, dx \qquad$ (Hint: Use the method of substitution.) \vs
+
+\textbf{7)} Evaluate $\quad \mbox{a)} \quad \int_{1}^{2} x^{2}\,\ln x \, dx$\hspace*{1cm}
+$\mbox{b)}\quad \int_{0}^{\pi} x \, \sin x \, dx \qquad $(Hint: Integrate by parts.)
+
+\end{document}

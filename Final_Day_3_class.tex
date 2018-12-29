@@ -1,0 +1,232 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Actual text starts below:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setcounter{page}{25}
+
+\section{Vector Algebra}
+\subsection{Vectors}
+Until now we have dealt only with  \emph{scalars} which are
+one-dimensional entities consisting of a magnitude and a sign.
+Higher-dimensional entities are composed of several scalars each
+of which is related to a particular direction. These objects are called
+vectors and are represented in print by either using bold symbols like
+{\boldmath $x$} or with an arrow on top as in $\vec{x}$. An
+$n$-dimensional vector has $n$ components $x_i$ with $i=1,...,n$.
+Its magnitude is given by $\abs{\vec{x}}=\sqrt{x_1^2+x_2^2+...+x_n^2}$.
+
+{\bf Notation:} $\quad \vec{x}=\left(\ba{c}x_1 \\ x_2 \\ \cdots \\x_n \ea \right)$
+is a column vector and $\vec{x} = (x_1, x_2, ..., x_n)$ is row vector.
+
+Sometimes a row vector is specifically denoted as $\vec{x}^T$ ($T$ for transposed).
+
+A vector is graphically represented by an arrow. The vector's magnitude
+$\abs{\vec{x}}$ is denoted by the arrow's length. If the starting point of the
+vector coincides with the origin of the coordinate system, then
+its end point corresponds to the coordinates of the vector components.
+Such a vector is called a coordinate vector. \vs
+
+\begin{figure}[!h]
+    \centerline{\epsfxsize=8cm  \epsfbox{matlab/fig24.eps}} \svs
+    \caption{The vector $(1,2)$ is an arrow from the origin to the point $x=1$ and $y=2$.} \label{fig27}
+\end{figure}
+
+
+\subsection{Elementary Vector Operations}
+
+\subsubsection{Addition and Subtraction}
+
+The sum two vectors can be obtained graphically by either shifting
+the tail of the second arrow to the head of the first, or by constructing
+the parallelogram that is defined by the two arrows. The difference between
+two vectors can be found by adding the vector that has the same length but
+points into the opposite direction.
+
+\begin{figure}[!h]
+\centering \subfigure[The sum of two vectors
+$\vec{c}=\vec{a}+\vec{b}$]{\epsfxsize=6cm
+\epsfbox{matlab/fig25a.eps}} \hspace*{1cm} \subfigure[The
+difference between two vectors $\vec{c}=\vec{a}-\vec{b}$]
+           {\epsfxsize=6cm \epsfbox{matlab/fig25b.eps}} \svs
+\caption{Addition and subtraction of vectors} \label{fig28}
+\end{figure}
+
+In components:  $\quad \vec{a} + \vec{b}=(a_1+b_1, ...,a_n+b_n)=(c_1, ...,c_n) = \vec{c}$ \vs
+
+{\bf Properties:}
+\bnn \begin{array}{cccc}
+    \vec{a} + \vec{b} & = & \vec{b} + \vec{a} &  \qquad\quad \mbox{\bf commutative} \qquad\quad \\
+    (\vec{a} + \vec{b}) + \vec{c} & = & \vec{a} + (\vec{b} +\vec{c}) & \qquad\quad \mbox{\bf associative} \qquad\quad
+\end{array} \enn \vs
+
+A closed polygon corresponds to the vector sum equal $\vec{0}$. \svs
+
+\begin{figure}[!h]
+    \centerline{\epsfxsize=6cm  \epsfbox{matlab/fig26.eps}} \svs
+    \caption{$\vec{a_1}+\vec{a_2}+\ldots + \vec{a_5}=\vec{0}$} \label{fig30}
+\end{figure}
+
+\vs {\bf Important note:} Make sure you understand that $\vec{0} \neq 0$ !!!!
+
+\subsubsection{Multiplication of a Vector with a Scalar}
+A vector can be multiplied with a scalar by multiplying each of the components
+which results in either stretching or squeezing  of the vector and may change
+its orientation.
+\bnn
+\vec{a}=\left( \begin{array}{c} 1 \\ 1 \end{array} \right) \quad \qquad
+\vec{b}=-2 \, \vec{a}=-2 \left( \begin{array}{c} 1 \\ 1 \end{array} \right)
+   = \left( \begin{array}{c} -2 \\ -2\\ \end{array} \right)
+\enn \svs
+
+\begin{figure}[!h]
+    \centerline{\epsfxsize=6cm \epsfbox{matlab/fig27.eps}} \svs
+    \caption{The multiplication of a vector with a scalar $\vec{b}=-2\,\vec{a}$} \label{fig31}
+\end{figure} \vs
+
+\textbf{Linear dependence of vectors:}
+
+$n$ vectors $\vec{a_1}, \cdots, \vec{a_n}$ are called {\em linearly independent}, if
+the only way to fulfill
+\bnn
+    \alpha_1 \, \vec{a_1} + \alpha_2 \, \vec{a_2} + \cdots + \alpha_n \, \vec{a_n}=0
+    \quad \mbox{is} \quad \alpha_1=\alpha_2=\cdots=\alpha_n=0
+\enn
+
+If this relation can be fulfilled with certain $\alpha_i \neq 0$, then the vectors
+are said to be {\em linearly dependent}. For instance, imagine $\alpha_1 \not = 0$,
+all others are free. Then $\vec{a_1}$ may be expressed by the other vectors and is
+redundant.
+\beq \vec{a_1}= -\frac{1}{\alpha_1} \sum_{i=2}^n \alpha_i \, \vec{a_i} \eeq
+
+One-dimensional: $\; \; \alpha \, \vec{a}$ represents all vectors on a straight line.
+Such vectors are called collinear.
+
+Two-dimensional: $\;\; \alpha_1 \, \vec{a_1} +\alpha_2 \, \vec{a_2}$
+represents all vectors in the plane. These vectors are coplanar.
+\begin{figure}[!h]
+    \centering
+    \subfigure[Collinear vectors define a line]{\epsfxsize=4cm  \epsfbox{matlab/fig28a.eps}}
+    \hspace*{1cm}
+    \subfigure[Two non-collinear vectors span a plane]{\epsfxsize=7cm  \epsfbox{matlab/fig28b.eps}} \svs
+    \caption{Collinear and coplanar vectors} \label{fig33}
+\end{figure}
+
+\subsubsection{Scalar Product}
+
+Two vectors $\vec{a}$ and $\vec{b}$ can be multiplied such that the result is a scalar $c$.
+This operation is called the {\em scalar, dot} or {\em inner} product.
+\bnn \begin{array}{cc} \svs
+    \vec{a}\cdot\vec{b}=\abs{\vec{a}} \; \abs{\vec{b}} \cos \alpha & \qquad
+    \mbox{where $\alpha$ is the angle between $\vec{a}$ and $\vec{b}$} \qquad \\
+    \vec{a}\cdot\vec{b}=a_{1} \, b_{1}+a_{2} \, b_{2}+...+ a_{n} \, b_{n} & \qquad
+    \mbox{scalar product in components} \qquad
+\end{array} \enn
+
+The scalar product measures the contribution of vector $\vec{a}$ to vector $\vec{b}$
+If the angle between $\vec{a}$ and $\vec{b}$ is $90^{\circ}$ the two vectors are orthogonal, there are no contributions at all. \vs
+
+{\bf Properties:}
+\bnn \begin{array}{cc} \svs
+    \vec{a}\cdot\vec{b}=\vec{b}\cdot\vec{a} & \qquad \mbox{\bf commutative} \qquad \\ \svs
+    (c\, \vec{a})\cdot \vec{b}=c \, (\vec{a}\cdot\vec{b})=\vec{a}\cdot\,(c \, \vec{b}) & \qquad \mbox{\bf associative} \qquad \\
+    (\vec{a_1}+\vec{a_2})\cdot\vec{b}=\vec{a_1}\cdot\vec{b}+\vec{a_2}\cdot\vec{b} & \qquad \mbox{\bf distributive} \qquad
+\end{array} \enn
+
+{\bf Examples:}
+\bnn
+\vec{a}= \left( \begin{array}{c} 2 \\ 0  \end{array} \right) \qquad
+\vec{b}= \left( \begin{array}{c}  1 \\  -2 \end{array} \right) \qquad
+\vec{a}\cdot\vec{b}=2\cdot1+0\cdot(-2)=2
+\enn
+\bnn
+\qquad\qquad \abs{\vec{a}}= 2 \qquad \abs{\vec{b}}=\sqrt{5}
+\quad \rightarrow \quad \cos\alpha=\frac{\vec{a} \cdot \vec{b}}{\abs{\vec{a}}\,\abs{\vec{b}}}
+=\frac{2}{2 \sqrt{5}} \quad \rightarrow \quad \alpha =\arccos\frac{1}{\sqrt{5}} = 1.107 \approx 63^{\circ}
+\enn
+
+\begin{figure}[!ht]
+    \centering
+    \subfigure[Projection of $\vec{b}$ on $\vec{a}$]{\epsfxsize=6cm  \epsfbox{matlab/fig29a.eps}}
+    \hspace*{1cm}
+    \subfigure[If $\alpha>90^0$ then $\cos \alpha < 0$ and the scalar
+        product is negative]{\epsfxsize=6cm \epsfbox{matlab/fig29b.eps}} \svs
+    \caption{Scalar Product}  \label{fig35}
+\end{figure} \vs
+
+\begin{figure}[!h]
+    \centering
+    \subfigure[The dot product has is maximal value in the case $\alpha = 0 \; \rightarrow \cos \alpha =1$]
+    {\epsfxsize=6cm  \epsfbox{matlab/fig30a.eps}}
+    \hspace*{1cm}
+    \subfigure[For $\alpha = 90^{\circ}$ the scalar product vanishes because $\cos \alpha =0$]
+    {\epsfxsize=6cm  \epsfbox{matlab/fig30b.eps}} \svs
+    \caption{Scalar product for parallel and orthogonal vectors}
+\end{figure}
+
+\newpage
+
+\subsubsection{Vector Product}
+
+Two vectors $\vec{a}$ and $\vec{b}$ can be multiplied such that the result is a vector $\vec{c}$.
+This operation is called the {\em vector, cross} or {\em outer} product.
+
+\vs \centerline{\bf The vector product exists only in three dimensions !!!}
+\bnn
+\vec{a}\times \vec{b} = \vec{c} \qquad\qquad
+\abs{\vec{c}} = \abs{\vec{a} \times \vec{b}} = \abs{\vec{a}} \, \abs{\vec{b}} \, \sin \alpha
+\enn
+
+\bnn
+\left(\begin{array}{c} a_{1} \\ a_{2} \\ a_{3} \\ \end{array}\right) \times
+\left(\begin{array}{c} b_{1} \\ b_{2} \\ b_{3} \\ \end{array}\right)
+=\left(\begin{array}{c} a_{2}b_{3}-a_{3}b_{2} \\ a_{3}b_{1}-a_{1}b_{3} \\ a_{1}b_{2}-a_{2}b_{1} \end{array}\right)
+\qquad \mbox{vector product in components}
+\enn
+
+The result of a vector product between two non-collinear vectors $\vec{a}$ and $\vec{b}$ is a vector $\vec{c}$ 
+which has a magnitude of $\abs{\vec{a}}\,\abs{\vec{b}} \, \sin\alpha$ and points into the direction perpendicular
+to the plane defined by $\vec{a}$ and $\vec{b}$ such that $\vec{a}$, $\vec{b}$ and $\vec{c}$ form a right-handed 
+system. To find this direction have your right thumb point into the direction of $\vec{a}$, the right index into
+the direction of $\vec{b}$, and the right middle finger perpendicular to the plane defined by $\vec{a}$ and $\vec{b}$. 
+There is only one way to do that without hurting yourself seriously. Now the middle finger points into the direction 
+of $\vec{c}$. 
+
+Hint: It is imperative that you use the {\bf right} hand for this. \svs
+
+{\bf Properties:}
+\bnn \begin{array}{cc} \svs
+    \vec{a} \times \vec{b}=-\vec{b} \times \vec{a} & \qquad \qquad \mbox{anti-commutative} \\ \svs
+    (c\,\vec{a}) \times \vec{b}= c\,(\vec{a} \times \vec{b})= \vec{a} \times (c\, \vec{b}) & \qquad\qquad \mbox{associative} \\
+    (\vec{a_1}+\vec{a_2}) \times \vec{b}=\vec{a_1} \times \vec{b}+\vec{a_2} \times \vec{b} & \qquad\qquad \mbox{distributive}
+\end{array} \enn \svs
+
+{\bf Note:} In 3 dimensions a plane can be defined by a point in the plane and its {\em normal vector} $\vec{n}$. \vs
+
+\begin{figure}[!h]
+    \centering
+    \subfigure[$\vec{a}$ and $\vec{b}$ span a plane]{\epsfxsize=7cm  \epsfbox{matlab/fig31a.eps}}
+    \hspace{0.5cm}
+    \subfigure[A plane defined by a point and its normal vector]{\epsfxsize=7cm  \epsfbox{matlab/fig31b.eps}} \svs
+    \caption{Vectors in 3-dimensional space}  \label{fig39}
+\end{figure} \vs
+
+
+\subsection{Basis vectors}
+Basis vectors span a coordinate system and can be represented in various ways
+\bnn \vec{i}, \vec{j}, \vec{k} \qquad \vec{e_1},\vec{e_2},\vec{e_3} \qquad
+\left(\begin{array}{c} 1 \\ 0 \\ 0 \\ \end{array}\right),
+\left(\begin{array}{c} 0 \\ 1 \\ 0 \\ \end{array}\right),
+\left(\begin{array}{c} 0 \\ 0 \\ 1 \\ \end{array}\right) \enn
+
+\bnn \vec{s}= \left(\begin{array}{c} x \\ y \\ \end{array} \right)
+ = x \, \overbrace{\left(\begin{array}{c} 1 \\ 0 \\ \end{array} \right)}^{\overrightarrow{e_1}}
+ +  y \, \overbrace{\left(\begin{array}{c} 0 \\ 1 \\ \end{array}\right)}^{\overrightarrow{e_2}}
+ = x \, \vec{e_1}+y \, \vec{e_2} \enn
+
+\vs \begin{figure}[!ht]
+    \centerline{\epsfxsize=6cm  \epsfbox{matlab/fig33.eps}}
+    \caption{Basis vectors.} \label{fig42}
+\end{figure}
+
+
+

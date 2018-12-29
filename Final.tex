@@ -1,0 +1,262 @@
+\documentclass[11pt]{article}
+
+\usepackage{makeidx}
+
+\usepackage{latexsym}
+
+\usepackage{color}
+
+\usepackage{wrapfig}
+
+\usepackage{here}
+
+\usepackage{graphicx}
+
+\usepackage[centertags]{amsmath}
+
+\usepackage{amsfonts}
+
+\usepackage{amssymb}
+
+\usepackage{amsthm}
+
+\usepackage{subfigure}
+
+\usepackage{here}
+
+\usepackage{ulsy}
+
+\usepackage{hyperref}
+
+
+\addtolength{\topmargin}{-2.5cm}
+
+\addtolength{\textheight}{4cm}
+
+\addtolength{\oddsidemargin}{-2cm} \addtolength{\textwidth}{3.5cm}
+
+\addtolength{\evensidemargin}{-2cm}
+
+
+
+\begin{document}
+
+\renewcommand\floatpagefraction{.9}
+
+\renewcommand\topfraction{.9}
+
+\renewcommand\bottomfraction{.9}
+
+\renewcommand\textfraction{.1}
+
+\setcounter{totalnumber}{50} \setcounter{topnumber}{50}
+
+\setcounter{bottomnumber}{50} \floatsep 20 pt \intextsep 5 pt
+
+\abovecaptionskip 0 pt
+
+\belowcaptionskip 0 pt
+
+
+
+\newcommand{\beq}{\begin{equation}}
+
+\newcommand{\eeq}{\end{equation}}
+
+\newcommand{\ba}{\begin{array}}
+
+\newcommand{\ea}{\end{array}}
+
+\newcommand{\bea}{\begin{eqnarray}}
+
+\newcommand{\eea}{\end{eqnarray}}
+
+\newcommand{\bes}{\begin{eqnarray*}}
+
+\newcommand{\ees}{\end{eqnarray*}}
+
+\newcommand{\vs}{\vspace*{0.5cm}}
+
+\newcommand{\svs}{\vspace*{0.25cm}}
+
+
+
+\newcommand{\abs}[1]{\mid \! #1\! \mid}
+
+\renewcommand{\b}[1]{\mbox{{\bf #1}}}
+
+\renewcommand{\vec}[1]{\protect\overrightarrow{ #1}}
+
+\newcommand{\mat}[1]{\mbox{\boldmath $#1$}}
+
+
+
+\long\def\bform#1\eform{\begin{equation}
+
+   \begin{minipage}{\eqbreite}\vskip .1cm
+
+   \let\\ = \thcr
+
+   \halign{$\displaystyle{##}$ \hfil
+
+  && $\displaystyle{##}$\hfil\cr#1\cr}
+
+   \vskip .3cm \end{minipage}
+
+\end{equation}}
+
+\def\thcr{\cr\noalign{\vskip.3cm}}
+
+\newlength{\eqbreite}\setlength{\eqbreite}{\textwidth}
+
+\addtolength{\eqbreite}{-1.5cm}
+
+
+
+\long\def\bnn#1\enn{$$\begin{minipage}{\eqbreite}
+
+\vskip .1cm \let\\ = \thcr \halign{$\displaystyle{##}$
+
+\hfil && $\displaystyle{##}$\hfil \cr#1 \cr}
+
+\vskip.3cm \end{minipage}$$}
+
+
+
+\parindent 0 in
+
+\parskip .25 cm
+
+
+
+\input epsf
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Actual text starts below:
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\thispagestyle{empty}
+
+\svs
+
+\begin{center}
+
+\begin{huge}
+  \textrm{\textbf{Maths	{\textcolor{red}{\Huge 4}}Biology}}\\
+\end{huge} 
+\vspace*{1cm}
+\begin{Large}
+  {\bf Alberto Pascual-Garc{\'i}a} \\
+\end{Large}
+
+\end{center} \vs
+
+
+
+\normalsize
+This project contains supporting notes and scripts for the course "Maths for Biology"
+of the Master for Computational Methods in Ecology and Evolution at 
+Imperial College London. It is a \href{}{fork} of the the 
+\href{https://github.com/vjirsa/bootcamp}{project} "Mathematics Boot Camp" proposed
+by \href{http://ins.univ-amu.fr/research-teams/team-member/v.jirsa/}{Viktor Jirsa}
+for graduate courses at the Center for Complex Systems \& Brain Sciences at Florida
+Atlantic University. Similar in spirit, by no means it is intended to compete with the
+traditional introductory courses in mathematics taught at universities. Rather it should
+be viewed as a synopsis of the mathematical tools most probably encountered in scientific
+applications. With respect to Jistra's notes, the present project expands on
+some of the topics and includes first-Order Differential Equations, of oustanding importance
+in Ecology. On the other hand, Fourier analysis is not considered in the course, although it is maintained
+in these notes for completeness.
+
+\vs \svs
+
+
+
+\begin{figure}[!h]
+
+    \centerline{\epsfxsize=10cm  \epsfbox{FRONT_COVER.ps}}
+
+\end{figure} \vs \svs
+
+
+
+\begin{center} \Large
+
+\textrm{Z{\"u}rich, December 2018 \\
+     Institute of Integrative Biology \\
+     ETH}
+\end{center}  \normalsize
+
+
+
+\newpage
+
+\vspace{5cm}
+\begin{center} \Large
+  \textrm{{\bf LICENSE -- DOCUMENT}\\
+    \vs
+    Copyright (c) 2018 Viktor K. Jirsa and Alberto Pascual-Garc{\'i}a}
+\end{center} \normalsize \vs \svs
+
+
+
+This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. 
+To view a copy of this license, visit \href{http://creativecommons.org/licenses/by-nc-sa/4.0/}{this page} or send a letter 
+to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+\vspace{3cm}
+
+%\begin{figure}
+%
+%    \centerline{\epsfxsize=11cm \includegraphics{CC-license.eps}}
+%
+%\end{figure} \vs \svs
+
+
+\vspace{5cm}
+\begin{center} \Large
+  \textrm{{\bf LICENSE -- \href{https://www.flickr.com/photos/anroir/323864105/}{PICTURE COVER}}\\
+    \vs
+    Copyright (c) 2016 anroir \href{https://www.flickr.com/people/anroir/}{(https://www.flickr.com/people/anroir/)}}
+\end{center} \normalsize \vs \svs
+
+
+The picture in the cover of the document is licensed under a Creative Commons Attribution-NonCommercial 2.0 International License. 
+To view a copy of this license, visit \href{https://creativecommons.org/licenses/by-nc/2.0/}{this page} or send a letter 
+to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+
+\newpage
+
+\tableofcontents
+
+\listoffigures
+
+
+
+\newpage
+
+\pagestyle{plain}
+
+
+
+\input{Final_Day_1}  \newpage
+
+\input{Final_Day_2}  \newpage
+
+\input{Final_Day_3}  \newpage
+
+\input{Final_Day_4}  \newpage
+
+\input{Final_Day_5}
+
+
+
+\end{document}
+

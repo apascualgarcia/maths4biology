@@ -1,0 +1,342 @@
+%\setcounter{page}{1}
+
+\section{Function Theory}
+\subsection{Foundations}
+
+{\bf Definition:} A {\em function} $f$ is a rule which unambiguously
+assigns $y \in B$ to each $x \in A$.
+
+"$x \in A$" means that "$x$ is an element of $A$". \vs
+
+\begin{figure}[!h]
+    \centerline{\epsfxsize=11cm  \epsfbox{matlab/fig1.eps}} \vs
+    \caption{Illustration of a function} \label{fig1}
+\end{figure} \vs
+
+{\bf Notation:}
+\bnn \begin{array}{ccc}
+    f: & A \rightarrow B & \\ \svs
+    f: & A \rightarrow B & \;\; x\in A, \; y\in B \\ \svs
+    & y = f(x) & \;\; x\in A, \; y\in B \\ \svs
+    & y = y(x) & \;\; x\in A, \; y\in B
+\end{array} \enn \vs
+
+{\bf Examples:}
+
+\vs \begin{figure}[!h]
+   \centerline{\epsfxsize=11cm \epsfbox{matlab/fig2.eps}} \vs
+   \caption{Assigning an element $\{21\} \in B$ to $\{1\} \in A$} \label{fig2}
+\end{figure} \vs
+
+\newpage
+
+Most commonly, functions are defined by equations: $\qquad y = f(x) = 2x + 1 \qquad\quad y=f(x)=x^2$  \svs
+
+{Graphical representation:} \svs
+\begin{figure}[!h]
+    \centering
+    \subfigure[Function $y = 2x + 1$]{\epsfxsize=7cm \epsfbox{matlab/fig3a.eps}}
+    \hspace*{0.5cm}
+    \subfigure[Function $y = x^2$]{\epsfxsize=7cm \epsfbox{matlab/fig3b.eps}} \svs
+    \caption{A linear and a quadratic function} \label{fig3}
+\end{figure} \vs
+
+\subsection{Inverse Functions}
+
+$f^{-1}$ denotes the inverse of the function $f$. \vs
+
+\begin{figure}[!h]
+   \centerline{\epsfxsize=11cm  \epsfbox{matlab/fig4.eps}} \svs
+    \caption{Inverse function} \label{fig4}
+\end{figure} \vs
+
+{\bf Notation:}
+\bnn f^{-1}: \; B \rightarrow A \enn \svs
+\bnn x = f^{-1}\,(y) \qquad \mbox{where} \qquad y = f(x) \enn \svs
+
+Graphically the inverse can be constructed as the mirror image of the function at the
+first bisector. This method always works, but caution is asked for, because the inverse 
+may not be unique and require more detailed discussion.
+
+{\bf Example:}
+\bnn y = f(x) = 2x + 1  \qquad  x = f^{-1}\,(y) = \frac{1}{2} \, (y-1) \enn
+
+{\bf Note:} There is not always an inverse function!  \vs
+
+\begin{figure}[!h]
+   \centerline{\epsfxsize=11cm \epsfbox{matlab/fig5.eps}} \svs
+    \caption{The inverse $f^{-1}$ is not unique, thus not a function.} \label{fig5}
+\end{figure} \vs
+
+
+{\bf Example:}
+\bnn y = f(x) = x^2 \enn
+\bnn x = \sqrt{y} \qquad \mbox{or} \qquad x = -\sqrt{y} \enn  \vs
+
+\begin{figure}[!h]
+    \centering
+    \subfigure[$\; f(x)=2\,x+1 \; \rightarrow \; f^{-1}(x)=\frac{1}{2}(x-1)$]{\epsfxsize=7cm \epsfysize=7cm
+        \epsfbox{matlab/fig6a.eps}}
+    \hspace*{0.5cm}
+    \subfigure[$\; f(x)=x^2 \; \rightarrow \; f^{-1}(x)=\pm\sqrt{x}$]{\epsfxsize=7cm \epsfysize=7cm
+         \epsfbox{matlab/fig6b.eps}} \svs
+    \caption{Graphical construction of the inverse function} \label{fig6}
+\end{figure}
+
+\newpage
+\subsection{Implicit Functions}
+A function is not given explicitly as in $y = f(x)$, but
+implicitly by $F(x,y) = 0$.
+
+{\bf Example:} Unit circle: $\quad F(x,y)=x^2+y^2-1=0$. \svs
+
+\begin{figure}[!h]
+    \centerline{\epsfxsize=7cm \epsfysize=7cm \epsfbox{matlab/fig7.eps}} \svs
+    \caption{Unit circle} \label{fig7}
+\end{figure} \svs
+
+The implicit representation of the unit circle also needs additional conditions to become
+unique and thus a function: a local neighborhood has to be defined, e.g. $y=\sqrt{1-x^2}$
+for \mbox{$x\in (-1;1)$},  \mbox{$y >0$} and $y=-\sqrt{1-x^2}$ for $x\in (-1;1), \, y<0$.
+
+\subsection{Polynomials}
+Polynomials are defined as a class of functions of the form
+\bnn y = a_0 + a_1 \, x + a_2 \, x^2 + \dots + a_N \, x^N = \sum_{n=0}^N a_n \, x^n \enn
+where the function $y$ is said to be a polynomial of order $N$.  \svs
+
+{\bf Example:}
+\bnn y = \underbrace{2}_{a_2} x^2 + \underbrace{8}_{a_1} x + \underbrace{4}_{a_0} \enn
+
+{\bf Goal:} To achieve a qualitative understanding of a given function without computing each value.
+
+{\bf Approach:}
+\bnn y = \sum_{n=0}^N a_n \, x^n  \qquad \mbox{where we assume} \;\; a_N>0 \enn
+
+\begin{description}
+\item[{\bf Step 1:}] If $N$ is even, then $x \rightarrow \pm\infty : y \rightarrow \pm \infty \, ; \quad$
+if $N$ is odd, then $x \rightarrow \pm \infty : y \rightarrow \mp \infty$. Note: If $a_N<0$,
+the behavior is the opposite.
+\item[{\bf Step 2:}] A polynomial of order $N$ has $N$ roots which are the solutions of $f(x)=0$.
+
+Set $y=0: f(x) = x^N + a_{N-1}\, x^{N-1} + \dots + a_1 \,x + a_0 = 0 $
+\bnn \begin{array}{ccl} \svs
+y = 17x + 4 \quad & y=0: x=-\frac{4}{17} & \quad \rightarrow  \quad \mbox{1 root} \\
+y = 2x^2 + 8x + 4 \quad & y=0: x=\frac{1}{4}(-8 \pm \sqrt{8^2-4\cdot2\cdot4})=\frac{1}{4}(-8 \pm
+\sqrt{32)}=-2 \pm \sqrt{2} & \quad \rightarrow \quad  \mbox{2 roots}
+\end{array} \enn
+\begin{center}
+    $\Rightarrow$ the roots are the locations where $f(x)$ crosses the $x$-axis.
+\end{center}
+\end{description}
+
+{\bf Examples:} Construct graph of $y=f(x)$ \vs
+\begin{figure}[!h]
+\centering \subfigure[Step 1: $y=x^2+3x+2$] {\epsfxsize=7cm \epsfbox{matlab/fig8a.eps}}
+\hspace*{0.5cm}
+\subfigure[Step 2:  $y=x^2+3x+2=0$] {\epsfxsize=7cm \epsfbox{matlab/fig8b.eps}} \svs 
+\caption{Graphical construction (the roots are $x=-1$ and $x=-2$)} \label{fig8}
+\end{figure}
+
+\vs\vs\begin{figure}[!h]
+\centering \subfigure[Step 1: $y=x^3+2x^2-3x$] {\epsfxsize=7cm \epsfbox{matlab/fig9a.eps}}
+\hspace*{0.5cm}%
+\subfigure[Step 2: $y=x^3+2x^2-3x=0$] {\epsfxsize=7cm \epsfbox{matlab/fig9b.eps}} \svs 
+\caption{Graphical construction (the roots are $x=-3, x=0$ and $x=1$)} \label{fig9}
+\end{figure}
+
+\begin{figure}[!h]
+\centering \subfigure[Step 1: $y=x^4+2x^3-3x^2$] {\epsfxsize=7cm \epsfbox{matlab/fig10a.eps}}
+\hspace*{0.5cm}%
+\subfigure[Step 2: $y=x^4+2x^3-3x^2=0$] {\epsfxsize=7cm \epsfbox{matlab/fig10b.eps}} \svs 
+\caption{Graphical construction (the roots are $x=-3, x=0$ and $x=1$)} \label{fig9}
+\end{figure} 
+
+\newpage
+
+{\bf Horizontal translation} is a horizontal shift of a function by $x_0$
+\bnn y=f(x) \; \rightarrow \; y =f(x-x_0) \enn
+
+{\bf Example:} $\qquad y = x^2$  \; shift by $\; x_0=2$: \; $ y = (x-2)^2 = x^2 - 4x +4$  \vs
+
+\vs {\bf Vertical translation} is a vertical shift of a function by $y_0$
+\bnn y=f(x) \; \rightarrow \; y =f(x)+y_0 \enn
+
+{\bf Example:} $\qquad y=x^2$ \; shift by $\; y_0=2$: \;  $ y=x^2+2 $ \vs
+
+\vs\begin{figure}[!h]
+\centering \subfigure[Horizontal shift by $x_0=2: y=(x-2)^2$]{\epsfxsize=7cm \epsfbox{matlab/fig11a.eps}} 
+\hspace*{0.5cm}
+\subfigure[Vertical shift by $y_0=2: y = x^2+2$] {\epsfxsize=7cm \epsfbox{matlab/fig11b.eps}} \svs 
+\caption{Vertical and horizontal shift of $y=x^2$} \label{fig11}
+\end{figure}
+
+\subsection{Trigonometric Functions}
+Trigonometric functions are a class of periodic functions such as
+\bnn y = f(x) = A \sin(kx + \phi) \quad \mbox{and} \quad
+     y = f(x) = A \cos(kx + \phi) \enn
+
+The constant parameters are the amplitude
+$A$, the frequency $k$ and the phase (angle) $\phi$. The period is
+defined as $\lambda=2\pi/k$ and the trigonometric functions fulfill
+the relation $f(x+\lambda)=f(x)$.
+\small  \vspace*{-5mm} \begin{center} \begin{tabular}{|c|c|c|c|c|c|c|c|c|} \hline
+\multicolumn{9}{|c|} {Special values of trigonometric functions (midnight stuff)\rule{0pt}{4mm}} \\
+\hline \hline
+$x$ & $\;0\;$ & $\pi/6=30^{\circ}$ & $\pi/4=45^{\circ}$ & $\pi/3=60^{\circ}$ & $\;\pi/2=90^{\circ}\;$ & $\;\pi=180^{\circ}\;$
+ & $\;3\pi/2=270^{\circ}\;$ & $\;2\pi=360^{\circ}\; $  \rule{0pt}{4mm} \\
+\hline
+$\;\sin x\;$ & $0$ & $1/2$ & $\sqrt{2}/2$ & $\sqrt{3}/2$ & $1$ & $0$ & $-1$ & $0$  \rule{0pt}{4mm} \\
+\hline
+$\cos  x$    & $1$ & $\sqrt{3}/2$ & $\sqrt{2}/2$ & $1/2$ & $0$ & $-1$ & $0$ & $1$ \rule{0pt}{4mm} \\
+\hline
+\end{tabular} \end{center} \normalsize
+
+Horizontal translation (shift) by means of $\phi$:
+\bnn
+\sin(x+\frac{\pi}{2})=\cos{x} \qquad \cos(x+\frac{\pi}{2})=-\sin{x} \qquad
+\sin(x-\frac{\pi}{2})=-\cos{x} \qquad \cos(x-\frac{\pi}{2})=\sin{x}
+\enn
+
+Useful relations between $\cos{x}$ and $\sin{x}$:
+\bnn \cos^2{x}+\sin^2{x}=1 \enn
+\bnn \sin(x\pm y)=\sin{x}\cos{y} \pm \cos{x}\sin{y} \qquad
+\cos(x\pm y) = \cos{x}\cos{y} \mp \sin{x}\sin{y} \enn
+\bnn \sin{2x} = 2\sin{x}\cos{x} \qquad
+\cos{2x} = \cos^2{x} - \sin^2{x} \enn
+
+Other trigonometric functions:
+\bnn \tan{x} = \frac{\sin{x}}{\cos{x}} \qquad\qquad \cot{x} = \frac{\cos{x}}{\sin{x}} \enn
+
+\begin{figure}[!h]
+\centering 
+\subfigure[The functions  $y\!=\!\sin{x}$ and \mbox{$y\!=\!\cos{x}$}] {\epsfxsize=7cm \epsfbox{matlab/fig12a.eps}}
+\hspace*{0.5cm}
+\subfigure[The functions $y\!=\!\tan{x}$ and $y\!=\!\cot{x}$. Note that these are $\pi$-periodic]
+           {\epsfxsize=7cm \epsfbox{matlab/fig12b.eps}} \svs
+\caption{The most common trigonometric functions} \label{fig12}
+\end{figure}
+
+
+\subsection{Exponential Functions}
+
+Exponential functions are functions most commonly used in the form
+\bnn y = A e^{kx} = A \exp{k x} \enn
+with the constant parameters: $A$ amplitude, $k$ growth rate if $k>0$ and the damping or fall 
+off, if $k<0$, and $e$ Euler number: 2.714....
+
+Note that $e^0=1\;$ and $\;e^{-x}=\frac{1}{e^x}$. \svs
+
+\begin{figure}[!h]
+    \centerline{\epsfxsize=10cm \epsfbox{matlab/fig13.eps}}
+    \caption{Exponential functions} \label{fig13}
+\end{figure} \vs
+
+
+\subsection{Hyperbolic Functions}
+
+Hyperbolic functions are of the form
+\bnn y = f(x) = \cosh{x} = \frac{1}{2}(e^x + e^{-x}) \qquad\mbox{hyperbolic cosine} \enn
+and
+\bnn y = f(x) = \sinh{x} = \frac{1}{2}(e^x - e^{-x}) \qquad\mbox{hyperbolic sine} \enn
+
+They have similar properties as the trigonometric functions such as a representation by
+exponentials (as we shall see later), and their derivatives convert into each other. 
+But the hyperbolic functions are {\em not} periodic. \vs
+
+Other hyperbolic functions:
+\bnn
+y=\tanh{x}=\frac{\sinh{x}}{\cosh{x}}=\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}} \qquad
+y=\coth{x}=\frac{\cosh{x}}{\sinh{x}}=\frac{e^{x}+e^{-x}}{e^{x}-e^{-x}}
+\enn
+
+\begin{figure}[!h]
+    \centering
+    \subfigure[$y=\sinh{x}\;$ and $\;y=x+\frac{1}{3!}\,x^3$]{\epsfxsize=7cm \epsfbox{matlab/fig14b.eps}}
+    \hspace*{0.5cm}
+    \subfigure[$y=\cosh{x}\;$ and $\;y=1+\frac{1}{2!}\,x^2$]{\epsfxsize=7cm \epsfbox{matlab/fig14a.eps}} \svs
+    \caption{Hyperbolic functions} \label{fig14}
+\end{figure} \vs
+
+
+
+\subsection{Basic Inverse Functions}
+\subsubsection{Logarithms}
+The logarithms are the inverse of the exponential functions:
+\bnn y=a^x \quad \leftrightarrow \quad x = \log_a y  \qquad\mbox{where} \quad 0<y<\infty \enn
+
+{\bf Special cases:}
+\begin{eqnarray*}
+\begin{array}{lcccccc}
+a=e: \qquad & y & = & \log_e x & = & \ln x & \qquad\mbox{natural logarithm}\\
+a=10: \qquad & y & = & \log_{10} x & = & \mbox{lg} x & \qquad\mbox{decimal logarithm}\\
+a=2: \qquad  & y & = & \log_2 x & = & \mbox{ld} x & \qquad\mbox{dual logarithm}
+\end{array}
+\end{eqnarray*}
+
+\begin{figure}[!h]
+    \centerline{\epsfxsize=10cm  \epsfbox{matlab/fig15.eps}} \svs
+   \caption{The logarithmic functions $y=\ln(x)$, $y=\mbox{lg}(x)$, $y=\mbox{ld}(x)$, and $y=-\ln(x)$.} \label{fig15}
+\end{figure} \vs
+
+{\bf Remark:} The most commonly used logarithm is $\ln x$, but there are certain applications for other 
+logarithms as well. For instance, the decimal logarithm can be used to find the number of digits in 
+a decimal number 
+($\mbox{lg} 4821=3.683 \rightarrow$  taking the whole number in front of the decimal point and 
+adding 1 gives the number of digits, 4). Similarly, the dual logarithm can be used to find the number
+of bits or binary digits that are necessary to represent a number $n$ in binary format, i.e. as 
+zeros and ones.  
+
+{\bf Rules and tricks for dealing with logarithms:}
+\bnn \ln x^n = n \ln x \enn
+\bnn \ln x_1 \, x_2 = \ln x_1 + \ln x_2  \qquad  \ln \frac{x_1}{x_2} = \ln x_1 - \ln x_2  \enn
+\bnn \log_a x = \frac{\ln x}{\ln a} \enn
+
+{\bf Note:} Every logarithm can be expressed in terms of the natural logarithm, and every exponential 
+function can be written in terms of the basis $e$
+\bnn    a^x = e^{x\,\ln a} \quad \mbox{with} \quad a>0 \qquad \mbox{\bf Very useful relation!} \enn 
+
+\subsubsection{Other inverse functions}
+\vspace*{-0.9cm} \begin{eqnarray*} \begin{array}{llll}
+y=\sin x & \rightarrow & x = \arcsin y & \mbox{arc sine} \\
+y=\cos x & \rightarrow & x = \arccos y & \mbox{arc cosine} \\
+y=\tan x & \rightarrow & x = \arctan y & \mbox{arc tangent} \\
+y=\cot x & \rightarrow & x = \mbox{arccot } y & \mbox{arc cotangent} \\
+y=\sinh x & \rightarrow & x = \mbox{arcsinh } y & \\
+& & x=\ln(y+\sqrt{y^2+1})
+& \mbox{area sine hyperbolic} \\
+y=\cosh x & \rightarrow & x = \mbox{arccosh } y & \\
+& & x = \ln(y+\sqrt{y^2-1})
+& \mbox{area cosine hyperbolic}
+\end{array} \end{eqnarray*} \svs
+
+\begin{figure}[!h]
+    \centering
+    \subfigure[Arc sine, and arc cosine]{\epsfxsize=7cm \epsfbox{matlab/fig15_1a.eps}}
+    \hspace*{0.5cm}
+    \subfigure[Arc tangent, and arc cotangent]{\epsfxsize=7cm \epsfbox{matlab/fig15_1b.eps}} \svs
+    \caption{The inverse of the trigonometric functions}
+\end{figure}
+
+\subsection{Elementary Combinations of Functions}
+\subsubsection{Superposition}
+Two functions are superimposed on each other by adding their values for the same $x$.
+\bnn y = f_1(x) + f_2(x) \enn
+\vspace*{-.5cm} \begin{figure}[!h]
+    \centering
+    \subfigure[Superposition of $f_1(x)\!=\!-x \mbox{ and } f_2(x)\!=\!1$]{\epsfxsize=7cm \epsfbox{matlab/fig16a.eps}}
+    \hspace{0.5cm}
+    \subfigure[Superposition of $f_1(x)\!=\!-2x \mbox{ and } f_2(x)\!=\!x^3$]{\epsfxsize=7cm \epsfbox{matlab/fig16b.eps}} \svs
+    \caption{Superposition of lines and functions} \label{fig17}
+\end{figure}
+
+\subsubsection{Modulation}
+A function is modulated by another function by multiplying their values for the same $x$. 
+\bnn y = f_1(x) \, f_2(x) \enn
+
+\vs\begin{figure}[!h]
+    \centering
+    \subfigure[$e^{-x}$ is the envelope function of $\cos 10x$] {\epsfxsize=7cm \epsfbox{matlab/fig17a.eps}}
+    \hspace{0.5cm}
+    \subfigure[$\cos 10x$ is modulated with $\sin x$]{\epsfxsize=7cm \epsfbox{matlab/fig17b.eps}}  \svs
+    \caption{Modulation of functions} \label{fig19}
+\end{figure}

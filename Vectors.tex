@@ -1,0 +1,80 @@
+\documentclass[11pt]{article}
+\usepackage{makeidx}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage{wrapfig}
+\usepackage{here}
+\usepackage{graphicx}
+\usepackage[centertags]{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{subfigure}
+\usepackage{here}
+\usepackage{ulsy}
+
+\addtolength{\topmargin}{-2.5cm}
+\addtolength{\textheight}{4cm}
+\addtolength{\oddsidemargin}{-2cm} \addtolength{\textwidth}{3.5cm}
+\addtolength{\evensidemargin}{-2cm}
+
+\begin{document}
+\renewcommand\floatpagefraction{.9}
+\renewcommand\topfraction{.9}
+\renewcommand\bottomfraction{.9}
+\renewcommand\textfraction{.1}
+\setcounter{totalnumber}{50} \setcounter{topnumber}{50}
+\setcounter{bottomnumber}{50} \floatsep 20 pt \intextsep 5 pt
+\abovecaptionskip 0 pt
+\belowcaptionskip 0 pt
+
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\ba}{\begin{array}}
+\newcommand{\ea}{\end{array}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\bes}{\begin{eqnarray*}}
+\newcommand{\ees}{\end{eqnarray*}}
+\newcommand{\vs}{\vspace*{0.5cm}}
+\newcommand{\svs}{\vspace*{0.25cm}}
+
+\newcommand{\abs}[1]{\mid \! #1\! \mid}
+\renewcommand{\b}[1]{\mbox{{\bf #1}}}
+\renewcommand{\vec}[1]{\protect\overrightarrow{ #1}}
+\newcommand{\mat}[1]{\mbox{\boldmath $#1$}}
+
+\long\def\bform#1\eform{\begin{equation}
+   \begin{minipage}{\eqbreite}\vskip .1cm
+   \let\\ = \thcr
+   \halign{$\displaystyle{##}$ \hfil
+  && $\displaystyle{##}$\hfil\cr#1\cr}
+   \vskip .3cm \end{minipage}
+\end{equation}}
+\def\thcr{\cr\noalign{\vskip.3cm}}
+\newlength{\eqbreite}\setlength{\eqbreite}{\textwidth}
+\addtolength{\eqbreite}{-1.5cm}
+
+\long\def\bnn#1\enn{$$\begin{minipage}{\eqbreite}
+\vskip .1cm \let\\ = \thcr \halign{$\displaystyle{##}$
+\hfil && $\dispaystyle{##}$\hfil \cr#1 \cr}
+\vskip.3cm \end{minipage}$$}
+
+\parindent 0 in
+\parskip .25 cm
+
+\input epsf
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Actual text starts below:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{empty}
+
+%\input{Final_Day_1}  \newpage
+%\input{Final_Day_2}  \newpage
+\input{Final_Day_3_class}  \newpage
+%\input{Final_Day_4}  \newpage
+%\input{Final_Day_5}
+
+\end{document}

@@ -1,0 +1,120 @@
+\documentclass[11pt]{article}
+\usepackage{makeidx}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage{wrapfig}
+\usepackage{here}
+\usepackage{graphicx}
+\usepackage[centertags]{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{subfigure}
+\usepackage{here}
+
+\addtolength{\topmargin}{-2.cm} \addtolength{\textheight}{4cm}
+\addtolength{\oddsidemargin}{-2cm} \addtolength{\textwidth}{3.5cm}
+\addtolength{\evensidemargin}{-2cm}
+
+
+\begin{document}
+\renewcommand\floatpagefraction{.9}
+\renewcommand\topfraction{.9}
+\renewcommand\bottomfraction{.9}
+\renewcommand\textfraction{.1}
+\setcounter{totalnumber}{50} \setcounter{topnumber}{50}
+\setcounter{bottomnumber}{50} \floatsep 20 pt \intextsep 5 pt
+\abovecaptionskip 0 pt
+\belowcaptionskip 0 pt
+
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\ba}{\begin{array}}
+\newcommand{\ea}{\end{array}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\bes}{\begin{eqnarray*}}
+\newcommand{\ees}{\end{eqnarray*}}
+\newcommand{\vs}{\vspace*{0.5cm}}
+\newcommand{\svs}{\vspace*{0.25cm}}
+
+\newcommand{\abs}[1]{\mid \! #1\! \mid}
+\renewcommand{\b}[1]{\mbox{{\bf #1}}}
+\renewcommand{\vec}[1]{\protect\overrightarrow{ #1}}
+\newcommand{\mat}[1]{\mbox{\boldmath $#1$}}
+
+\long\def\bform#1\eform{\begin{equation}
+   \begin{minipage}{\eqbreite}\vskip .1cm
+   \let\\ = \thcr
+   \halign{$\displaystyle{##}$ \hfil
+  && $\displaystyle{##}$\hfil\cr#1\cr}
+   \vskip .3cm \end{minipage}
+\end{equation}}
+\def\thcr{\cr\noalign{\vskip.3cm}}
+\newlength{\eqbreite}\setlength{\eqbreite}{\textwidth}
+\addtolength{\eqbreite}{-1.5cm}
+
+\long\def\bnn#1\enn{$$\begin{minipage}{\eqbreite}
+\vskip .1cm \let\\ = \thcr \halign{$\displaystyle{##}$
+\hfil && $\dispaystyle{##}$\hfil \cr#1 \cr}
+\vskip.3cm \end{minipage}$$}
+
+\parindent 0 in  \parskip .37 cm
+
+\input epsf 
+
+\pagestyle{empty}
+
+\LARGE
+\begin{center}
+\underline{\textbf{ Complex Systems Boot Camp }}
+\end{center}
+
+\begin{flushleft}
+\large \verb"ISC6930"\hspace{5.1cm} \textsc{Section}\#5  \hspace{4.cm} \textsc{Date:} \ldots\ldots. \\
+\vspace*{.3cm} \large \textsc{Name:}
+\ldots\ldots\ldots\ldots\ldots\ldots\hspace{1.85cm} SS\#:
+\ldots\ldots\ldots\ldots\ldots\ldots\hspace{2cm}\textsc{Points:} \ldots\ldots\\
+\line(1,0){455}
+\end{flushleft}
+
+\normalsize
+
+\textbf{1)} What is the amplitude, frequency, period and phase of
+the following harmonic function?
+
+\hspace*{4mm} $f(x) = 2\,\sin(3\,x + \frac{\pi}{2})
+\qquad A =$\hspace*{2cm}$\omega =$\hspace*{2cm}$T =$\hspace*{2cm}$\varphi=$\hspace*{2cm} \vs
+
+\textbf{2)} Convert $f(x) = 2\,\sin(3\,x + \frac{\pi}{2})$ into the sum of a sine and cosine
+function. \vs
+
+\textbf{3)} Find the amplitude, period and phase of the following harmonic function.
+
+\hspace*{4mm} $g(x) = 2\,\cos 2\,x + 2\, \sqrt{3} \,\sin 2\,x 
+\qquad A =$\hspace*{2.cm}$T =$\hspace*{2.cm}$\varphi=$\hspace*{2cm} \vs
+
+\textbf{4)} Find the Fourier expansion of $\quad h(x) = x \quad \mbox{with} \quad -\pi<x<\pi, 
+\quad \mbox{and} \quad h(x + 2\pi) = h(x)$ \vs
+
+\textbf{5)} Explain why there are no cosine terms in the answer to question 4. \vs
+
+\textbf{6)} Use Taylor's formula to find the first five terms of the Maclaurian series for:
+$\; f(x) = e^{-2x}$ \vs
+
+\textbf{7)} At what decimal point do you notice the first error in the function at the following points:
+
+\hspace*{4mm} $f(1.2)= $\hspace*{2.5cm} $f(-\frac{1}{2})= $\hspace*{2.5cm} $f(0)= $
+
+\hspace*{4mm} Use the series and compare your answers with those obtained from a calculator. \vs
+
+
+\textbf{8)} Without using the Taylor's formula find the first four terms of the Maclaurian series for:
+
+\hspace*{4mm} $f(x) = -2e^{-2x}$ \hspace*{1cm} (Hint: Modify the series used in problem 6) \vs
+
+\textbf{9)} Find the series formed by differentiating each term of the answer to problem 6. \vs
+
+\textbf{10)} Explain why the problems 8 and 9 have the same result.
+
+\end{document}

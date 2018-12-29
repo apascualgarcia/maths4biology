@@ -1,0 +1,575 @@
+
+
+%\setcounter{page}{46}
+
+
+
+\section{Fourier Series}
+
+Fourier series go back to a publication by the French mathematician Jean Baptiste Joseph Fourier (1768-1830)
+
+in 1804. A \emph{Fourier series} is the decomposition of a function $f(x)$ into a sum of trigonometric
+
+functions. If not stated otherwise we will assume in the following $f(x)=f(x+T)$, i.e. $f(x)$ it periodic
+
+with a period of $T$.\svs
+
+
+
+{\bf A first simple step:}
+
+
+
+Find a representation of the function $f(x)= A\,\sin(kx-\phi)$ in terms of $\sin kx$ and $\cos kx$.
+
+Here $A$ is called the amplitude, $k$ is the frequency and $\phi$ is the phase.
+
+
+
+It can be shown that $f(x)$ can be written in the form
+
+\bnn f(x)=A\,\sin(kx-\phi)=a\,\cos kx+b\,\sin kx \qquad\mbox{with} \qquad a=-A\,\sin\phi \qquad b=A\,\cos\phi \enn
+
+\bnn \mbox{and amplitude and phase given by:}\qquad A=\sqrt{a^2+b^2} \qquad \phi=-\arctan\frac{a}{b} \enn \svs
+
+
+
+{\bf Example:}
+
+\bnn  
+    f(x)=2\,\sin(x-\frac{\pi}{3}) \quad \rightarrow \quad a=-2\,\sin\frac{\pi}{3}=-\sqrt{3} \quad b=2\,\cos\frac{\pi}{3}=1
+    \quad \rightarrow \quad f(x)=-\sqrt{3}\cos x + \sin x
+\enn
+
+
+
+\begin{figure}[!h]
+
+    \centerline{\epsfxsize=12cm \epsfysize=8cm  \epsfbox{matlab/fig42.eps}} \svs
+
+    \caption{$f(x)=2\,\sin(x-\frac{\pi}{3})\;$ expressed as $\;f(x)=-\sqrt{3}\cos x + \sin x$}  \label{fig52}
+
+\end{figure} \vs
+
+
+
+
+
+Superposition of two curves with different frequencies (harmonics):
+
+\bnn \begin{array}{rcl} \svs
+
+   f(x) & = & A_{1}\,\sin(kx-\phi_{1})+A_{2}\,\sin(2kx-\phi_{2}) \\
+
+   & = & a_1\cos kx+ b_1\,\sin kx + a_2\,\cos 2kx+ b_2\,\sin 2kx
+
+\end{array} \enn
+
+
+
+\begin{figure}[!h]
+
+    \centerline{\epsfxsize=12cm \epsfysize=8cm  \epsfbox{matlab/fig43.eps}} \svs
+
+    \caption{Superposition of two functions with different frequencies and phases} \label{fig53}
+
+\end{figure} \svs
+
+
+
+$\Rightarrow$ By these means arbitrarily complicated functions may be constructed or decomposed.
+
+Most functions can be approximated by a sum over trigonometric functions and some higher harmonics.
+
+\bnn
+f(x)\approx\frac{a_0}{2}+\sum^{N}_{n=1}a_n\,\cos nkx + b_n\,\sin nkx \qquad
+        \mbox{where} \;\; a_n \;\; \mbox{and} \;\; b_n \;\; \mbox{are real constants}
+\enn
+
+
+
+In the limit $N \rightarrow \infty$ a large class of functions can be represented as a Fourier series
+
+\bnn  f(x)=\frac{a_0}{2}+\sum^{\infty}_{n=1} a_n\,\cos nkx + b_n\,\sin nkx  \enn
+
+\bnn
+\mbox{or by making use of} \qquad \cos nkx = \frac{1}{2}(e^{inkx}+e^{-inkx}) \quad \mbox{and} \quad
+    \sin nkx = \frac{1}{2\,i}(e^{inkx}-e^{-inkx}) \enn
+
+\bnn
+f(x)=\underbrace{\frac{a_0}{2}}_{c_0}+\sum^{\infty}_{n=1}\left(\underbrace{\frac{a_n-i\,b_n}{2}}_{c_n}\,
+    e^{i nkx}+\underbrace{\frac{a_n+i\,b_n}{2}}_{c_{-n}}\, e^{-inkx}\right)
+    =\sum^{\infty}_{n=-\infty}c_n \, e^{inkx} \enn \vs
+
+
+
+{\bf How can the Fourier coefficients {\boldmath $a_n,\; b_n$} and {\boldmath $c_n$} be found?}
+
+
+
+If $f(x)$ can be represented by a Fourier series then
+
+\bnn
+    f(x)=\frac{a_0}{2}+\sum^{\infty}_{n=1}a_n\,\cos nkx+b_n\,\sin nkx  \qquad \mbox{or} \qquad
+    f(x)=\sum^{\infty}_{n=-\infty}c_n \, e^{inkx}
+\enn
+
+
+
+Now remember the orthogonality relations for the trigonometric functions:
+
+\bnn
+   \int_{-\pi}^\pi\sin mkx \, \sin nkx \;dx =
+   \int_{-\pi}^\pi\cos mkx \, \cos nkx \;dx =\pi \, \delta_{mn} \qquad
+   \int_{-\pi}^\pi\sin nkx \, \cos mkx \;dx =0
+\enn
+
+\bnn \mbox{and for the exponentials:} \qquad \int_{-\pi}^\pi e^{imx} \, e^{-inx} \;dx=2\,\pi\,\delta_{mn} \enn
+
+
+
+So we multiply both sides of the right equation above with $e^{-imkx}$ and integrate from $-\pi$ to $\pi$
+
+\bnn
+    \int_{-\pi}^{\pi} f(x)\, e^{-imkx} \, dx = \int_{-\pi}^{\pi} e^{-imkx} \, dx \sum^{\infty}_{n=-\infty}c_n \, e^{inkx}
+    = \sum^{\infty}_{n=-\infty}c_n \, \underbrace{\int_{-\pi}^{\pi} \, e^{inkx} e^{-imkx} \, dx}_{2\,\pi\,\delta_{mn}}
+\enn
+
+
+
+Because of the orthogonality of the exponential functions the sum disappears and we find for $c_n$
+
+\bnn c_n=\frac{1}{2\,\pi} \int_{-\pi}^{\pi} f(x)\, e^{-inkx} \, dx \qquad n=0, \, \pm 1, \, \hdots \enn
+
+
+
+In a similar way the left equation can be multiplied with $\sin mkx$ and in a second step with $\cos mkx$
+
+and again integrated over $x$ from $-\pi$ to $\pi$. Using the orthogonality relations for sine and cosine
+
+the coefficients $a_n$ and $b_n$ can be readily calculated
+
+\bnn
+    a_n=\frac{1}{\pi}\int_{-\pi}^{\pi} f(x) \, \cos nkx \;dx  \qquad
+    b_n=\frac{1}{\pi}\int_{-\pi}^{\pi} f(x) \, \sin nkx \;dx  \qquad n=0, \, 1, \, \hdots
+\enn \vs
+
+
+
+{\bf Example:} $\qquad f(x)=x^2    \quad -\pi\leq x\leq\pi$
+
+\bnn
+b_n = \frac{1}{\pi}\int_{-\pi}^{\pi} f(x) \,\sin nkx \,dx
+ = \frac{1}{\pi}\int_{-\pi}^{\pi}\underbrace{x^2}_{even} \; \underbrace{\sin nkx}_{odd} \;dx =0 \qquad\mbox{symmetries!!}
+\enn
+
+\bnn
+a_n=\frac{1}{\pi}\int_{-\pi}^{\pi} x^2 \cos nkx \;dx = \frac{2}{\pi}\int_0^{\pi} x^2 \cos nkx \;dx
+    =\frac{2}{\pi}\left[\frac{2x}{(nk)^2}\cos nkx +\left(\frac{x^2}{nk}-\frac{2}{(nk)^3}\right)
+        \sin nkx \right]_0^{\pi} \enn
+
+\bnn =\frac{2}{\pi}\frac{2\pi}{(nk)^{2}}\cos nk \pi = (-1)^{n}\frac{4}{(nk)^2}  \enn
+
+\bnn  
+a_{0} =\frac{2}{\pi}\int_0^{\pi}x^2 \; dx =  \frac{2}{\pi} \left[ \frac{1}{3} x^3 \right]_0^{\pi} 
+=\frac{2}{3} \pi^2  
+\enn
+
+
+
+\bnn
+  \Rightarrow f(x)=\frac{\pi^2}{3}+4\sum^{\infty}_{n=1}(-1)^n\frac{1}{(nk)^{2}}\,\cos nkx
+\enn
+
+
+
+\begin{figure}[!h]
+
+    \centerline{\epsfxsize=10cm  \epsfbox{matlab/fig44.eps}}
+
+    \caption{Decomposition of a non periodic function} \label{fig54}
+
+\end{figure}
+
+
+
+\subsection{Power Spectrum}
+
+Power spectrum is  the power in the n-th frequency component
+
+plotted over all frequencies.
+
+\bnn
+f(x)=\frac{a_0}{2}+\sum^{\infty}_{n=1}\,\underbrace{a_n\,\cos nkx+
+b_n\,\sin nkx}_{\mbox{\small n-th frequency component}} \enn
+
+
+
+\bnn \Rightarrow \quad \mbox{Power:}\quad  P=a_n^2+ b_n^2=A_n^2\,\cos^2\phi_n+A_n^2\,\sin^2\phi_n=A_n^2 \enn
+
+
+
+\bnn \qquad \Rightarrow \quad \mbox{For the above example:} \quad P=a_n^2+ b_n^2=0^2+\frac{16}{(nk)^4}\propto \frac{1}{n^4} \enn
+
+
+
+\begin{figure}[h]
+
+    \centerline{\epsfxsize=10cm  \epsfbox{matlab/fig45.eps}}
+
+    \caption{The power spectrum for $f(x)=x^2$} \label{fig55}
+
+\end{figure}
+
+
+
+\vs {\bf Typical situation:} When a time series is not periodic it may be assumed  to be
+
+periodically  contained. If $T$ it the length of the time series, then the smallest
+
+frequency in the Fourier series is given by $k=\frac{2\pi}{T}$.
+
+
+
+\begin{figure}[!ht]
+
+    \centerline{\epsfxsize=12cm  \epsfbox{matlab/fig46.eps}}
+
+    \caption{A finite non periodic time series is periodically contained} \label{fig56}
+
+\end{figure}
+
+
+
+\subsection{Gibbs' Phenomenon}
+
+It is an obvious question, whether a Fourier series always gets closer and closer to the value
+
+of a given function at all points $x$. The answer is 'yes', if the function is continuous, and
+
+'no' if the function is discontinuous, i.e. it has jumps. Unless we are very lucky, this is 
+
+the case, for instance if we assume a non-periodic time series to be periodically contained as
+
+above. To see what happens around the discontinuities we look at the function 
+
+\bnn
+  f(x)=\left\{ \begin{array}{ccc} 1 & \;\;\mbox{for} & 0\leq x < \pi \\
+            -1 & \;\;\mbox{for} & \pi\leq x < 2\,\pi \end{array} \right. 
+            \quad \mbox{which represents a step function}
+\enn 
+
+Periodically contained this function can be written as a Fourier series of the form
+
+\bnn
+    f(x)=\frac{4}{\pi} \, \left[ \, \sin x + \frac{\sin 3 x}{3}+ \frac{\sin 5 x}{5}+ + \frac{\sin 7 x}{7}+ \; ...\, \right]
+    =\frac{4}{\pi}\, \sum_{n=0}^{\infty} \frac{\sin (2\,n+1)\, x}{2\,n +1}
+\enn 
+
+The figure shows functions obtained from the first (dashed) and the first two terms from the Fourier 
+
+series together with the function for $n=20$. It is obvious, that in the vicinity of the discontinuities
+
+the Fourier series does not converge to the values $\pm 1$ but overshoots and then exhibits a fast damped 
+
+oscillation which is called 'ringing'. These two effects together, the overshoot and the ringing at 
+
+discontinuities are known as Gibbs' phenomenon.
+
+
+
+
+
+\begin{figure}[!ht]
+
+    \centerline{\epsfxsize=12cm \epsfysize=8cm \epsfbox{matlab/fig46_1.eps}} \svs
+
+    \caption{Gibbs' phenomenon} \label{fig56}
+
+\end{figure}
+
+
+
+\subsection{Important Time-Frequency relations}
+
+
+
+\begin{figure}[!h]
+
+    \centerline{\epsfxsize=12cm  \epsfbox{matlab/fig47.eps}}
+
+    \caption{Power spectra of a random signal and a sine wave} \label{fig57}
+
+\end{figure}
+
+
+
+\newpage
+
+\subsection{Taylor Series}\label{taylor}
+
+A Taylor series is an approximation of a function $f(x)$ in the neighborhood of a given point
+
+in terms of its derivatives. This technique has been developed by Brook Taylor($1685-1731$)
+
+and first published in 1715.
+
+
+
+In a first step we can approximate the function $f(x)$ in the neighborhood around $x_0$ by the
+
+tangent through $x_0$
+
+\bnn f(x)=f(x_{0})+f'(x_{0}) \, (x-x_{0})+\mbox{error}
+\enn
+
+
+
+\begin{figure}[!h]
+
+    \centerline{\epsfxsize=12cm  \epsfbox{matlab/fig48.eps}}
+
+    \caption{Approximation of a curve at a point $x_0$ with the tangent at $x_0$} \label{fig58}
+
+\end{figure} \vs \vs
+
+
+
+\centerline{\bf Can we do better than this? Yes if higher order derivatives are considered!}
+
+\bnn f(x)=f(x_{0})+f'(x_0)\,(x-x_0)+\frac{1}{2!}\,F''(x_0)(x-x_0)^2+\frac{1}{3!}\,F'''(x_{0})(x-x_{0})^{3}+... \enn
+
+
+
+\bnn
+    \mbox{\bf Taylor series:} \qquad f(x)=\left. \sum^{\infty}_{n=0}\frac{1}{n!}
+    \,\frac{d^n f(x)}{dx^n}\right|_{x=x_0}\,(x-x_0)^n \qquad
+    \mbox{with}\quad n!=1\cdot2\cdot3\cdot ... \;\;\;\mbox{n-factorial}
+\enn
+
+
+
+A function $f(x)$ may be approximated by truncating a Taylor Expansion
+
+around $x_{0}$ at the m-th order.
+
+
+
+$\Rightarrow$ Polynomial representations of function work well if
+
+the error approaches $0$ as the order $n$ increases.
+
+
+
+{\bf Error estimate:}
+
+\bnn
+    f(x)=\left. \sum^n_{k=0}\frac{1}{k!}\,\frac{d^n f(x)}{dx^n}\right|_{x=x_0} \,(x-x_0)^k+\underbrace{R_n(x)}_{\mbox{error}}
+\enn
+
+
+
+Lagrange formulation of the error $R_n$ in a Taylor expansion that is truncated at order $n$
+
+\bnn
+    R_n(x)=\left. \frac{(x-x_0)^{n+1}}{(n+1)!}\,\frac{d^n f(x)}{dx^n}\right|_{x=\xi} \qquad
+    \xi=x_0+\delta\,(x-x_0) \quad 0< \delta <1
+\enn \vs
+
+
+
+{\bf Examples:}
+
+
+
+Approximate the  function $\sin x$ up to the 7-th order for $x$ around $x_0=0$ (Maclaurin series)
+
+using a Taylor expansion
+
+\bnn
+    \sin x\approx \underbrace{\sin 0}_{0}\; +\;\underbrace{\cos 0\cdot x}_{x}\;+\;\underbrace{-\sin
+    0\frac{1}{2!}\;x^{2}}_{0}\;-\;\frac{1}{3!}\;x^{3}\;+\;\frac{1}{5!}\;x^{5}-\;\frac{1}{7!}\;x^{7} \qquad
+    \mbox{symmetries!!}
+\enn
+
+
+
+\begin{figure}[!ht]
+
+    \centerline{\epsfxsize=10cm  \epsfbox{matlab/fig49.eps}}
+
+    \caption{Steps of a Taylor expansion of $\sin x$ around $x_0=0$}  \label{fig59}
+
+\end{figure} \svs
+
+
+
+The further away you move from the expansion point, the more significant the higher order terms!!
+
+
+
+
+
+\vs {\bf Specific expansion of important functions:}
+
+\bnn
+\sin x=x-\;\frac{1}{3!}\;x^3\;+\;\frac{1}{5!}\;x^5-\;....\;\frac{(-1)^{n+1}}{(2\,n+1)!}\;x^{2\,n+1} \qquad \mbox{only odd terms}
+\enn
+
+\bnn
+\cos x=1-\;\frac{1}{2!}\;x^2\;+\;\frac{1}{4!}\;x^4-\;....\;\frac{(-1)^n}{2\,n!}\;x^{2\,n} \qquad\qquad \mbox{only even terms}
+\enn
+
+\bnn e^{x}=1+\;\frac{1}{2!}\;x^2\;+\;\frac{1}{3!}\;x^3\;+\;....\;\frac{1}{n!}\;x^n \enn
+
+\bnn  \mbox{ln}(1+x)=x-\;\frac{x^{2}}{2!}\;+\;\frac{x^{3}}{3!}\;+\;....\;\frac{(-1)^{n+1}}{n!}\;x^{n+1}  \enn
+
+
+
+
+
+\vs {\bf Euler's Formula: {\boldmath $e^{i\theta}=\cos\theta+i\,\sin\theta$}}
+
+\bnn e^{i\,\theta}=1+i\theta +\frac{1}{2!}\underbrace{(i\,\theta)^2}_{-\theta^2}+ \frac{1}{3!}\underbrace{(i\,\theta)^3}_{-i\,\theta^3}+\frac{1}{4!}\underbrace{(i\,\theta)^4}_{\theta^4}+
+\frac{1}{5!}\underbrace{(i\theta)^5}_{i\,\theta^5}+...\qquad\mbox{Taylor expansion around $\theta=0$}
+\enn
+
+\bnn
+  \Rightarrow \qquad e^{i\,\theta}= \underbrace{1-\frac{1}{2!}\,\theta^2+\frac{1}{4!}\,\theta^4+...}_{\cos\theta} \quad
+    +i\,(\,\underbrace{\theta-\frac{1}{3!}\,\theta^3+\frac{1}{5!}\,\theta^5+...}_{\sin\theta}\,) \qquad\mbox{q.e.d.}
+\enn
+
+
+
+\subsection{Finally some fun with Math}
+
+
+
+Now, let's have a little more fun with complex numbers. From
+
+Euler's formula we find
+
+\bnn  e^{i\,\pi}=\cos\pi+i\,\sin\pi=-1  \enn
+
+ Now we take the natural log of both sides
+
+\bnn
+   \ln \{ e^{i \pi} \} = i \pi = \ln(-1)  \qquad \mbox{WHAT'S THAT ??}
+\enn
+
+Didn't your math teachers always tell you that there is not
+
+such a thing as the logarithm of a negative number? Well,
+
+obviously they lied. But probably for good reasons: They didn't
+
+want you to get confused. Because as a smart kid you may have come
+
+up with
+
+\bnn
+  e^{i \frac{\pi}{2}} = \cos\frac{\pi}{2} + i \sin\frac{\pi}{2} = i
+       \quad \mbox{or take the log} \quad \ln i = i \frac{\pi}{2}
+\enn even worse, the logarithm of an imaginary number~? Or
+
+multiply the last equation by $i$
+
+\bnn
+    i \ln i = i*i \frac{\pi}{2} \quad \mbox \quad \ln(i^i) = -\frac{\pi}{2}
+\enn
+
+ and raise into the exponent of $e$
+
+\bnn
+    i^i = e^{-\frac{\pi}{2}} \approx 0.2078796 \quad
+          \mbox{A {\em real} number !!!}
+\enn Or you can rewrite the monster number $\pi$ simply as $\pi=-2\,i \ln i$.
+
+
+
+Confused? Don't worry, you are in excellent company. The American
+
+mathematician Benjamin Pierce in the last century called Euler's formula
+
+"mysterious". The story goes that after having
+
+shown these derivations to his class at Harvard he turned around
+
+and declared: "Gentlemen," (there might not have been many women
+
+in math classes at this time) "this is surely true, it is
+
+absolutely paradoxical; we cannot understand what it means. But we
+
+have proved it, and therefore we know it must be the truth."
+
+
+
+Talking about proofs: Check this one out
+
+\bnn
+   e^{3 i \pi} = \cos 3\pi + i \sin 3 \pi = -1 \quad \mbox{and take the log}
+      \quad 3 i \pi = \ln (-1)
+\enn
+
+
+
+Uuuups, didn't we see above that $\ln (-1) = i \pi$~? So we have
+
+$3 i \pi = i \pi$ or $1=3$, right~? See, that's the trouble your
+
+teacher wanted to keep you away from.
+
+
+
+
+
+
+
+\section{Acknowledgements}
+
+
+
+The Mathematics Boot Camp would not have been possible without the
+help of my students, both running the boot camp, as well as
+writing this script. Here I wish to thank in particular Felix
+Almonte, Collins Assisi, Frederick Carver and Gautam Vallabha who
+tutored several afternoon sessions over the years and developed
+the exercises. Their contribution cannot be overstated. Jaime
+Morris helped in the typing and formatting of the script and Ajay
+Pillai did the lion's share in generating the figures and
+formatting the script. Without these two, the script would have
+never evolved beyond a few hand-scribbled notes. Armin Fuchs spent considerable time on debugging the manuscript and took over my class towards the end of my tenure at FAU. Thank you so much!
+\vs \vs
+
+
+
+
+
+
+
+{\bf \large Epilogue:}
+
+
+\large
+
+There was a young fellow from Trinity \\
+Who took $\sqrt{\infty}$ \\
+But the number of digits \\
+Gave him the fidgets \\
+He dropped  Math and took up Divinity.
+
+\hspace*{4cm} George Gamow 
+
+
+
+
+
+
+
+
+
+
+
+
+

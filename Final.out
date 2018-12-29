@@ -1,0 +1,61 @@
+\BOOKMARK [1][-]{section.1}{Function Theory}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Foundations}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Inverse Functions}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Implicit Functions}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Polynomials}{section.1}% 5
+\BOOKMARK [2][-]{subsection.1.5}{Trigonometric Functions}{section.1}% 6
+\BOOKMARK [2][-]{subsection.1.6}{Exponential Functions}{section.1}% 7
+\BOOKMARK [2][-]{subsection.1.7}{Hyperbolic Functions}{section.1}% 8
+\BOOKMARK [2][-]{subsection.1.8}{Basic Inverse Functions}{section.1}% 9
+\BOOKMARK [3][-]{subsubsection.1.8.1}{Logarithms}{subsection.1.8}% 10
+\BOOKMARK [3][-]{subsubsection.1.8.2}{Other inverse functions}{subsection.1.8}% 11
+\BOOKMARK [2][-]{subsection.1.9}{Elementary Combinations of Functions}{section.1}% 12
+\BOOKMARK [3][-]{subsubsection.1.9.1}{Superposition}{subsection.1.9}% 13
+\BOOKMARK [3][-]{subsubsection.1.9.2}{Modulation}{subsection.1.9}% 14
+\BOOKMARK [1][-]{section.2}{Differential and Integral Calculus}{}% 15
+\BOOKMARK [2][-]{subsection.2.1}{Difference Quotient}{section.2}% 16
+\BOOKMARK [2][-]{subsection.2.2}{Derivatives of Elementary Functions}{section.2}% 17
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Polynomials}{subsection.2.2}% 18
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Trigonometric functions}{subsection.2.2}% 19
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Exponential functions}{subsection.2.2}% 20
+\BOOKMARK [3][-]{subsubsection.2.2.4}{Hyperbolic functions}{subsection.2.2}% 21
+\BOOKMARK [3][-]{subsubsection.2.2.5}{Logarithms}{subsection.2.2}% 22
+\BOOKMARK [2][-]{subsection.2.3}{The Basic Rules for Calculating Derivatives}{section.2}% 23
+\BOOKMARK [2][-]{subsection.2.4}{The Chain Rule}{section.2}% 24
+\BOOKMARK [2][-]{subsection.2.5}{Selected problems \(the page from hell\):}{section.2}% 25
+\BOOKMARK [2][-]{subsection.2.6}{Integral Calculus: Definite Integrals}{section.2}% 26
+\BOOKMARK [2][-]{subsection.2.7}{Methods of Integration}{section.2}% 27
+\BOOKMARK [2][-]{subsection.2.8}{Symmetries}{section.2}% 28
+\BOOKMARK [2][-]{subsection.2.9}{Orthogonality of trigonometric functions}{section.2}% 29
+\BOOKMARK [2][-]{subsection.2.10}{Integrals to Infinity}{section.2}% 30
+\BOOKMARK [2][-]{subsection.2.11}{Functions with no Antiderivative}{section.2}% 31
+\BOOKMARK [1][-]{section.3}{Vector Algebra}{}% 32
+\BOOKMARK [2][-]{subsection.3.1}{Vectors}{section.3}% 33
+\BOOKMARK [2][-]{subsection.3.2}{Elementary Vector Operations}{section.3}% 34
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Addition and Subtraction}{subsection.3.2}% 35
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Multiplication of a Vector with a Scalar}{subsection.3.2}% 36
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Scalar Product}{subsection.3.2}% 37
+\BOOKMARK [3][-]{subsubsection.3.2.4}{Vector Product}{subsection.3.2}% 38
+\BOOKMARK [2][-]{subsection.3.3}{Matrices}{section.3}% 39
+\BOOKMARK [2][-]{subsection.3.4}{Multiplication of Matrices}{section.3}% 40
+\BOOKMARK [2][-]{subsection.3.5}{Transposed Matrix}{section.3}% 41
+\BOOKMARK [2][-]{subsection.3.6}{Basis vectors}{section.3}% 42
+\BOOKMARK [2][-]{subsection.3.7}{Transformation of coordinate systems}{section.3}% 43
+\BOOKMARK [3][-]{subsubsection.3.7.1}{Translation}{subsection.3.7}% 44
+\BOOKMARK [3][-]{subsubsection.3.7.2}{Rotation}{subsection.3.7}% 45
+\BOOKMARK [3][-]{subsubsection.3.7.3}{Polar coordinates}{subsection.3.7}% 46
+\BOOKMARK [3][-]{subsubsection.3.7.4}{Non-orthogonal Coordinate Systems}{subsection.3.7}% 47
+\BOOKMARK [2][-]{subsection.3.8}{Determinants}{section.3}% 48
+\BOOKMARK [2][-]{subsection.3.9}{The Inverse of a Matrix A-1}{section.3}% 49
+\BOOKMARK [2][-]{subsection.3.10}{Linear Systems of Equations}{section.3}% 50
+\BOOKMARK [2][-]{subsection.3.11}{Eigenvalues and Eigenvectors}{section.3}% 51
+\BOOKMARK [1][-]{section.4}{Complex Number Theory}{}% 52
+\BOOKMARK [2][-]{subsection.4.1}{Representations and Basic Properties}{section.4}% 53
+\BOOKMARK [2][-]{subsection.4.2}{Complex conjugate}{section.4}% 54
+\BOOKMARK [1][-]{section.5}{Fourier Series}{}% 55
+\BOOKMARK [2][-]{subsection.5.1}{Power Spectrum}{section.5}% 56
+\BOOKMARK [2][-]{subsection.5.2}{Gibbs' Phenomenon}{section.5}% 57
+\BOOKMARK [2][-]{subsection.5.3}{Important Time-Frequency relations}{section.5}% 58
+\BOOKMARK [2][-]{subsection.5.4}{Taylor Series}{section.5}% 59
+\BOOKMARK [2][-]{subsection.5.5}{Finally some fun with Math}{section.5}% 60
+\BOOKMARK [1][-]{section.6}{Acknowledgements}{}% 61

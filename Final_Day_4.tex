@@ -1,0 +1,93 @@
+
+%\setcounter{page}{43}
+
+\section{Complex Number Theory}
+There are polynomials, such as $f(x)=x^{2}+1$, which do not have a root, $f(x)=0$ for
+$x \in \mathbb{R}$. This is one of the reasons to extend the numbers from
+$x \in \mathbb{R}$ to $z \in \mathbb{C}$ where $\mathbb{C}$ is the set of complex numbers.
+Beyond this algebraic motivation there are many applications of complex numbers.
+
+\subsection{Representations and Basic Properties}
+A complex number $z$ consists of a pair of real numbers called the real and imaginary part,
+respectively, and a "new" number '$i$' which has the property $i^2=-1$. While the real
+numbers can be represented as points on a line, a complex number is given as a point in a
+plane (called the complex plane) where the coordinates are its real (horizontal axis) and
+imaginary (vertical axis) part.
+\bnn z=\underbrace{\, \overbrace{a}^{\mbox{\small real}} \,
++ \;\; i \, \overbrace{b}^{\mbox{\small imaginary}}}_{\mbox{\small complex number}}
+\qquad \mbox{with}  \quad a, b \in \mathbb{R} \enn
+\begin{figure}[!h]
+    \centerline{\epsfxsize=10cm  \epsfbox{matlab/fig39.eps}} \svs
+    \caption{Representation of a complex number} \label{fig49}
+\end{figure} \vs
+
+The real and imaginary part, $a$ and $b$, can be expressed by a distance from the origin $r$
+and an angle $\varphi$ (remember polar coordinates) in terms of $a=r\cos\varphi$ and
+$b=r\sin\varphi$ which leads to
+\bnn  z=a + i\, b = r\, \cos\varphi + i\,r\,\sin\varphi=r\,e^{i\,\varphi} \qquad \mbox{with} \quad
+r=\sqrt{a^2+b^2} \quad \varphi=\arctan\frac{b}{a} \enn
+
+\newpage
+{\bf Remarks:}
+\begin{itemize}
+\item We will proof later by Taylor expansion that the relation $\cos\varphi+i\,\sin\varphi=e^{i\,\varphi}$ is true.
+\item All basic computations such as addition, subtraction, multiplication or division are defined for $z \in \mathbb{C}$.
+\item The inverse relation $\varphi=\arctan\frac{b}{a}$ is not unique because $\frac{-b}{-a}=\frac{b}{a}$. However, the
+first number is the third quadrant whereas the second number is in the first quadrant.
+Most computer languages, therefore have a second
+function to calculate the inverse tangent (usually called atan2 or so) which accepts two arguments, i.e. $b$ and $a$
+and not only their ratio $\frac{b}{a}$ and returns the correct angle in the $[0, 2\pi]$ or $[-\pi, \pi]$ range.
+\item The number $i$ is called the imaginary unit and is defined as $i^2=-1$. It represents a very powerful tool to
+simplify calculations, in particular when trigonometric functions are involved. From its definition we find readily
+$i=\pm \sqrt{-1}, \;\; i^3=-i, \;\; \mbox{and} \;\; i^4=1$.
+\end{itemize}  \svs
+
+
+{\bf Rules for dealing with complex numbers:} $\qquad z=a + i\, b = r\, e^{i\, \varphi}$
+\bnn \begin{array}{crcl} \svs
+\mbox{Addition:} & \quad (a_1 + i\, b_1) + (a_2 + i\, b_2) & = & a_1 + a_2 + i\,(b_1+b_2) \\  \svs
+\mbox{Multiplication:} & \quad (a_1 + i\, b_1) \; (a_2 + i\, b_2) & = & a_1\,a_2-b_1\,b_2+i\,(a_1\,b_2+a_2\,b_1) \\
+       \quad & r_1\, e^{i\,\varphi_1} \; r_2\, e^{i\,\varphi_2} & = & r_1\, r_2\,e^{i\,(\varphi_1+\varphi_2)}
+\end{array} \enn
+
+\begin{figure}[!h]
+    \centerline{\epsfxsize=10cm  \epsfbox{matlab/fig40.eps}} \svs
+    \caption{Adding two complex numbers}  \label{fig50}
+\end{figure} \vs
+
+\begin{center}
+$\Rightarrow \quad$ Addition of two complex numbers is done by adding their corresponding vectors \\ \svs
+$\Rightarrow \quad$ Multiplication of two complex numbers results in the product of the individual \\
+                          amplitudes and the sum of the phases
+\end{center}
+
+\centerline{\bf All the properties of real numbers are still preserved!} \vs
+
+{\bf Examples:} $\qquad z_1=1+2\,i \qquad z_2=2-\,i$
+\bnn z_1+z_2=1+2+i\,(2-1)=3+i \qquad\quad z_1\, z_2=1\cdot2-2\cdot(-1)+i\,(1\cdot(-1)+2\cdot2)=4+3\,i \enn
+
+\subsection{Complex conjugate}
+The complex conjugate of $z=a+i\,b$ is defined as $z^*=a-i\,b$
+\bnn z^*=a+i\,b=r\,e^{-i\,\varphi} \qquad\quad z\,z^*=(a+i\,b)\,(a-i\,b)=a^2+b^2=\abs{z}^2 \neq z^2 \enn
+\begin{figure}[!h]
+    \centerline{\epsfxsize=9.5cm  \epsfbox{matlab/fig41.eps}} \svs
+    \caption{The complex number $z$ and its complex conjugate $z^*$}  \label{fig51}
+\end{figure}
+
+Compare the following:
+\bnn \begin{array}{ccccccccccc} \svs
+z^2 &=& z\,z &=& (a+i\,b)^2 &=& a^2-b^2+2\,i\,a\,b &=& (r\,e^{i\,\varphi})^2 &=& r^2\,e^{2\,i\,\varphi} \\
+\abs{z}^2 &=& z\,z^* &=& (a+i\,b)\,(a-i\,b) &=& a^2+b^2 &=& r\,e^{i\,\varphi}\;r\,e^{-i\,\varphi} &=& r^2
+\end{array} \enn \svs
+
+{\bf Some more rules:}
+
+\bnn \mbox{Complex division:} \quad \frac{z_1}{z_2}=\frac{a_1+i\,b_1}{a_2+i\,b_2}=\frac{z_1\,z_2^*}{z_2\,z_2^*}
+        =\frac{z_1\,z_2^*}{\abs{z_2}^2}=\frac{a_1\,a_2+b_1\,b_2+i\,(a_2\,b_1-a_1\,b_2)}{a_2^2+b_2^2} \enn \svs
+\bnn {\cal R}(z)=\frac{1}{2}(z+z^*)=\frac{1}{2}(a+i\,b+a-i\,b)=a \qquad\quad
+        {\cal I}(z)=\frac{1}{2}(z-z^*)=\frac{1}{2}(a+i\,b-(a-i\,b))=b  \enn \svs
+\bnn
+    e^{i\,\varphi}=\cos\varphi+i\,\sin\varphi \qquad \Rightarrow \quad
+    \cos\varphi=\frac{1}{2}(e^{i\,\varphi}+e^{-i\,\varphi}) \qquad
+    \sin\varphi=\frac{1}{2\,i}(e^{i\,\varphi}-e^{-i\,\varphi})
+\enn

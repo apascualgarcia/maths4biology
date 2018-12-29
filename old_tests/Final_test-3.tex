@@ -1,0 +1,213 @@
+\documentclass[11pt]{article}
+\usepackage{makeidx}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage{wrapfig}
+\usepackage{here}
+\usepackage{graphicx}
+\usepackage[centertags]{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{subfigure}
+\usepackage{here}
+
+\addtolength{\topmargin}{-2.3cm} \addtolength{\textheight}{4.3cm}
+\addtolength{\oddsidemargin}{-2cm} \addtolength{\textwidth}{3.5cm}
+\addtolength{\evensidemargin}{-2cm}
+
+
+\begin{document}
+\renewcommand\floatpagefraction{.9}
+\renewcommand\topfraction{.9}
+\renewcommand\bottomfraction{.9}
+\renewcommand\textfraction{.1}
+\setcounter{totalnumber}{50} \setcounter{topnumber}{50}
+\setcounter{bottomnumber}{50} \floatsep 20 pt \intextsep 5 pt
+\abovecaptionskip 0 pt
+\belowcaptionskip 0 pt
+
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\ba}{\begin{array}}
+\newcommand{\ea}{\end{array}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\bes}{\begin{eqnarray*}}
+\newcommand{\ees}{\end{eqnarray*}}
+\newcommand{\vs}{\vspace*{0.5cm}}
+\newcommand{\svs}{\vspace*{0.25cm}}
+
+\newcommand{\abs}[1]{\mid \! #1\! \mid}
+\renewcommand{\b}[1]{\mbox{{\bf #1}}}
+\renewcommand{\vec}[1]{\protect\overrightarrow{ #1}}
+\newcommand{\mat}[1]{\mbox{\boldmath $#1$}}
+
+\long\def\bform#1\eform{\begin{equation}
+   \begin{minipage}{\eqbreite}\vskip .1cm
+   \let\\ = \thcr
+   \halign{$\displaystyle{##}$ \hfil
+  && $\displaystyle{##}$\hfil\cr#1\cr}
+   \vskip .3cm \end{minipage}
+\end{equation}}
+\def\thcr{\cr\noalign{\vskip.3cm}}
+\newlength{\eqbreite}\setlength{\eqbreite}{\textwidth}
+\addtolength{\eqbreite}{-1.5cm}
+
+\long\def\bnn#1\enn{$$\begin{minipage}{\eqbreite}
+\vskip .1cm \let\\ = \thcr \halign{$\displaystyle{##}$
+\hfil && $\dispaystyle{##}$\hfil \cr#1 \cr}
+\vskip.3cm \end{minipage}$$}
+
+\parindent 0 in  \parskip .37 cm
+
+\input epsf 
+
+\pagestyle{plain}
+
+\LARGE
+\begin{center}
+\underline{\textbf{ Complex Systems Boot Camp }}
+\end{center}
+
+\begin{flushleft}
+\large \verb"ISC6930"\hspace{5.1cm} \textsc{Section}\#3  \hspace{4.cm} \textsc{Date:} \ldots\ldots. \\
+\vspace*{.3cm} \large \textsc{Name:}
+\ldots\ldots\ldots\ldots\ldots\ldots\hspace{1.85cm} SS\#:
+\ldots\ldots\ldots\ldots\ldots\ldots\hspace{2cm}\textsc{Points:} \ldots\ldots\\
+\line(1,0){455}
+\end{flushleft}
+
+\normalsize
+\textbf{1)} Let $ \vec{x} = \left( \begin{array}{c} 1 \\ 1 \end{array} \right)$ 
+            and $ \vec{y} = \left( \begin{array}{c} 0.5 \\ 2  \end{array} \right)$ \svs \\ \svs
+\hspace*{5mm} a) Draw the two vectors and evaluate their sum $\vec{x}+\vec{y}$ and 
+                        difference $\vec{x}+\vec{y}$ graphically.\\
+\hspace*{5mm} b) Calculate the magnitude and direction of the vector $x$. \vs
+
+\textbf{2)} What is the sum of the vectors in the following diagram. \svs
+
+\begin{figure}[!ht]
+   \centerline{\epsfxsize=6cm  \epsfbox{fig/pentagon.eps}} \svs
+   \caption{Vector sum} \label{fig2}
+\end{figure} \svs
+
+The vectors are of equal length originating at the center of a
+regular pentagon and ending at the vertices. \vs
+
+\textbf{3)} Let $\vec{a} = 2\,\vec{e_1} + 3\,\vec{e_2}$ and $\vec{b} = \vec{e_1} + 4\,\vec{e_2}$, 
+$\vec{e_1}$ and $\vec{e_2}$ being unit vectors along the $x$ and $y$-axis, \\
+\hspace*{4mm} respectively. \svs \\ \svs
+\hspace{5mm} a) Find the magnitude of $\vec{b}$ and its angle with the $y$-axis. \\ \svs
+\hspace{5mm} b) Find the vector perpendicular to $\vec{a}$. \\ \vs
+\hspace{5mm} c) Evaluate the projection of the vector $\vec{a}$ onto the vector $\vec{b}$. 
+
+\textbf{4)} Let $ \vec{x} = \left( \begin{array}{c} 1 \\ -1 \\ 0 \end{array}\right), \; 
+\vec{y}= \left( \begin{array}{c} 0 \\ 1 \\ 1 \end{array} \right), \;
+\vec{z}= \left( \begin{array}{c} 1 \\ 2 \\ -2 \end{array} \right)$. 
+Evaluate $\; \vec{x} \cdot (\vec{y} + \vec{z}) \;$ and $\; \vec{x} \times (\vec{y} + \vec{z})$. \vs
+
+\textbf{5)} Use the cross product to determine the area of the triangle with the vertices \\
+\hspace*{5mm} $\vec{a} =(1,0,0), \;\; \vec{b} =(0,1,0) \; ; \mbox{and} \;\; c =(0,0,0)$. \vs
+
+\textbf{6)} Let matrix $\mat{A} = \left( \begin{array}{ccc} 9 & -5 & 0 \\ 0 & 6 & 0 \\ 4 & 7 & 2 \end{array} \right) \; $ 
+and matrix $\mat{B} = \left( \begin{array}{ccc} 2 & 0 & -6  \\ 8 & 0 & 3 \\ 1 & -3 & 0 \end{array} \right)$. 
+
+\hspace*{4.5mm}Compute the following quantities:
+
+$\quad \mbox{a)} \quad \mat{A}+\mat{B} \qquad \mbox{b)} \quad \mat{A}-\mat{B} \qquad \mbox{c)} \quad \mat{A}\,\mat{B}
+\qquad \mbox{e)} \quad \mat{B}\,\mat{A}$ \vs
+
+\textbf{7)} Let matrix $\mat{A} = \left( \begin{array}{ccc} 1 & 4 & 5 \\ 0 & 2 & -6 \end{array} \right)$, 
+and matrix $\mat{B} = \left( \begin{array}{ccc} -2 & 0 & 2 \\ 9 & -5 & 12 \end{array} \right)$. 
+
+\hspace*{4.5mm}Compute the following quantities:
+
+$\quad \mbox{a)} \quad \mat{A}+\mat{B} \qquad \mbox{b)} \quad \mat{A}-\mat{B} \qquad \mbox{c)} \quad \mat{A}\, \mat{A^T} 
+\qquad \mbox{d)} \quad \mat{A^T}\, \mat{B} \qquad \mbox{e)} \quad \mat{A}\, \mat{B^T}$ \vs
+
+\textbf{8)} Express the following system of equations as a vector equation with matrix $\mat{A}$ such that
+ 
+\bnn \mat{A}\, \left( \begin{array}{c} x \\ y \\ z \end{array} \right)=\left( \begin{array}{c} a \\ b \\ c \end{array} \right) 
+\qquad \mbox{where} \qquad 
+\begin{array}{l}  a = -4\,x + c \\ b = 17\,y - 2\,z + 3\,x \\ c = -2\,y - x \end{array} \enn
+
+\hspace*{5mm} Express the following system of equations as a vector equation with matrix $\mat{B}$ such that 
+
+\bnn  \mat{B} \,\left( \begin{array}{c} a \\ b \\ c \end{array} \right)=\left( \begin{array}{c} p \\ q \end{array} \right)
+\qquad \mbox{where} \qquad
+\begin{array}{l} p = 2c + 11a - 4b \\ q = -a - b + c \end{array} \enn
+
+\hspace*{5mm} Specify the matrix $\mat{C}$ which combines the operation of $\mat{A}$ and $\mat{B}$ such that
+$\; \mat{C}\left( \begin{array}{c} x \\ y \\ z \end{array} \right)=\left( \begin{array}{c} p \\ q \end{array} \right)$ 
+
+\textbf{9)} For of the following operations, specify the $2\times 2$ matrix that takes a vector 
+$\left( \begin{array}{c} x \\ y \end{array} \right)$ and \svs \\ \svs
+\hspace*{5mm} a) Stretches $x$ by a factor of 3 and shrinks $y$ by a factor of 2. \\ \svs
+\hspace*{5mm} b) Mirrors $x$ around the $y$-axis,while leaving $y$ unchanged. \\ \svs
+\hspace*{5mm} c) Replaces $y$ by the sum of $x$ and $y$. \\ 
+\hspace*{5mm} d) Combines the operations (a)-(c), as performed one after another.
+
+\textbf{10)} Figure 2 below shows 4 vectors,
+each plotted as filled circles, in a Cartesian coordinate space.
+
+\hspace*{6mm} The four vectors are: 
+$\vec{v_1}=\left( \begin{array}{c} 1 \\ 0.5 \end{array} \right), \;
+\vec{v_2}=\left( \begin{array}{c} -2 \\ 1 \end{array} \right), \;
+\vec{v_3}=\left( \begin{array}{c} -1 \\ -1 \end{array} \right)$ and 
+$\left( \begin{array}{c} 2 \\ -2 \end{array} \right)$. 
+
+\hspace*{6mm} The dashed line is the $x$-axis, and the vertical dark line is the $y$-axis. \svs
+
+\begin{figure}[!ht]
+   \centerline{\epsfxsize=10cm  \epsfbox{fig/cartesiantest.eps}} \svs
+   \caption{Cartesian coordinates} 
+\end{figure}
+
+Figure 3 shows the coordinate space as a result of the transformation
+$\mat{M} =  \left( \begin{array}{cc} 0.7 & -0.7 \\ 0.7 & 0.7 \end{array} \right)$. 
+Note that the  dashed line is the "x" coordinate (i.e.
+first component of the vector) in the new coordinate space.
+
+\hspace*{5mm} a) Using the grid lines in the figure, estimate the new coordinates of $\vec{v_2}$ and $\vec{v_3}$.
+
+\hspace*{5mm} b) Using the transformation $\vec{v_{new}}= \mat{M} \, \vec{v_{old}}$, calculate the new coordinates 
+                    of $\vec{v_2}$ and $\vec{v_3}$. \svs
+
+\begin{figure}[!ht]
+   \centerline{\epsfxsize=10cm \epsfbox{fig/transformedtest.eps}} \svs
+    \caption{Rotated cartesian coordinates} 
+\end{figure} \vs
+
+Figure 4 shows the result of transforming the Cartesian coordinate space of Figure 2 into polar coordinates.
+
+\hspace*{5mm} c) Using the grid lines in the figure, estimate the new coordinates of each of the four vectors. \\
+\hspace*{9mm} To convert the angle from degrees to radians, multiply the angle in degrees by $\pi/180^0$
+
+\hspace*{5mm} d) Calculate the new coordinates of $\vec{v_2}$ and $\vec{v_3}$.\svs
+
+\begin{figure}[!ht]
+   \centerline{\epsfxsize=10cm \epsfbox{fig/polartest.eps}} \svs
+    \caption{Polar coordinates}
+\end{figure} \vs
+
+\newpage
+
+\textbf{13)}\  Mark the following points in the polar coordinate system below and convert them to cartesian \\
+\hspace*{6mm} coordinates.
+
+$\begin{array}{llcll}
+\qquad \mbox{a)} \quad r = 2 &\qquad \theta=\pi \vspace*{.35cm} & \qquad  \qquad & 
+\qquad \mbox{b)} \quad r = -3 &\qquad \theta=3\pi \vspace*{.35cm}\\
+\qquad \mbox{c)} \quad r = 1 &\qquad \theta=-\pi /2\vspace*{.35cm} & \qquad \qquad &
+\qquad \mbox{d)} \quad r = 1/2& \qquad \theta=\pi /4 \vspace*{.35cm}\\
+\qquad \mbox{e)} \quad r = 0 &\qquad \theta=\pi /6\vspace*{.35cm}
+\end{array}$
+
+\begin{figure}[!ht]
+   \centerline{\epsfxsize=10cm \epsfbox{fig/polartest.eps}} \svs
+    \caption{Polar coordinates}
+\end{figure} \vs
+
+
+\end{document}

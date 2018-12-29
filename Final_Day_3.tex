@@ -1,0 +1,735 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Actual text starts below:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setcounter{page}{25}
+
+\section{Vector Algebra}
+\subsection{Vectors}
+Until now we have dealt only with  \emph{scalars} which are
+one-dimensional entities consisting of a magnitude and a sign.
+Higher-dimensional entities are composed of several scalars each
+of which is related to a particular direction. These objects are called
+vectors and are represented in print by either using bold symbols like
+{\boldmath $x$} or with an arrow on top as in $\vec{x}$. An
+$n$-dimensional vector has $n$ components $x_i$ with $i=1,...,n$.
+Its magnitude is given by $\abs{\vec{x}}=\sqrt{x_1^2+x_2^2+...+x_n^2}$.
+
+{\bf Notation:} $\quad \vec{x}=\left(\ba{c}x_1 \\ x_2 \\ \cdots \\x_n \ea \right)$
+is a column vector and $\vec{x} = (x_1, x_2, ..., x_n)$ is row vector.
+
+Sometimes a row vector is specifically denoted as $\vec{x}^T$ ($T$ for transposed).
+
+A vector is graphically represented by an arrow. The vector's magnitude
+$\abs{\vec{x}}$ is denoted by the arrow's length. If the starting point of the
+vector coincides with the origin of the coordinate system, then
+its end point corresponds to the coordinates of the vector components.
+Such a vector is called a coordinate vector. \vs
+
+\begin{figure}[!h]
+    \centerline{\epsfxsize=10cm  \epsfbox{matlab/fig24.eps}} \svs
+    \caption{The vector $(1,2)$ is an arrow from the origin to the point $x=1$ and $y=2$.} \label{fig27}
+\end{figure}
+
+
+\subsection{Elementary Vector Operations}
+
+\subsubsection{Addition and Subtraction}
+
+The sum two vectors can be obtained graphically by either shifting
+the tail of the second arrow to the head of the first, or by constructing
+the parallelogram that is defined by the two arrows. The difference between
+two vectors can be found by adding the vector that has the same length but
+points into the opposite direction.
+
+\begin{figure}[!h]
+\centering \subfigure[The sum of two vectors
+$\vec{c}=\vec{a}+\vec{b}$]{\epsfxsize=7cm
+\epsfbox{matlab/fig25a.eps}} \hspace*{0.5cm} \subfigure[The
+difference between two vectors $\vec{c}=\vec{a}-\vec{b}$]
+           {\epsfxsize=7.5cm \epsfbox{matlab/fig25b.eps}} \svs
+\caption{Addition and subtraction of vectors} \label{fig28}
+\end{figure}
+
+In components:  $\quad \vec{a} + \vec{b}=(a_1+b_1, ...,a_n+b_n)=(c_1, ...,c_n) = \vec{c}$ \vs
+
+{\bf Properties:}
+\bnn \begin{array}{cccc}
+    \vec{a} + \vec{b} & = & \vec{b} + \vec{a} &  \qquad\quad \mbox{\bf commutative} \qquad\quad \\
+    (\vec{a} + \vec{b}) + \vec{c} & = & \vec{a} + (\vec{b} +\vec{c}) & \qquad\quad \mbox{\bf associative} \qquad\quad
+\end{array} \enn \vs
+
+A closed polygon corresponds to the vector sum equal $\vec{0}$. \svs
+
+\begin{figure}[!h]
+    \centerline{\epsfxsize=8cm  \epsfbox{matlab/fig26.eps}} \svs
+    \caption{$\vec{a_1}+\vec{a_2}+\ldots + \vec{a_5}=\vec{0}$} \label{fig30}
+\end{figure}
+
+\vs {\bf Important note:} Make sure you understand that $\vec{0} \neq 0$ !!!!
+
+\subsubsection{Multiplication of a Vector with a Scalar}
+A vector can be multiplied with a scalar by multiplying each of the components
+which results in either stretching or squeezing  of the vector and may change
+its orientation.
+\bnn
+\vec{a}=\left( \begin{array}{c} 1 \\ 1 \end{array} \right) \quad \qquad
+\vec{b}=-2 \, \vec{a}=-2 \left( \begin{array}{c} 1 \\ 1 \end{array} \right)
+   = \left( \begin{array}{c} -2 \\ -2\\ \end{array} \right)
+\enn \svs
+
+\begin{figure}[!h]
+    \centerline{\epsfxsize=8cm \epsfbox{matlab/fig27.eps}} \svs
+    \caption{The multiplication of a vector with a scalar $\vec{b}=-2\,\vec{a}$} \label{fig31}
+\end{figure} \vs
+
+\textbf{Linear dependence of vectors:}
+
+$n$ vectors $\vec{a_1}, \cdots, \vec{a_n}$ are called {\em linearly independent}, if
+the only way to fulfill
+\bnn
+    \alpha_1 \, \vec{a_1} + \alpha_2 \, \vec{a_2} + \cdots + \alpha_n \, \vec{a_n}=0
+    \quad \mbox{is} \quad \alpha_1=\alpha_2=\cdots=\alpha_n=0
+\enn
+
+If this relation can be fulfilled with certain $\alpha_i \neq 0$, then the vectors
+are said to be {\em linearly dependent}. For instance, imagine $\alpha_1 \not = 0$,
+all others are free. Then $\vec{a_1}$ may be expressed by the other vectors and is
+redundant.
+\beq \vec{a_1}= -\frac{1}{\alpha_1} \sum_{i=2}^n \alpha_i \, \vec{a_i} \eeq
+
+One-dimensional: $\; \; \alpha \, \vec{a}$ represents all vectors on a straight line.
+Such vectors are called collinear.
+
+Two-dimensional: $\;\; \alpha_1 \, \vec{a_1} +\alpha_2 \, \vec{a_2}$
+represents all vectors in the plane. These vectors are coplanar.
+\begin{figure}[!h]
+    \subfigure[Collinear vectors define a line]{\epsfxsize=5cm  \epsfbox{matlab/fig28a.eps}}
+    \hspace*{0.5cm}
+    \subfigure[Two non-collinear vectors span a plane]{\epsfxsize=9cm  \epsfbox{matlab/fig28b.eps}} \svs
+    \caption{Collinear and coplanar vectors} \label{fig33}
+\end{figure}
+
+\subsubsection{Scalar Product}
+
+Two vectors $\vec{a}$ and $\vec{b}$ can be multiplied such that the result is a scalar $c$.
+This operation is called the {\em scalar, dot} or {\em inner} product.
+\bnn \begin{array}{cc} \svs
+    \vec{a}\cdot\vec{b}=\abs{\vec{a}} \; \abs{\vec{b}} \cos \alpha & \qquad
+    \mbox{where $\alpha$ is the angle between $\vec{a}$ and $\vec{b}$} \qquad \\
+    \vec{a}\cdot\vec{b}=a_{1} \, b_{1}+a_{2} \, b_{2}+...+ a_{n} \, b_{n} & \qquad
+    \mbox{scalar product in components} \qquad
+\end{array} \enn
+
+The scalar product measures the contribution of vector $\vec{a}$ to vector $\vec{b}$
+If the angle between $\vec{a}$ and $\vec{b}$ is $90^{\circ}$ the two vectors are orthogonal, there are no contributions at all. \vs
+
+{\bf Properties:}
+\bnn \begin{array}{cc} \svs
+    \vec{a}\cdot\vec{b}=\vec{b}\cdot\vec{a} & \qquad \mbox{\bf commutative} \qquad \\ \svs
+    (c\, \vec{a})\cdot \vec{b}=c \, (\vec{a}\cdot\vec{b})=\vec{a}\cdot\,(c \, \vec{b}) & \qquad \mbox{\bf associative} \qquad \\
+    (\vec{a_1}+\vec{a_2})\cdot\vec{b}=\vec{a_1}\cdot\vec{b}+\vec{a_2}\cdot\vec{b} & \qquad \mbox{\bf distributive} \qquad
+\end{array} \enn
+
+{\bf Examples:}
+\bnn
+\vec{a}= \left( \begin{array}{c} 2 \\ 0  \end{array} \right) \qquad
+\vec{b}= \left( \begin{array}{c}  1 \\  -2 \end{array} \right) \qquad
+\vec{a}\cdot\vec{b}=2\cdot1+0\cdot(-2)=2
+\enn
+\bnn
+\qquad\qquad \abs{\vec{a}}= 2 \qquad \abs{\vec{b}}=\sqrt{5}
+\quad \rightarrow \quad \cos\alpha=\frac{\vec{a} \cdot \vec{b}}{\abs{\vec{a}}\,\abs{\vec{b}}}
+=\frac{2}{2 \sqrt{5}} \quad \rightarrow \quad \alpha =\arccos\frac{1}{\sqrt{5}} = 1.107 \approx 63^{\circ}
+\enn
+
+\begin{figure}[!ht]
+    \centering
+    \subfigure[Projection of $\vec{b}$ on $\vec{a}$]{\epsfxsize=7cm  \epsfbox{matlab/fig29a.eps}}
+    \hspace*{0.5cm}
+    \subfigure[If $\alpha>90^0$ then $\cos \alpha < 0$ and the scalar
+        product is negative]{\epsfxsize=7cm \epsfbox{matlab/fig29b.eps}} \svs
+    \caption{Scalar Product}  \label{fig35}
+\end{figure} \vs
+
+\begin{figure}[!h]
+    \centering
+    \subfigure[The dot product has is maximal value in the case $\alpha = 0 \; \rightarrow \cos \alpha =1$]
+    {\epsfxsize=7cm  \epsfbox{matlab/fig30a.eps}}
+    \hspace*{0.5cm}
+    \subfigure[For $\alpha = 90^{\circ}$ the scalar product vanishes because $\cos \alpha =0$]
+    {\epsfxsize=7cm  \epsfbox{matlab/fig30b.eps}} \svs
+    \caption{Scalar product for parallel and orthogonal vectors}
+\end{figure}
+
+\newpage
+
+\subsubsection{Vector Product}
+
+Two vectors $\vec{a}$ and $\vec{b}$ can be multiplied such that the result is a vector $\vec{c}$.
+This operation is called the {\em vector, cross} or {\em outer} product.
+
+\vs \centerline{\bf The vector product exists only in three dimensions !!!}
+\bnn
+\vec{a}\times \vec{b} = \vec{c} \qquad\qquad
+\abs{\vec{c}} = \abs{\vec{a} \times \vec{b}} = \abs{\vec{a}} \, \abs{\vec{b}} \, \sin \alpha
+\enn
+
+\bnn
+\left(\begin{array}{c} a_{1} \\ a_{2} \\ a_{3} \\ \end{array}\right) \times
+\left(\begin{array}{c} b_{1} \\ b_{2} \\ b_{3} \\ \end{array}\right)
+=\left(\begin{array}{c} a_{2}b_{3}-a_{3}b_{2} \\ a_{3}b_{1}-a_{1}b_{3} \\ a_{1}b_{2}-a_{2}b_{1} \end{array}\right)
+\qquad \mbox{vector product in components}
+\enn
+
+The result of a vector product between two non-collinear vectors $\vec{a}$ and $\vec{b}$ is a vector $\vec{c}$ 
+which has a magnitude of $\abs{\vec{a}}\,\abs{\vec{b}} \, \sin\alpha$ and points into the direction perpendicular
+to the plane defined by $\vec{a}$ and $\vec{b}$ such that $\vec{a}$, $\vec{b}$ and $\vec{c}$ form a right-handed 
+system. To find this direction have your right thumb point into the direction of $\vec{a}$, the right index into
+the direction of $\vec{b}$, and the right middle finger perpendicular to the plane defined by $\vec{a}$ and $\vec{b}$. 
+There is only one way to do that without hurting yourself seriously. Now the middle finger points into the direction 
+of $\vec{c}$. 
+
+Hint: It is imperative that you use the {\bf right} hand for this. \svs
+
+{\bf Properties:}
+\bnn \begin{array}{cc} \svs
+    \vec{a} \times \vec{b}=-\vec{b} \times \vec{a} & \qquad \qquad \mbox{anti-commutative} \\ \svs
+    (c\,\vec{a}) \times \vec{b}= c\,(\vec{a} \times \vec{b})= \vec{a} \times (c\, \vec{b}) & \qquad\qquad \mbox{associative} \\
+    (\vec{a_1}+\vec{a_2}) \times \vec{b}=\vec{a_1} \times \vec{b}+\vec{a_2} \times \vec{b} & \qquad\qquad \mbox{distributive}
+\end{array} \enn \svs
+
+{\bf Note:} In 3 dimensions a plane can be defined by a point in the plane and its {\em normal vector} $\vec{n}$. \vs
+
+\begin{figure}[!h]
+    \centering
+    \subfigure[$\vec{a}$ and $\vec{b}$ span a plane]{\epsfxsize=7cm  \epsfbox{matlab/fig31a.eps}}
+    \hspace{0.5cm}
+    \subfigure[A plane defined by a point and its normal vector]{\epsfxsize=7cm  \epsfbox{matlab/fig31b.eps}} \svs
+    \caption{Vectors in 3-dimensional space}  \label{fig39}
+\end{figure} \vs
+
+\subsection{Matrices}
+A matrix {\bf A} operates on a vector $\vec{x}$ and transforms, i.e. stretches, squeezes or rotates it.
+
+\bnn
+\vec{y}= \mbox{\boldmath $A$} \, \vec{x} \qquad \mbox{where} \quad
+\mbox{\boldmath $A$}=\left(\begin{array}{lll} A_{11} & A_{12} & A_{1n} \\ A_{21} & \ddots& \ldots \\
+A_{n1} & \cdots &  A_{nn} \end{array} \right)=A_{ij} \quad \mbox{is a $\; n \times n$ matrix}
+\enn \svs
+
+\bnn
+\vec{y}=\left( \begin{array}{c} y_{1} \\ y_{2} \\ \vdots \\ y_{n}  \\ \end{array}\right) \;=\;
+\left(\begin{array}{c} A_{11} \, x_{1}+A_{12} \, x_{2}+\ldots A_{1n} \, x_{n}  \\
+ A_{21} \, x_{1}+A_{22} \, x_{2}+\ldots A_{2n} \, x_{n} \\ \vdots \\
+ A_{n1} \, x_{1}+A_{n2} \, x_{2}+\ldots A_{nn} \, x_{n} \\ \end{array} \right)
+ \enn \svs
+
+\bnn
+\underbrace{\left( \begin{array}{cr} 1 & 1 \\ 1 & -2 \\ \end{array} \right)}_{\mat{A}} \;
+\underbrace{ \left( \begin{array}{c} 1 \\ 1 \\ \end{array} \right)}_{\vec{x}}
+\; = \; \underbrace{\left( \begin{array}{r} 2\\ -1 \\ \end{array} \right)}_{\vec{y}}
+\enn
+
+\begin{figure}[!h]
+    \centerline{\epsfxsize=9cm  \epsfbox{matlab/fig32.eps}}
+    \caption{Rotation and scaling of a vector}  \label{fig41}
+\end{figure} \vs
+
+{\bf Properties:}
+\bnn \mat{A} = \mat{B} \quad \rightarrow \quad a_{ij}=b_{ij}  \enn
+\bnn \mat{A} + \mat{B} \quad \rightarrow \quad a_{ij}+b_{ij}  \enn
+\bnn c \, \mat{A} \quad \rightarrow \quad c \, a_{ij}  \enn
+\bnn \mat{A}+\mat{B}  =   \mat{B} + \mat{A}  \enn
+
+\subsection{Multiplication of Matrices}
+The product of two matrices $\mat{A}$ and $\mat{B}$ is found by calculating
+the scalar products between the {\it rows} of matrix $\mat{A}$ and the 
+{\it columns} of matrix $\mat{B}$. This implies that the number of columns
+of matrix $\mat{A}$ must be the same as the number of rows of matrix $\mat{B}$. \svs
+
+{\bf Examples:}
+\bnn 
+    \left( \begin{array}{cc} a_{11} & a_{12} \\ a_{21} & a_{22} \end{array} \right)  
+    \left( \begin{array}{cc} b_{11} & b_{12} \\ b_{21} & b_{22} \end{array} \right) \,=\, 
+    \left( \begin{array}{cc} a_{11}\,b_{11}+a_{12}\,b_{21} & a_{11}\,b_{12}+a_{12}\,b_{22} \\ 
+                         a_{21}\,b_{11}+a_{22}\,b_{21} & a_{21}\,b_{12}+a_{22}\,b_{22} \end{array} \right) 
+\enn
+
+\bnn
+    \mat{A}\,\mat{B} = 
+    \left( \begin{array}{cc} 5 & 3 \\ 2 & 7 \end{array} \right)  
+    \left( \begin{array}{cc} 2 & -3 \\ -1 & 4 \end{array} \right) \,=\, 
+    \left( \begin{array}{cc} 5\cdot2+3\cdot(-1) & 5\cdot (-3)+3\cdot 4 \\ 
+                         2\cdot 2+7\cdot (-1) & 2 \cdot (-3)+7\cdot 4 \end{array} \right) \,=\,
+    \left( \begin{array}{cc} 7 & -3 \\  -3 & 22 \end{array} \right) 
+\enn
+\bnn
+    \mat{B}\,\mat{A} = 
+    \left( \begin{array}{cc} 2 & -3 \\ -1 & 4 \end{array} \right)  
+    \left( \begin{array}{cc} 5 & 3 \\ 2 & 7 \end{array} \right) \,=\,
+    \left( \begin{array}{cc} 4 & -15 \\  3 & -25 \end{array} \right) \,\neq \, \mat{A} \, \mat{B} 
+\enn \vs
+
+\centerline{\bf The multiplication of matrices is NOT commutative!!!!!}
+
+In general a $n \times m$ matrix can be multiplied with a $m \times n$ matrix and the result is a
+$n \times n$ matrix.
+
+\bnn  \mat{C} = \mat{A} \, \mat{B} = \left(\begin{array}{cccc}
+\Sigma_i \: a_{1i} \, b_{i1} & \Sigma_i \, a_{1i} \: b_{i2} & \hdots & \Sigma_i \, a_{1i} \, b_{in}\\
+\Sigma_i \: a_{2i} \, b_{i1} & \Sigma_i \, a_{2i} \: b_{i2} & \hdots & \Sigma_i \, a_{2i} \, b_{in}\\
+\vdots & \vdots & & \vdots \\
+\Sigma_i \: a_{ni} \, b_{i1} & \Sigma_i \, a_{ni} \: b_{i2} & \hdots & \Sigma_i \, a_{ni} \, b_{in}
+\end{array}\right) \qquad \mbox{with} \;\; \Sigma_i = \sum_{i=1}^m \enn \svs
+
+\subsection{Transposed Matrix}
+The transposed of a matrix is found by exchanging the row and column vectors.
+
+\bnn 
+\mat{A}=\left(\begin{array}{cccc} A_{11} & A_{12} & A_{13} & \ldots \\
+  A_{21} & A_{22} & \cdot & \cdots \\ \vdots & \vdots & \ddots & \vdots\\
+  \cdot & \cdot& \cdots & A_{mn} \end{array}\right) \quad \rightarrow \quad
+\mat{A^T}=\left(\begin{array}{cccc} A_{11} & A_{21} & A_{31} & \ldots \\
+  A_{12} & A_{22} & \cdot & \cdots \\ \vdots & \vdots & \ddots & \vdots\\
+  \cdot & \cdot& \cdots & A_{nm} \end{array}\right) 
+\enn \svs
+
+{\bf Examples:}
+\bnn
+    \mat{A} = \left( \begin{array}{ccc} 2 & 3 & 5 \\ 1 & 4 & 0 \end{array} \right) \quad \rightarrow \quad 
+    \mat{A^T} = \left( \begin{array}{cc} 2 & 1 \\ 3 & 4 \\ 5 & 0 \end{array} \right) 
+\enn
+
+\bnn
+    \mat{A}\,\mat{A^T} = 
+    \left( \begin{array}{ccc} 2 & 3 & 5 \\ 1 & 4 & 0 \end{array} \right)  
+    \left( \begin{array}{cc} 2 & 1 \\ 3 & 4 \\ 5 & 0 \end{array} \right) = 
+    \left( \begin{array}{cc} 38 & 14 \\ 14 & 17 \end{array} \right)
+\enn
+
+\bnn
+    \mat{A^T}\,\mat{A} = 
+    \left( \begin{array}{cc} 2 & 1 \\ 3 & 4 \\ 5 & 0 \end{array} \right) 
+    \left( \begin{array}{ccc} 2 & 3 & 5 \\ 1 & 4 & 0 \end{array} \right) =  
+    \left( \begin{array}{ccc} 5 & 10 & 10 \\ 10 & 25 & 15 \\ 10 & 15 & 25 \end{array} \right)
+\enn
+
+This should eliminate any remaining doubts that matrix multiplication could be commutative.
+These matrices are not even the same size.
+
+\subsection{Basis vectors}
+Basis vectors span a coordinate system and can be represented in various ways
+\bnn \vec{i}, \vec{j}, \vec{k} \qquad \vec{e_1},\vec{e_2},\vec{e_3} \qquad
+\left(\begin{array}{c} 1 \\ 0 \\ 0 \\ \end{array}\right),
+\left(\begin{array}{c} 0 \\ 1 \\ 0 \\ \end{array}\right),
+\left(\begin{array}{c} 0 \\ 0 \\ 1 \\ \end{array}\right) \enn
+
+\bnn \vec{s}= \left(\begin{array}{c} x \\ y \\ \end{array} \right)
+ = x \, \overbrace{\left(\begin{array}{c} 1 \\ 0 \\ \end{array} \right)}^{\overrightarrow{e_1}}
+ +  y \, \overbrace{\left(\begin{array}{c} 0 \\ 1 \\ \end{array}\right)}^{\overrightarrow{e_2}}
+ = x \, \vec{e_1}+y \, \vec{e_2} \enn
+
+\vs \begin{figure}[!ht]
+    \centerline{\epsfxsize=7cm  \epsfbox{matlab/fig33.eps}}
+    \caption{Basis vectors.} \label{fig42}
+\end{figure}
+
+\subsection{Transformation of coordinate systems}
+In general the component of a vector depend on the coordinate system used. Coordinate
+systems can be transformed, which changes the vector components in a certain way and a vector $\vec{s}$
+in the old coordinate system becomes the vector $\widetilde{\vec{s}}$ in the new coordinates. The two easiest
+transformations of a coordinate system are a translation or shift and a rotation around the origin.
+
+\subsubsection{Translation}
+A translation of the coordinate system is performed by adding a constant vector
+\bnn 
+\vec{s} \rightarrow \widetilde{\vec{s}}=\vec{s}+\vec{t} \qquad\mbox{shifts the coordinate system by} \;\;
+\vec{t}= \left(\begin{array}{c} t_1 \\ t_2 \end{array}\right) 
+\enn
+
+Components of $\vec{s}$ in old system: $\vec{s}
+=\left(\begin{array}{c} x+t_1 \\ y+t_2 \\ \end{array} \right)
+=\left(\begin{array}{c} 1+t_1 \\ 2+t_2 \\ \end{array} \right)$
+
+\svs
+Components of $\widetilde{\vec{s}}$ in the new system: $\widetilde{\vec{s}}
+=\left(\begin{array}{c} \widetilde{x} \\ \widetilde{y} \\ \end{array} \right)
+=\left(\begin{array}{c} 2 \\ 1 \\ \end{array} \right)$
+
+\begin{figure}[!h]
+    \centering
+    \subfigure[Translation of the coordinate system]{\epsfxsize=7cm  \epsfbox{matlab/fig34.eps}}
+    \hspace{0.5cm}
+    \subfigure[Rotation of the coordinate system]{\epsfxsize=7cm \epsfbox{matlab/fig35.eps}} \svs
+    \caption{Coordinate transformations: Translation and Rotation} \label{fig43}
+\end{figure}
+
+\subsubsection{Rotation}
+A rotation of the coordinate system by an angle $\alpha$ around the origin is performed by 
+applying the rotation matrix $\mat{R}$ to the vector $\widetilde{\vec{s}}$
+\bnn \mat{R} =  
+    \left( \begin{array}{cc} \cos \alpha & \sin \alpha \\ -\sin \alpha & \cos \alpha \end{array} \right) 
+    \qquad 
+    \widetilde{\vec{s}} = \mat{R} \,\vec{s} = 
+    \left( \begin{array}{cc} \cos \alpha & -\sin \alpha \\ \sin \alpha & \cos \alpha \end{array} \right) 
+    \left( \begin{array}{c} x \\ y \end{array} \right) =
+    \left( \begin{array}{c} x\,\cos \alpha - y\,\sin \alpha \\ x\,\sin \alpha + y\,\cos \alpha \end{array} \right) 
+\enn
+
+The rotation matrix $\mat{R}$ can be found by calculating the basis vectors $\widetilde{\vec{e_1}}$ 
+and $\widetilde{\vec{e_2}}$ for the new coordinate system 
+\bnn 
+\widetilde{\vec{e_1}}= \cos\alpha \, \vec{e_{1}} + \sin\alpha \, \vec{e_2}  \qquad \mbox{and} \qquad
+\widetilde{\vec{e_2}}=-\sin\alpha \, \vec{e_1} + \cos\alpha \, \vec{e_2} 
+\enn
+
+Representation of a point $\vec{s}$:
+\bnn 
+\vec{s} = \left( \begin{array}{c} x \\ y \end{array} \right) 
+= \underbrace{x \, \vec{e_1} + y \, \vec{e_2}}_{\mbox{old system}}
+= \underbrace{\widetilde{x} \, \widetilde{\vec{e_1}} + \widetilde{y} \, \widetilde{\vec{e_2}}}_{\mbox{new system}} 
+= \left( \begin{array}{c} \widetilde{x}\,\cos \alpha + \widetilde{y}\,\sin \alpha \\ 
+        -\widetilde{x}\,\sin \alpha + \widetilde{y}\,\cos \alpha \end{array} \right) 
+\enn
+
+Relation between old and new coordinates:
+\bnn \begin{array}{cccc} \svs
+    \vec{x} = \mat{A} \, \widetilde{\vec{x}} & \quad \mbox{where} \quad &
+    \mat{A}=\left( \begin{array}{cc} \cos\alpha & -\sin\alpha \\ \sin\alpha &  \cos\alpha \end{array} \right) & \\
+    \widetilde{\vec{x}}= \mat{A^{T}} \, \vec{x} & \quad \mbox{with} \quad &
+    \mat{A^T}=\left( \begin{array}{cc} \cos\alpha & \sin\alpha \\ -\sin\alpha &  \cos\alpha \end{array} \right)
+    & \quad \mbox{and}\quad \mat{A} \, \mat{A^{T}}=\left( \begin{array}{cc} 1 & 0 \\ 0 & 1 \end{array} \right)
+\end{array} \enn
+
+\bnn \begin{array}{ccc} \svs
+    \vec{s}=x \, \vec{e_1} + y \, \vec{e_2} & = &
+    \widetilde{x} \, \underbrace{(\cos\alpha \, \vec{e_1} + \sin\alpha \, \vec{e_2})}_{\widetilde{\vec{e_1}}}+
+    \widetilde{y} \, \underbrace{(-\sin\alpha \, \vec{e_1} + \cos\alpha \, \vec{e_2})}_{\widetilde{\vec{e_{2}}}} \\
+    & = & \underbrace{(\widetilde{x} \, \cos\alpha - \widetilde{y} \, \sin\alpha)}_{x} \, \vec{e_1}+
+    \underbrace{(\widetilde{x} \, \sin\alpha + \widetilde{y} \, \cos\alpha)}_{y} \, \vec{e_2}
+\end{array} \enn
+
+
+\subsubsection{Polar coordinates}
+Polar coordinates are often used if the problem under consideration has a certain symmetry. They are
+represented by a vector $\vec{e_r}$ from the origin to a point in the plane and a vector $\vec{e_{\varphi}}$
+from that point with the direction tangentially to the unit circle.
+\bnn  \vec{S} = \left( \begin{array}{c} x \\  y \end{array} \right)
+= x \, \vec{e_1} + y \, \vec{e_2}
+=\left( \begin{array}{c} r \cos\varphi  \\  r \sin\varphi \end{array} \right)
+=r \, \vec{e_r} + \varphi \, \vec{e_{\varphi}} 
+\quad\rightarrow\quad\left( \begin{array}{c} r \\ \varphi \end{array} \right)_{pol}
+\enn
+
+\bnn \mbox{with}\quad r=\sqrt{x^{2}+y^{2}} \quad \varphi=\arctan \frac{y}{x} \enn \svs
+
+\begin{figure}[!h]
+    \centerline{\epsfxsize=10cm  \epsfbox{matlab/fig36.eps}}
+    \caption{Polar coordinates}  \label{fig46}
+\end{figure}
+
+\vs {\bf Example:}
+\bnn \vec{S}=\left( \begin{array}{c} 1 \\ 1 \end{array} \right)_{cart}= x \, \vec{e_1} + y \, \vec{e_2}  \qquad
+\rightarrow \qquad r=\sqrt{1^{2}+1^{2}}=\sqrt{2} \qquad \varphi=\frac{\pi}{4}=45^0 \enn
+\bnn 
+\vec{S}=r \, \vec{e_r}+\frac{\pi}{4} \, \vec{e_{\varphi}} 
+ \quad \rightarrow\quad \left(\begin{array}{c} \sqrt{2} \\ \frac{\pi}{4} \end{array} \right)_{pol}
+\enn \svs
+
+{\bf Note:} $\qquad \mbox{The quantity} \left(\begin{array}{c} \sqrt{2} \\ \frac{\pi}{4} \end{array} \right)_{pol}$
+is {\em not} a vector!!!!
+
+\subsubsection{Non-orthogonal Coordinate Systems}
+Using a system of basis vectors that is orthogonal and normalized, i.e. 
+$\vec{e_1} \cdot \vec{e_1}=\vec{e_2} \cdot \vec{e_2} =0$ and $\vec{e_1} \cdot \vec{e_2}=0$, or more general
+$\vec{e_i} \cdot \vec{e_j}=\delta_{ij}$ is very convenient because it is straight forward to 
+find a certain component of a vector simply by multiplying with the corresponding basis vector
+\bnn
+\vec{x} = x_1\,\vec{e_1} + x_2\,\vec{e_2} \; = \; \left\{ \begin{array}{c}     \vec{x}\cdot\vec{e_1}=x_1\,\overbrace{\vec{e_1}\cdot\vec{e_1}}^{=1}+\,x_2\,\overbrace{\vec{e_2}\cdot\vec{e_1}}^{=0}
+=x_1 \svs \\        \vec{x}\cdot\vec{e_2}=x_1\,\underbrace{\vec{e_1}\cdot\vec{e_2}}_{=0}+\,x_2\,\underbrace{\vec{e_2}\cdot\vec{e_2}}_{=1}      
+=x_2 \end{array} \right.
+\enn
+
+Sometimes, however it is necessary to represent vectors in a basis system $\vec{u},\,\vec{v}$ that is not orthogonal.
+The easiest way to deal with this situation is to introduce a second set of basis vectors, the so-called {\em adjoint}
+vectors or {\em dual basis} $\vec{u}^\dagger, \, \vec{v}^\dagger$ such the relations
+\bnn
+  \vec{u}^\dagger\cdot\vec{u}=\vec{v}^\dagger\cdot\vec{v} =1 \qquad\mbox{and}\qquad   
+  \vec{u}^\dagger\cdot\vec{v}=\vec{v}^\dagger\cdot\vec{u} =0
+\enn
+are fulfilled. In components these equations read
+\bnn
+u_1^\dagger\,u_1+u_2^\dagger\,u_2=1 \qquad v_1^\dagger\,v_1+v_2^\dagger\,v_2=1 \qquad 
+u_1^\dagger\,v_1+u_2^\dagger\,v_2=0 \qquad v_1^\dagger\,u_1+v_2^\dagger\,u_2=0
+\enn
+which are four equations for the four unknowns $u_i^\dagger,\,v_i^\dagger$ and allows us to determine the
+adjoint vectors $\vec{u}^\dagger$ and $\vec{v}^\dagger$ if the original basis vectors $\vec{u}$ and $\vec{v}$
+are linearly independent, i.e. not collinear.
+
+Now we can express vectors in the basis $\vec{u}$ and $\vec{v}$, and determine their components by
+multiplying with the corresponding vectors from the adjoint basis
+\bnn
+\vec{x} = a\,\vec{u} + b\,\vec{v} \; = \; \left\{ \begin{array}{c}     \vec{x}\cdot\vec{u}^\dagger=a\,\overbrace{\vec{u}\cdot\vec{u}^\dagger}^{=1}+\,b\,\overbrace{\vec{v}\cdot\vec{u}^\dagger}^{=0}
+=a \svs \\        \vec{x}\cdot\vec{v}=a\,\underbrace{\vec{u}\cdot\vec{v}^\dagger}_{=0}+\,b\,\underbrace{\vec{v}\cdot\vec{v}^\dagger}_{=1}      
+=b \end{array} \right.
+\enn
+ 
+%\begin{figure}[!h]
+%    \centerline{\epsfxsize=7cm  \epsfbox{fig_dummy.eps}} \svs
+%    \caption{Adjoint basis vectors}  \label{fig46}
+%\end{figure}\vs
+
+{\bf Note:} An ortho-normal basis system is simply the special case where the original and adjoint basis vectors are the same.
+
+
+\subsection{Determinants}
+The {\em determinant} is a is a descriptor of a matrix.
+The determinant of a $2\times2$ matrix is given by
+\bnn \det \mat{A}=\left| \begin{array}{cc} a_{11} & a_{12} \\ a_{21} & a_{22} \end{array} \right|
+= a_{11} \, a_{22}-a_{21} \, a_{12} \enn
+
+The determinant of a $3\times3$ matrix it is defined as
+\bnn \det \mat{A}= \left| \begin{array}{ccc} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\
+  a_{31} & a_{32} & a_{33} \end{array} \right|
+= a_{11} \, a_{22} \, a_{33} + a_{12} \, a_{23} \, a_{31} + a_{13} \, a_{21} \, a_{32}
+- a_{13} \, a_{22} \, a_{31} - a_{11} \, a_{23} \, a_{32} -a_{33} \, a_{12} \, a_{21} \enn \vs
+
+{\bf Hint:} The question arises, of course: "Who can remember something like this?" Well, it is actually
+not that difficult using the following construction. First copy the left and the middle column to
+the right. Then go through this scheme as indicated below: the left to right or southeast diagonals are
+counted positive, the right to left or southwest diagonals are counted negative, resulting in the formula
+for the determinant of a $3\times 3$ matrix (unfortunately such a procedure does not exist for higher
+dimensional matrices and how to find their determinants is beyond the scope of this course).
+
+\small
+\bnn
+\begin{array}{|ccc|cc}
+a_{11} & a_{12} & a_{13} &  a_{11} & a_{12} \\
+a_{21} & a_{22} & a_{23} &  a_{21} & a_{22} \\
+a_{31} & a_{32} & a_{33} &  a_{31} & a_{32}  \end{array} \quad \Rightarrow \quad \left\{
+\begin{array}{cccccccccl}
+a_{11} & & a_{12} & & a_{13} & & a_{11} & & a_{12} & \\ & \searrow & & \searrow & & \searrow & & & & \\
+a_{21} & & a_{22} & & a_{23} & & a_{21} & & a_{22} &  \qquad \mbox{\bf positive: +}
+\\ & & & \searrow & & \searrow & & \searrow & & \\
+a_{31} & & a_{32} & & a_{33} & & a_{31} & & a_{32} & \\ &&&&&&&&& \\ &&&&&&&&& \\ &&&&&&&&& \\
+a_{11} & & a_{12} & & a_{13} & & a_{11} & & a_{12} \\ &  & & \swarrow & & \swarrow & & \swarrow & &\\
+a_{21} & & a_{22} & & a_{23} & & a_{21} & & a_{22}  & \qquad \mbox{\bf negative: --}
+\\ & \swarrow & & \swarrow & & \swarrow & & & & \\
+a_{31} & & a_{32} & & a_{33} & & a_{31} & & a_{32} &
+\end{array} \right.
+\enn
+\normalsize
+
+{\bf Properties:}
+
+If at least two of the column vectors are \emph{linearly dependent} the determinant $\det \mat{A}=0$. \\
+\bnn \det (\mat{A} \, \mat{B})= \det \mat{A} \, \det \mat{B} \enn  \vs
+
+{\bf Examples:}
+\bnn \begin{array}{ccc} x-2y & = & \alpha_1 \\ 5 \, (x-2y) & = & \alpha_2 \end{array} \qquad
+\mat{A} = \left( \begin{array}{cc} 1 & -2 \\ 5 & -10 \end{array} \right) \qquad
+\vec{\alpha} = \left( \begin{array}{c} \alpha_1 \\ \alpha_2 \end{array} \right) \enn
+
+\bnn \det \mat{A} =(-10) \cdot 1-(-2) \cdot 5=0 \enn \svs
+
+\bnn \begin{array}{|rrr|rr}
+3  & 1 & 2 &  \;3  & 1 \\
+0 & -2 & 2 &  \;0 & -2 \\
+1  & 3 & 0 &  \;1  & 3  
+\end{array} = 3\cdot(-2)\cdot0+1\cdot2\cdot1+2\cdot0\cdot3-2\cdot(-2)\cdot1-3\cdot2\cdot3-1\cdot0\cdot0=-12
+\enn \svs
+
+{\bf Note:} The components of the vector product can be found from a determinant
+\bnn
+    \vec{a} \times \vec{b} = \left| \begin{array}{ccc}
+    \vec{i} & \vec{j} & \vec{k} \\ a_1 & a_2 & a_3 \\ b_1 & b_2 & b_3 \end{array} \right|
+    =\vec{i}\, (a_2\,b_3-a_3\,b_2) + \vec{j}\, (a_3\,b_1-a_1\,b_3) + \vec{k}\, (a_1\,b_2-a_2\,b_1)  
+\enn
+
+\subsection{The Inverse of a Matrix $\mat{A^{-1}}$}
+The matrix $\mat{A}$ has an inverse with the property
+$\mat{A} \, \mat{A^{-1}} = \mat{I} = \left( \begin{array}{cccc}
+ 1 & 0 & \hdots & 0 \\ 0 & 1 & \hdots & 0 \\ \vdots & \vdots & & \vdots \\ 0 & 0 & \hdots & 1
+ \end{array} \right) \quad$ \mbox{if} $\det \mat{A} \neq 0$ \vs
+
+{\bf Note:}
+\bnn \vec{y}=\mat{A} \, \vec{x} \qquad \rightarrow \qquad \vec{x}=\mat{A^{-1}} \, \vec{y}  \enn
+\bnn \det  (\mat{A} \, \mat{A^{-1}})= \det \mat{I}=1= \det \mat{A} \, \det \mat{A^{-1}} \qquad
+\quad \rightarrow \quad \det \mat{A^{-1}}=\frac{1}{\det \mat{A}} \enn \svs
+
+Inverse of a $2\times2 $ matrix:
+\bnn \mat{A}= \left( \begin{array}{cc} a_{11} & a_{12} \\ a_{21} & a_{22} \end{array} \right)\qquad
+\mat{A^{-1}}=\frac{1}{\det \: \mat{A}}\left( \begin{array}{rr} a_{22} & -a_{12} \\ -a_{21} & a_{11} \end{array} \right) \enn
+
+\bnn
+\Rightarrow \quad \mat{A} \, \mat{A^{-1}}  =\left( \begin{array}{cc} a_{11} & a_{12} \\ a_{21} & a_{22} \end{array} \right)
+\frac{1}{\det \: \mat{A}}  \left( \begin{array}{rr} a_{22} & -a_{12} \\ -a_{21} & a_{11} \end{array} \right)
+\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad \enn
+
+\bnn
+ \qquad\qquad =\frac{1}{a_{11}\,a_{22}-a_{12}\,a_{21}}
+    \left( \begin{array}{cc} a_{11}\,a_{22}-a_{12}\,a_{21} & 0 \\ 0 & a_{11}\,a_{22}-a_{12}\,a_{21} \end{array} \right)
+= \mat{I} = \left( \begin{array}{cc} 1 & 0 \\ 0 & 1 \end{array} \right)
+\enn \vs
+
+\subsection{Linear Systems of Equations}
+A system of the form
+\bnn \begin{array}{ccc}
+    y_1 & = & a_{11}\,x_1 + a_{12}\,x_2+ \, \hdots \, +a_{1n}\,x_n \\
+    y_2 & = & a_{21}\,x_1 + a_{22}\,x_2+ \, \hdots \, +a_{2n}\,x_n \\
+    \vdots & & \vdots \\
+    y_n & = & a_{n1}\,x_1 + a_{n2}\,x_2+ \, \hdots \, +a_{nn}\,x_n \end{array}
+    \qquad \mbox{or} \qquad
+    \left( \begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_n \end{array} \right)
+    = \left( \begin{array}{cccc} a_{11} & a_{12} & \hdots & a_{1n} \\ a_{21} & a_{22} & \hdots & a_{2n} \\
+        \vdots & \vdots & \vdots & \vdots \\ a_{n1} & a_{n2} & \hdots &  a_{nn} \end{array} \right)
+    \left( \begin{array}{c} x_1 \\ x_2 \\ \vdots \\ x_n \end{array} \right)
+\enn
+
+is called a {\em linear system of equations} and can be conveniently written in terms of 
+vectors and matrices $\vec{y}=\mat{A}\,\vec{x}$. In most cases the coefficients $a_{ij}$ and
+the values on the left hand side $y_i$ are known, and one is interested in finding a solution,
+i.e. values for the $x_i$ such that all equations are fulfilled. What are the conditions that 
+such a system has solutions and what are their properties?
+
+We distinguish two cases:
+\begin{enumerate}
+\item $\vec{y} \neq \vec{0}$, i.e. at least one of the $y_i \neq 0$. In this case the system
+       is called {\em inhomogeneous} and it has a unique solution if $\det \mat{A} \neq 0$. Then
+       the matrix $\mat{A}$ has an inverse and the solution is given by $\vec{x}=\mat{A^{-1}}\, \vec{y}$.
+       For $\det \mat{A} = 0$ the system has either no solution or infinitely many depending on $\vec{y}$;
+\item $\vec{y} = \vec{0}$, i.e. all of the $y_i = 0$. In this case the system
+       is called {\em homogeneous} and it has always the solution $\vec{x}=\vec{0}$, which is 
+       called the {\em trivial} solution. Non-trivial solutions exist only if $\det \mat{A}=0$ and then
+       there are infinitely many.
+\end{enumerate}
+
+{\bf Examples:}
+\bnn
+    \begin{array}{c} 3\,x_1 + x_2 = 6 \\ 3\,x_1 - x_2 =12 \end{array} 
+    \quad \mbox{inhom.,} \quad 
+    \det \mat{A} = \left| \begin{array}{cc} 3 & 1 \\ 3 & -1 \end{array} \right| = -6 \neq 0 \quad \rightarrow
+    \quad \begin{array}{c} \mbox{unique} \\ \mbox{solution} \end{array} \quad \rightarrow
+    \quad \begin{array}{c} x_1=3 \\ x_2= -3 \end{array}
+\enn 
+    
+\bnn
+    \begin{array}{c} 3\,x_1 + x_2 =6 \\  6\,x_1 + 2\,x_2 =10 \end{array} 
+    \quad \mbox{inhom.,} \quad 
+    \det \mat{A} = \left| \begin{array}{cc} 3 & 1 \\ 6 & 2 \end{array} \right| = 0  \quad \rightarrow
+    \quad 12=10 \; \blitzd \quad \rightarrow \quad \begin{array}{c} \mbox{no} \\ \mbox{solution} \end{array}
+\enn 
+    
+\bnn
+    \begin{array}{c} 3\,x_1 + x_2 = 6 \\ 6\,x_1 +2\,x_2=12 \end{array} 
+    \quad \mbox{inhom.,} \quad 
+    \det \mat{A} = \left| \begin{array}{cc} 3 & 1 \\ 6 & 2 \end{array} \right| =  0 \quad \rightarrow
+    \quad x_2=-3\,x_1+6 \quad \rightarrow \quad \begin{array}{c} \mbox{infinitely many} \\ \mbox{solutions} \end{array} 
+\enn 
+    
+\bnn
+    \begin{array}{c} 3\,x_1 + x_2 = 0 \\ 3\,x_1 - x_2 =0 \end{array} 
+    \quad \mbox{hom.,} \quad 
+    \det \mat{A} = \left| \begin{array}{cc} 3 & 1 \\ 3 & -1 \end{array} \right| = -6 \quad \rightarrow
+    \quad \begin{array}{c} x_2=-3\,x_1 \\ x_2= 3\,x_1 \end{array} \quad \rightarrow
+    \quad \begin{array}{c} \mbox{trivial} \\ \mbox{solution} \end{array} \quad \rightarrow \quad \vec{x}=\vec{0}
+\enn 
+
+\bnn
+    \begin{array}{c} 6\,x_1 + 2\,x_2 = 0 \\ 3\,x_1 + x_2 =0 \end{array} 
+    \quad \mbox{hom.,} \quad 
+    \det \mat{A} = \left| \begin{array}{cc} 6 & 2 \\ 3 & 1 \end{array} \right| = 0 \quad \rightarrow
+    \quad x_2=-3\,x_1 \quad \rightarrow
+    \quad \begin{array}{c} \mbox{infinitely many} \\ \mbox{solution} \end{array} 
+\enn 
+     
+\subsection{Eigenvalues and Eigenvectors}
+A matrix performs a stretch, squeeze and/or rotation of a vector.The vector and matrix
+elements depend on the choice of the coordinate system. Since this choice is arbitrary, the
+question arises whether there is a special or canonical representation which is independent
+of the coordinate system.
+
+There are distinguished directions [eigendirections (eigen $\sim$ self)] along which a matrix operates.
+Vectors pointing into these directions are only scaled but not rotated.
+
+\bnn\label{eig} \mat{A} \vec{v}= \lambda \vec{v} \qquad \lambda \sim \mbox{eigenvalue}
+\quad \vec{v} \sim \mbox{eigenvector} \enn
+\bnn \mbox{or:} \quad  \underbrace{(\mat{A}-\lambda \, \mat{I})}_{\mat{B}} \, \vec{v}= 0 \qquad
+\mbox{where} \quad \mat{I}=\left( \begin{array}{cc} 1 & 0 \\ 0 & 1 \end{array} \right)\mbox{ is the identity matrix.} \enn
+
+The linear system of equations given by $\mat{b} \vec{v} =0$ is homogeneous and has nontrivial solutions
+$\vec{v} \neq \vec{0}$ only if $\det \mat{b}=0$. The condition for non-vanishing eigenvectors is therefore 
+given by
+\bnn \det (\mat{A}-\lambda \, \mat{I})=0 \enn
+from which the eigenvalues can be readily found. The eigenvector are then determined by solving
+\bnn (\mat{A}-\lambda \, \mat{I}) \, \vec{v} = 0 \enn
+
+\begin{figure}[!ht]
+    \centerline{\epsfxsize=10cm  \epsfbox{matlab/fig37.eps}} \svs
+    \caption{Eigenvalues and eigenvectors} \label{fig47}
+\end{figure} \vs
+
+{\bf Examples:} 
+\bnn
+\mat{A} = \left( \begin{array}{cc} 13 & 4 \\ 4 & 7 \end{array} \right) \qquad \rightarrow \quad \mbox{eigenvalues:}
+\quad \det \, (\mat{A} -\lambda \, \mat{I}) = \left| \begin{array}{cc} 13-\lambda & 4 \\ 4 & 7-\lambda \end{array} \right|= 0
+\enn
+\bnn
+\rightarrow \quad \lambda^2-20\lambda+75=0 \quad\mbox{(characteristic polynomial)} \qquad \rightarrow \quad
+\lambda_1=15, \quad \lambda_2=5
+\enn
+\bnn
+\lambda_1=15: \qquad \left. \begin{array}{ccccc} 13 \, v_1 & + & 4 \, v_2& = & 15 \, v_1 \\
+4\, v_1 & + & 7\, v_2 & = & 15\,v_2 \end{array} \right. \qquad \rightarrow \quad v_1= 2 \, v_2
+\enn
+\bnn
+\rightarrow \quad \mbox{choose:}\quad v_2=1 \quad \rightarrow \quad v_1=2 \quad \rightarrow \quad
+\abs{\vec{v_1}}=\sqrt{5} \quad \Rightarrow \quad \vec{v_1}=\frac{1}{\sqrt{5}}
+\left( \begin{array}{c} 2 \\ 1 \end{array} \right)
+\enn
+\bnn
+\lambda_2=5: \;\;  \mat{A} \, \vec{v_2} = 5\, \vec{v_2} \;\;\rightarrow\;\; v_2=-2\, v_1 \;\;\rightarrow\;\;
+\mbox{choose:} \;\; v_1=1 \;\;\rightarrow\;\;  v_2=-2 \;\;\Rightarrow\;\;
+\vec{v_2}=\frac{1}{\sqrt{5}}\left( \begin{array}{c} 1 \\ -2 \end{array} \right)
+\enn
+
+\svs {\bf Note:} A matrix is called {\em symmetric} if $a_{ij}=a_{ji}$. Symmetric Matrices have real eigenvalues and
+orthogonal eigenvectors $\vec{v_1} \cdot \vec{v_2} = 2\cdot 1 + 1 \cdot (-2) =0$.
+
+
+\bnn
+\mat{A} = \left( \begin{array}{cc} 1 & 0 \\ 2 & 2 \end{array} \right) \qquad \rightarrow \quad \mbox{eigenvalues:}
+\quad \det \, (\mat{A} -\lambda \, \mat{I}) = \left| \begin{array}{cc} 1-\lambda & 0 \\ 2& 2-\lambda \end{array} \right|= 0
+\enn
+\bnn
+\rightarrow \quad (1-\lambda)(2-\lambda)=0 \quad\mbox{(characteristic polynomial)} \qquad \rightarrow \quad
+\lambda_1=1, \quad \lambda_2=2
+\enn
+\bnn
+\rightarrow \quad \mbox{eigenvectors:} \quad \mat{A} \, \vec{v} = \lambda \, \vec{v} \qquad \rightarrow \quad
+\left( \begin{array}{cc} 1 & 0 \\ 2 & 2 \end{array} \right) \left( \begin{array}{c} v_1 \\ v_2 \end{array} \right)
+= \lambda \left( \begin{array}{c} v_1 \\ v_2 \end{array} \right)
+\enn
+\bnn
+\lambda_1=1: \qquad \left. \begin{array}{ccc} v_1 & = & v_1 \\ 2\, v_1 + 2\, v_2 & = & v_2 \end{array} \right.
+\qquad \rightarrow \quad v_1=- \frac{1}{2} v_2
+\enn
+\bnn
+\rightarrow \quad \mbox{choose:}\quad v_2=2 \quad \rightarrow \quad v_1=-1 \quad \rightarrow \quad
+\abs{\vec{v_1}}=\sqrt{5} \quad \Rightarrow \quad \vec{v_1}=\frac{1}{\sqrt{5}}
+\left( \begin{array}{c} -1 \\ 2 \end{array} \right)
+\enn
+\bnn
+\lambda_2=2: \;\;  \mat{A} \, \vec{v_2} = 2\, \vec{v_2} \;\;\rightarrow\;\; v_1=2\, v_1 \;\;\rightarrow\;\;
+v_1=0 \;\;\rightarrow\;\; \mbox{choose:} \;\; v_2=1 \;\;\Rightarrow\;\;
+\vec{v_2}=\left( \begin{array}{c} 0 \\ 1 \end{array} \right)
+\enn \svs
+
+
+
+\vs \begin{figure}[!h]
+    \centerline{\epsfxsize=12cm  \epsfbox{matlab/fig38.eps}} \svs
+    \caption{Determining eigenvalues and eigenvectors } \label{fig48}
+\end{figure}
+
