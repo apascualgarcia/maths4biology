@@ -3,13 +3,14 @@
 \section{Function Theory}
 \subsection{Foundations}
 
-{\bf Definition:} A {\em function} $f$ is a rule which unambiguously
-assigns $y \in B$ to each $x \in A$.
+{\bf Definition:} Consider two sets of elements $A$ and $B$. A {\em function} $f$ is a rule which unambiguously
+assigns $y \in B$ to each $x \in A$. We call the set $A$ the {\em domain} of the function and the set $B$ its
+{\em codomain}.
 
-"$x \in A$" means that "$x$ is an element of $A$". \vs
+{\bf Note:} "$x \in A$" means that "$x$ is an element of $A$".\vs
 
 \begin{figure}[!h]
-    \centerline{\epsfxsize=11cm  \epsfbox{matlab/fig1.eps}} \vs
+    \centerline{\epsfxsize=10cm  \epsfbox{matlab/fig1.eps}} \vs
     \caption{Illustration of a function} \label{fig1}
 \end{figure} \vs
 
@@ -24,13 +25,13 @@ assigns $y \in B$ to each $x \in A$.
 {\bf Examples:}
 
 \vs \begin{figure}[!h]
-   \centerline{\epsfxsize=11cm \epsfbox{matlab/fig2.eps}} \vs
+   \centerline{\epsfxsize=10cm \epsfbox{matlab/fig2.eps}} \vs
    \caption{Assigning an element $\{21\} \in B$ to $\{1\} \in A$} \label{fig2}
 \end{figure} \vs
 
 \newpage
 
-Most commonly, functions are defined by equations: $\qquad y = f(x) = 2x + 1 \qquad\quad y=f(x)=x^2$  \svs
+Most commonly, functions are defined by equations: \qquad a) $ y = f(x) = 2x + 1$, \qquad b) $y=f(x)=x^2$  \svs
 
 {Graphical representation:} \svs
 \begin{figure}[!h]
@@ -40,6 +41,41 @@ Most commonly, functions are defined by equations: $\qquad y = f(x) = 2x + 1 \qq
     \subfigure[Function $y = x^2$]{\epsfxsize=7cm \epsfbox{matlab/fig3b.eps}} \svs
     \caption{A linear and a quadratic function} \label{fig3}
 \end{figure} \vs
+
+{\bf Types:} Some important types of functions are:
+\begin{enumerate}
+\item Injective functions: Those functions that preserve distinctiveness, i.e. they never map distinct elements of its domain to the same elements of its codomain.
+\item Surjective functions: Every element $y$ of the codomain has a correspondent element $x$ of the domain that is mapping it.
+\item Bijective functions: Those functions that are both injective and surjective.
+\end{enumerate}
+
+\subsection{Domain, parity and periodicity of functions}
+
+{\bf Domain of a function} is the set of input values in which the function can be defined. Therefore, given
+a map between two sets, to define a function we should determine a valid domain identifying possible {\em pathological} input values.
+
+{\bf Example:} 
+The map $f(x) = 1/x$ has a pathological value at $x=0$ meaning that the map diverges to infinity. In order
+for this map to be a function, we should {\em restrict the domain} and define the function as:
+
+\bnn 
+  f(x)=\begin{cases}
+    1/x, & \text{if $x\neq0$}.\\
+    0, & \text{if $x=0$}.
+  \end{cases}
+\enn
+
+{\bf Parity of a function.} Let $f(x)$ be a real-valued function, then:
+\begin{enumerate}
+ \item $f$ is {\em even} if the following equation holds for all $x$ in the domain of $f$:
+ 		\bnn f(x) = f(-x) \quad \rightarrow \quad f(x)-f(-x)=0 \enn
+ \item $f$ is {\em odd} if
+ 	    \bnn -f(x) = f(-x) \quad  \rightarrow \quad f(x)+f(-x)=0.\enn
+\end{enumerate}
+
+{\bf Note:} These properties will be very useful to guess some properties of derivatives and integrals of functions.
+
+{\bf Periodicity of a function.} We say that a function $f(x)$ is periodic if for all $x$ in the domain of $f$ there is a value $\lambda \in \mathbb{R}$ such that for a every $n \in \mathbb{N}$ it holds that $f(x) = f(x+n\lambda)$, where $\lambda$ is the {\em period} of the function.
 
 \subsection{Inverse Functions}
 
@@ -86,18 +122,30 @@ may not be unique and require more detailed discussion.
 \newpage
 \subsection{Implicit Functions}
 A function is not given explicitly as in $y = f(x)$, but
-implicitly by $F(x,y) = 0$.
+implicitly by $F(x,y) = 0$. Note that an implicit equation may not necessarily fulfill
+the conditions of a function when written explicitly, unless some additional conditions
+are imposed.
 
-{\bf Example:} Unit circle: $\quad F(x,y)=x^2+y^2-1=0$. \svs
+{\bf Example:} Unit circle: $\quad F(x,y)=x^2+y^2-1=0$. In the plot, we observe that
+each $x$ point corresponds to two $y$ points and hence it is not a function. \svs
 
 \begin{figure}[!h]
     \centerline{\epsfxsize=7cm \epsfysize=7cm \epsfbox{matlab/fig7.eps}} \svs
     \caption{Unit circle} \label{fig7}
 \end{figure} \svs
 
-The implicit representation of the unit circle also needs additional conditions to become
+The implicit representation of the unit circle needs additional conditions to become
 unique and thus a function: a local neighborhood has to be defined, e.g. $y=\sqrt{1-x^2}$
 for \mbox{$x\in (-1;1)$},  \mbox{$y >0$} and $y=-\sqrt{1-x^2}$ for $x\in (-1;1), \, y<0$.
+
+{\bf Note:} The implicit representation is particularly important for algebraic equations
+of the form:
+
+\bnn
+a_n(x)y^n + a_{n-1}y^{n-1}+...+a_0(x)=0
+\enn
+
+since those of order $n>5$ may not have an explicit representation.
 
 \subsection{Polynomials}
 Polynomials are defined as a class of functions of the form
@@ -116,7 +164,7 @@ where the function $y$ is said to be a polynomial of order $N$.  \svs
 \item[{\bf Step 1:}] If $N$ is even, then $x \rightarrow \pm\infty : y \rightarrow \pm \infty \, ; \quad$
 if $N$ is odd, then $x \rightarrow \pm \infty : y \rightarrow \mp \infty$. Note: If $a_N<0$,
 the behavior is the opposite.
-\item[{\bf Step 2:}] A polynomial of order $N$ has $N$ roots which are the solutions of $f(x)=0$.
+\item[{\bf Step 2: (Fundamental theorem of algebra)}] A polynomial of order $N$ has $N$ roots which are the solutions of $f(x)=0$.
 
 Set $y=0: f(x) = x^N + a_{N-1}\, x^{N-1} + \dots + a_1 \,x + a_0 = 0 $
 \bnn \begin{array}{ccl} \svs
@@ -128,6 +176,8 @@ y = 2x^2 + 8x + 4 \quad & y=0: x=\frac{1}{4}(-8 \pm \sqrt{8^2-4\cdot2\cdot4})=\f
     $\Rightarrow$ the roots are the locations where $f(x)$ crosses the $x$-axis.
 \end{center}
 \end{description}
+
+{\bf Note:} Analytic formulas to find the roots of polynomials are known until 4th degree.
 
 {\bf Examples:} Construct graph of $y=f(x)$ \vs
 \begin{figure}[!h]
@@ -169,6 +219,94 @@ y = 2x^2 + 8x + 4 \quad & y=0: x=\frac{1}{4}(-8 \pm \sqrt{8^2-4\cdot2\cdot4})=\f
 \subfigure[Vertical shift by $y_0=2: y = x^2+2$] {\epsfxsize=7cm \epsfbox{matlab/fig11b.eps}} \svs 
 \caption{Vertical and horizontal shift of $y=x^2$} \label{fig11}
 \end{figure}
+
+\subsection{Rational functions}
+
+Given two polynomial functions $D(x)$ and $d(x)$ a rational function has the form:
+\bnn f(x)=\frac{D(x)}{d(x)} \enn
+
+Working with these functions can be cumbersome if the polynomials are complicated. It is
+useful to learn how to factorize the polynomials, because it will allow us to find equivalent
+(simplified) functions. 
+
+{\bf 1. Binomial expressions.} Second order polynomials can be factorized in the product of two first order polynomials, i.e. $ax^2+bx+c = (x+u)(x+v)$. Some immediate factorizations are:
+
+\bnn
+ 	a^2x^2+b^2+2abx=(ax+b)(ax+b)\\
+ 	a^2x^2+b^2-2abx=(ax-b)(ax-b)\\
+    a^2x^2-b^2=(ax+b)(ax-b)
+\enn 
+
+Nevertheless, other expressions are not so easy. In general, we know that we are looking
+for something like $(x+u)(x+v)$ and hence, if we have for instance
+
+\bnn x^2+bx+c = (x+u)(x+v)= x^2 + (u+v)x + uv, \enn
+
+we can see that $u+v=b$ and $uv=c$, which are two equations with two unknowns that we can solve. A little
+bit more general expression would be:
+
+\bnn ax^2+bx+c = (ax+u)(x+v)= ax^2 + (u+av)x + uv, \enn
+
+leads to $u+av=b$ and $uv=c$. 
+
+{\bf Example:}
+
+\bnn
+\frac{x^4+8x^2+7}{3x^5-3x} = \frac{(x^2+7)(x^2+1)}{3x(x^2+1)(x^2-1)} = \frac{x^2+7}{3x(x^2-1)}
+\enn
+
+%If we substitute $u=c/v$ in the first equation
+%we get $c+av^2=bv \quad\rightarrow \quad v=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$ and only one of the
+%solutions will be compatible with the second equation $u=c/v$. However, the factorization
+%of $c$ in prime numbers typically brings an immediate answer.
+
+{\bf 2. Degree of $D(x)$ is larger than $d(x)$. } In this situation we can simply divide the numerator
+by the denominator! Calling $q(x)$ to the quotient and $r(x)$ to the remainder of the division, we get:
+
+\bnn
+	\frac{D(x)}{d(x)}=q(x)+\frac{r(x)}{d(x)}.
+\enn
+
+{\bf Example:}
+
+\bnn
+	\frac{3x^3-2x^2+4x-3}{x^2+3x+3}=(3x-11)+\frac{28x+30}{x^2+3x+3},
+\enn
+
+{\bf 3. Degree of $D(x)$ is smaller than $d(x)$. } To solve this case we proceed in three steps that we illustrate with one example:
+
+{\em Step 1 --} Factorize the denominator.
+\bnn
+	\frac{x}{x^2-3x+2}=\frac{x}{(x-1)(x-2)}
+\enn
+{\em Step 2 --} Rewrite the function as a sum of rational functions whose numerators are polynomials of degree zero, sum up the functions and group the terms by their degree on $x$.
+\bnn
+	\frac{x}{(x-1)(x-2)}=\frac{A}{(x-1)}+\frac{B}{(x-2)}=\\
+	=\frac{A(x-2)+B(x-1)}{(x-1)(x-2)}=\frac{(A+B)x-(2A+B)}{(x-1)(x-2)}
+\enn
+{\em Step 3 --} Identify the terms in the numerator of the last expression with those of the original function, and find the coefficients $A$, $B$, etc.
+\bnn
+	(A+B)x-(2A+B) = x.
+\enn
+
+Since the coefficient of $x$ in the numerator of the original function is 1 we get $A+B=1$ and, since the independent term is zero, we get $2A+B=0$. Considering both equations for the variables $A$ and $B$ we conclude that $A=-1$ and $B=2$, and the final factorization is:
+\bnn
+	\frac{x}{(x-1)(x-2)}=\frac{-1}{(x-1)}+\frac{2}{(x-2)}
+\enn
+
+{\bf Example:} It may happen that the multiplicity of any of the factors in the denominator is larger than one, in which case the decomposition at Step 2 becomes:
+
+\bnn
+	\frac{x}{(x-1)^3}=\frac{A}{(x-1)}+\frac{B}{(x-1)^2}+\frac{C}{(x-1)^3}
+\enn
+
+and we proceed similarly
+
+\bnn
+	\frac{x}{(x-1)^3}=\frac{A(x-1)^2+B(x-1)+C}{(x-1)^3}=\frac{Ax^2+(B-2A)x+(A+C-B)}{(x-1)^3}
+\enn
+
+finding that $A=0$, $B=1$ and $C=1$.
 
 \subsection{Trigonometric Functions}
 Trigonometric functions are a class of periodic functions such as
@@ -222,7 +360,7 @@ Other trigonometric functions:
 Exponential functions are functions most commonly used in the form
 \bnn y = A e^{kx} = A \exp{k x} \enn
 with the constant parameters: $A$ amplitude, $k$ growth rate if $k>0$ and the damping or fall 
-off, if $k<0$, and $e$ Euler number: 2.714....
+off, if $k<0$, and $e$ Euler number: 2.718....
 
 Note that $e^0=1\;$ and $\;e^{-x}=\frac{1}{e^x}$. \svs
 
@@ -287,13 +425,17 @@ of bits or binary digits that are necessary to represent a number $n$ in binary 
 zeros and ones.  
 
 {\bf Rules and tricks for dealing with logarithms:}
-\bnn \ln x^n = n \ln x \enn
-\bnn \ln x_1 \, x_2 = \ln x_1 + \ln x_2  \qquad  \ln \frac{x_1}{x_2} = \ln x_1 - \ln x_2  \enn
-\bnn \log_a x = \frac{\ln x}{\ln a} \enn
+\bnn \log_a x^n = n \log_a x \enn
+\bnn \log_a x_1 \, x_2 = \log_a x_1 + \log_a x_2  \qquad  \log_a \frac{x_1}{x_2} = \log_a x_1 - \log_a x_2  \enn
+\bnn \log_a x = \frac{\log_b x}{\log_b a} \enn
 
-{\bf Note:} Every logarithm can be expressed in terms of the natural logarithm, and every exponential 
+{\bf Note:} The last expression tells us that changing the base simply changes the values of the function by a constant. Every logarithm can be expressed in terms of the natural logarithm, and every exponential 
 function can be written in terms of the basis $e$
-\bnn    a^x = e^{x\,\ln a} \quad \mbox{with} \quad a>0 \qquad \mbox{\bf Very useful relation!} \enn 
+
+A particularly useful relation is the following:
+
+\bnn    a^x = e^{\ln a^x} = e^{x\,\ln a} \quad \mbox{with} \quad a>0 \enn 
+
 
 \subsubsection{Other inverse functions}
 \vspace*{-0.9cm} \begin{eqnarray*} \begin{array}{llll}
