@@ -66,7 +66,7 @@ to thank to all past contributors of Jirsta's course.
 
 Two different licenses are granted in this repository, one for the code and another one for the didactic contents.
 
-This code is licensed by a MIT License (Copyright (c) 2018, Viktor K. Jirsa). See the [LICENSE_software](LICENSE_software) file and please note that some exceptions apply. The didactic contents (tex, pdfs, figures, etc) are licensed by a Creative Commons BY-NC-SA License (Copyright (c) 2018, Viktor K. Jirsa). See the [LICENSE_tex](LICENSE_tex) file. 
+This code is licensed by a MIT License (Copyright (c) 2018, Viktor K. Jirsa). See the [LICENSE_software](LICENSE_software) file and please note that some exceptions apply. The didactic contents (tex, pdfs, figures, etc) are licensed by a Creative Commons BY-NC-SA License (Copyright (c) 2018, Viktor K. Jirsa and Alberto Pascual-García). See the [LICENSE_tex](LICENSE_tex) file. 
 
 
 
