@@ -32,9 +32,9 @@
 \contentsline {figure}{\numberline {16}{\ignorespaces The inverse of the trigonometric functions}}{20}{figure.16}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Arc sine, and arc cosine}}}{20}{figure.16}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Arc tangent, and arc cotangent}}}{20}{figure.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces Superposition of lines and functions}}{20}{figure.17}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Superposition of $f_1(x)\tmspace -\thinmuskip {.1667em}=\tmspace -\thinmuskip {.1667em}-x \unhbox \voidb@x \hbox { and } f_2(x)\tmspace -\thinmuskip {.1667em}=\tmspace -\thinmuskip {.1667em}1$}}}{20}{figure.17}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Superposition of $f_1(x)\tmspace -\thinmuskip {.1667em}=\tmspace -\thinmuskip {.1667em}-2x \unhbox \voidb@x \hbox { and } f_2(x)\tmspace -\thinmuskip {.1667em}=\tmspace -\thinmuskip {.1667em}x^3$}}}{20}{figure.17}
+\contentsline {figure}{\numberline {17}{\ignorespaces Superposition of lines and functions}}{21}{figure.17}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Superposition of $f_1(x)\tmspace -\thinmuskip {.1667em}=\tmspace -\thinmuskip {.1667em}-x \unhbox \voidb@x \hbox { and } f_2(x)\tmspace -\thinmuskip {.1667em}=\tmspace -\thinmuskip {.1667em}1$}}}{21}{figure.17}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Superposition of $f_1(x)\tmspace -\thinmuskip {.1667em}=\tmspace -\thinmuskip {.1667em}-2x \unhbox \voidb@x \hbox { and } f_2(x)\tmspace -\thinmuskip {.1667em}=\tmspace -\thinmuskip {.1667em}x^3$}}}{21}{figure.17}
 \contentsline {figure}{\numberline {18}{\ignorespaces Modulation of functions}}{21}{figure.18}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$e^{-x}$ is the envelope function of $\qopname \relax o{cos}10x$}}}{21}{figure.18}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\qopname \relax o{cos}10x$ is modulated with $\qopname \relax o{sin}x$}}}{21}{figure.18}
@@ -52,14 +52,14 @@
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$\DOTSI \intop \ilimits@ _0^{\infty } e^{-x} \tmspace +\thinmuskip {.1667em} dx = 1$}}}{32}{figure.25}
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$\DOTSI \intop \ilimits@ _1^{\infty } x^{-1} \tmspace +\thinmuskip {.1667em} dx = \infty $}}}{32}{figure.25}
 \contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$\DOTSI \intop \ilimits@ _0^2 x^{-1} \tmspace +\thinmuskip {.1667em} dx = \infty $}}}{32}{figure.25}
-\contentsline {figure}{\numberline {26}{\ignorespaces Definite integrals over functions with no antiderivatives}}{32}{figure.26}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\DOTSI \intop \ilimits@ _{-\infty }^{\infty } e^{-x^2}\tmspace +\thinmuskip {.1667em}dx=\sqrt {\pi }$}}}{32}{figure.26}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\DOTSI \intop \ilimits@ _{-\infty }^{\infty }{\frac {\qopname \relax o{sin}x}{x}}\tmspace +\thinmuskip {.1667em}dx=\pi $}}}{32}{figure.26}
-\contentsline {figure}{\numberline {27}{\ignorespaces The vector $(1,2)$ is an arrow from the origin to the point $x=1$ and $y=2$.}}{33}{figure.27}
+\contentsline {figure}{\numberline {26}{\ignorespaces Definite integrals over functions with no antiderivatives}}{33}{figure.26}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\DOTSI \intop \ilimits@ _{-\infty }^{\infty } e^{-x^2}\tmspace +\thinmuskip {.1667em}dx=\sqrt {\pi }$}}}{33}{figure.26}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\DOTSI \intop \ilimits@ _{-\infty }^{\infty }{\frac {\qopname \relax o{sin}x}{x}}\tmspace +\thinmuskip {.1667em}dx=\pi $}}}{33}{figure.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces The vector $(1,2)$ is an arrow from the origin to the point $x=1$ and $y=2$.}}{34}{figure.27}
 \contentsline {figure}{\numberline {28}{\ignorespaces Addition and subtraction of vectors}}{34}{figure.28}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {The sum of two vectors $\overrightarrow { c}=\overrightarrow { a}+\overrightarrow { b}$}}}{34}{figure.28}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {The difference between two vectors $\overrightarrow { c}=\overrightarrow { a}-\overrightarrow { b}$}}}{34}{figure.28}
-\contentsline {figure}{\numberline {29}{\ignorespaces $\overrightarrow { a_1}+\overrightarrow { a_2}+\ldots + \overrightarrow { a_5}=\overrightarrow { 0}$}}{34}{figure.29}
+\contentsline {figure}{\numberline {29}{\ignorespaces $\overrightarrow { a_1}+\overrightarrow { a_2}+\ldots + \overrightarrow { a_5}=\overrightarrow { 0}$}}{35}{figure.29}
 \contentsline {figure}{\numberline {30}{\ignorespaces The multiplication of a vector with a scalar $\overrightarrow { b}=-2\tmspace +\thinmuskip {.1667em}\overrightarrow { a}$}}{35}{figure.30}
 \contentsline {figure}{\numberline {31}{\ignorespaces Collinear and coplanar vectors}}{36}{figure.31}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Collinear vectors define a line}}}{36}{figure.31}
@@ -81,15 +81,6 @@
 \contentsline {figure}{\numberline {38}{\ignorespaces Polar coordinates}}{43}{figure.38}
 \contentsline {figure}{\numberline {39}{\ignorespaces Eigenvalues and eigenvectors}}{48}{figure.39}
 \contentsline {figure}{\numberline {40}{\ignorespaces Determining eigenvalues and eigenvectors }}{49}{figure.40}
-\contentsline {figure}{\numberline {41}{\ignorespaces Representation of a complex number}}{50}{figure.41}
-\contentsline {figure}{\numberline {42}{\ignorespaces Adding two complex numbers}}{51}{figure.42}
-\contentsline {figure}{\numberline {43}{\ignorespaces The complex number $z$ and its complex conjugate $z^*$}}{52}{figure.43}
-\contentsline {figure}{\numberline {44}{\ignorespaces $f(x)=2\tmspace +\thinmuskip {.1667em}\qopname \relax o{sin}(x-\frac {\pi }{3})\tmspace +\thickmuskip {.2777em}$ expressed as $\tmspace +\thickmuskip {.2777em}f(x)=-\sqrt {3}\qopname \relax o{cos}x + \qopname \relax o{sin}x$}}{54}{figure.44}
-\contentsline {figure}{\numberline {45}{\ignorespaces Superposition of two functions with different frequencies and phases}}{54}{figure.45}
-\contentsline {figure}{\numberline {46}{\ignorespaces Decomposition of a non periodic function}}{56}{figure.46}
-\contentsline {figure}{\numberline {47}{\ignorespaces The power spectrum for $f(x)=x^2$}}{57}{figure.47}
-\contentsline {figure}{\numberline {48}{\ignorespaces A finite non periodic time series is periodically contained}}{57}{figure.48}
-\contentsline {figure}{\numberline {49}{\ignorespaces Gibbs' phenomenon}}{58}{figure.49}
-\contentsline {figure}{\numberline {50}{\ignorespaces Power spectra of a random signal and a sine wave}}{59}{figure.50}
-\contentsline {figure}{\numberline {51}{\ignorespaces Approximation of a curve at a point $x_0$ with the tangent at $x_0$}}{60}{figure.51}
-\contentsline {figure}{\numberline {52}{\ignorespaces Steps of a Taylor expansion of $\qopname \relax o{sin}x$ around $x_0=0$}}{61}{figure.52}
+\contentsline {figure}{\numberline {41}{\ignorespaces Representation of a complex number}}{62}{figure.41}
+\contentsline {figure}{\numberline {42}{\ignorespaces Adding two complex numbers}}{63}{figure.42}
+\contentsline {figure}{\numberline {43}{\ignorespaces The complex number $z$ and its complex conjugate $z^*$}}{64}{figure.43}

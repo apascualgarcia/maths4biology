@@ -51,13 +51,14 @@
 \BOOKMARK [2][-]{subsection.3.9}{The Inverse of a Matrix A-1}{section.3}% 51
 \BOOKMARK [2][-]{subsection.3.10}{Linear Systems of Equations}{section.3}% 52
 \BOOKMARK [2][-]{subsection.3.11}{Eigenvalues and Eigenvectors}{section.3}% 53
-\BOOKMARK [1][-]{section.4}{Complex Number Theory}{}% 54
-\BOOKMARK [2][-]{subsection.4.1}{Representations and Basic Properties}{section.4}% 55
-\BOOKMARK [2][-]{subsection.4.2}{Complex conjugate}{section.4}% 56
-\BOOKMARK [1][-]{section.5}{Fourier Series}{}% 57
-\BOOKMARK [2][-]{subsection.5.1}{Power Spectrum}{section.5}% 58
-\BOOKMARK [2][-]{subsection.5.2}{Gibbs' Phenomenon}{section.5}% 59
-\BOOKMARK [2][-]{subsection.5.3}{Important Time-Frequency relations}{section.5}% 60
-\BOOKMARK [2][-]{subsection.5.4}{Taylor Series}{section.5}% 61
-\BOOKMARK [2][-]{subsection.5.5}{Finally some fun with Math}{section.5}% 62
-\BOOKMARK [1][-]{section.6}{Acknowledgements}{}% 63
+\BOOKMARK [1][-]{section.4}{Differential equations}{}% 54
+\BOOKMARK [2][-]{subsection.4.1}{General classes of differential equations \205 and which ones we will NOT study}{section.4}% 55
+\BOOKMARK [2][-]{subsection.4.2}{Differential equations that we WILL study}{section.4}% 56
+\BOOKMARK [2][-]{subsection.4.3}{Existence and uniqueness of solutions}{section.4}% 57
+\BOOKMARK [2][-]{subsection.4.4}{Separable ODEs}{section.4}% 58
+\BOOKMARK [2][-]{subsection.4.5}{Homogeneous ODEs}{section.4}% 59
+\BOOKMARK [2][-]{subsection.4.6}{Exact ODEs}{section.4}% 60
+\BOOKMARK [2][-]{subsection.4.7}{Linear ODEs}{section.4}% 61
+\BOOKMARK [1][-]{section.5}{Complex Number Theory}{}% 62
+\BOOKMARK [2][-]{subsection.5.1}{Representations and Basic Properties}{section.5}% 63
+\BOOKMARK [2][-]{subsection.5.2}{Complex conjugate}{section.5}% 64
