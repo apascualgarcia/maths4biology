@@ -1,93 +1,516 @@
+% Differential equations
 
-%\setcounter{page}{43}
+\section{Differential equations}
 
-\section{Complex Number Theory}
-There are polynomials, such as $f(x)=x^{2}+1$, which do not have a root, $f(x)=0$ for
-$x \in \mathbb{R}$. This is one of the reasons to extend the numbers from
-$x \in \mathbb{R}$ to $z \in \mathbb{C}$ where $\mathbb{C}$ is the set of complex numbers.
-Beyond this algebraic motivation there are many applications of complex numbers.
+In many relevant problems, we aim to determine a function satisfying an
+equation containing one or more derivatives of the unknown function.
 
-\subsection{Representations and Basic Properties}
-A complex number $z$ consists of a pair of real numbers called the real and imaginary part,
-respectively, and a "new" number '$i$' which has the property $i^2=-1$. While the real
-numbers can be represented as points on a line, a complex number is given as a point in a
-plane (called the complex plane) where the coordinates are its real (horizontal axis) and
-imaginary (vertical axis) part.
-\bnn z=\underbrace{\, \overbrace{a}^{\mbox{\small real}} \,
-+ \;\; i \, \overbrace{b}^{\mbox{\small imaginary}}}_{\mbox{\small complex number}}
-\qquad \mbox{with}  \quad a, b \in \mathbb{R} \enn
-\begin{figure}[!h]
-    \centerline{\epsfxsize=10cm  \epsfbox{matlab/fig39.eps}} \svs
-    \caption{Representation of a complex number} \label{fig49}
-\end{figure} \vs
+{\bf Example:} Consider a function $y=y(t)$ such that verifies the differential equation:
 
-The real and imaginary part, $a$ and $b$, can be expressed by a distance from the origin $r$
-and an angle $\varphi$ (remember polar coordinates) in terms of $a=r\cos\varphi$ and
-$b=r\sin\varphi$ which leads to
-\bnn  z=a + i\, b = r\, \cos\varphi + i\,r\,\sin\varphi=r\,e^{i\,\varphi} \qquad \mbox{with} \quad
-r=\sqrt{a^2+b^2} \quad \varphi=\arctan\frac{b}{a} \enn
+\bnn
+\frac{dy}{dt} = -Ky \qquad \mbox{where } K \mbox{ is a constant.}
+\enn
+
+We aim to find the explicit expression of the function $y(t)$. We can rearrange this equation separating terms containing the variable $y$ from those containing the variable $t$:
+
+\bnn \frac{dy}{y} = -Kdt, \enn
+
+and now we integrate both sides
+
+\bnn \int \frac{dy}{y} = \int -Kdt \quad \rightarrow \quad \ln |y| +C_1 = -Kt + C_2\enn
+
+where $C_i$ are constants that we can merge into a single one, i.e. $C = C_1+C_2$. Solving for $y$ we obtain the explicit expression $y(t)$ that we look for:
+
+\bnn y = e^{-Kt+C} = Ce^{-Kt} \enn
+
+\subsection{General classes of differential equations -- and which ones we will NOT study}
+
+To solve differential equations we should first recognize different properties in the equations, that allow us to classify them into types. This is important because there are different methods for each particular type of equation, so many times the difficulty relies in the identification of the equation and, eventually, in the transformation of the equation into one type we know how to solve. In this course, we will focus on {\em first-order ordinary differential equations}. To see what does this mean we will see here the type of equations that we will NOT study.
+
+\paragraph{a) Ordinary differential equation (ODE) vs. partial differential equation (PDE).} 
+If the unknown function only depends on one independent variable we are dealing with an ODE, otherwise it is a PDE. We will study ODEs only.
+
+{\bf Example: } The difussion equation is a PDE. If the diffusion constant $D$ is independent of time ($t$) and space ($\vec{r}$), the one-dimensional ($\vec{r}=x$)  equation is:
+
+\bnn D\frac{\partial^2 y(x,t)}{\partial x^2} = \frac{\partial y(x,t)}{\partial t} \enn
+
+\paragraph{b) Order of a differential equation.}
+The order of a differential equation is given by the order of the highest derivative found in the equation, i.e. the highest number of times that the function $y$ is differentiated in any term of the equation. In this course we
+will focus on first-order ODEs. Many times in natural systems we only need to consider first and second order differential equations to describe processes.
+
+{\bf Example: } The Newton's law is a second-order differential equation.
+
+\bnn m\frac{d\vec{r}(t)}{dt^2}=F(t,\vec{r}(t),d\vec{r}(t)/dt) \enn
+
+\paragraph{c) Systems of differential equations}
+
+In the same way that we studied systems of linear equations, we may have
+systems of differential equations, where there is one equation for each unknown function. 
+
+{\bf Example:} Consider the population dynamics of some plant, $P=P(t)$, and herbivore species,  $H=H(t)$:
+
+\bnn \frac{dP}{dt}=a P - \beta H P \\
+     \frac{dH}{dt}=-b H + \gamma P H. \enn
+     
+Where the parameters $a$ ($b$) describe the intrinsic growth (death) rates of plants (herbivores), and the $\beta$ ($\gamma$) parameters the rate of decrease (increase) in the populations due to the prey-predator interaction. These equations are also known as Lotka-Volterra equations. In this course, we will not study systems of differential equations that will be studied in the module of Ecological Modelling.
+
+
+\subsection{Differential equations that we WILL study}
+
+In this course, we would like to solve 1st-order ODEs that can be written in general in this form:
+
+\bnn N(x,y)y' + M(x,y) = Q(x). \enn
+
+There are four main types of analytically solvable 1st-order ODEs, that we will define from the above equation. The four types are: separable, homogeneous, exact and linear ODEs.  We will learn how to solve these types of ODEs and we will see some examples of equations that can be transformed into these ones. It is important to know that homogeneity and linearity are properties that can be defined for higher-order ODEs and hence ODEs can be classified as linear vs. non-linear and as homogeneous vs. non-homogeneous. For simplicity, we will present here the definition for first-order ODEs but we should keep that these two types are particularly important.  
+
+\paragraph{a) Separable ODEs}
+
+We will say that a first-order ODE is separable if $N(x,y)=N(y)$ and $M(x,y)=M(x)$:
+
+\bnn N(y)y' + M(x) = 0. \enn
+
+{\bf Example: } The first example we discussed in this chapter was a separable ODE, and it was very easy to solve it!
+
+\paragraph{b) Homogeneous ODEs}
+
+We say that the equation is {\em homogeneous} if $Q(x)=0$ and if $M(x,y)$ and $N(x,y)$ are {\em homogeneous functions} of the same order. What is a homogeneous function? 
+
+{\bf Definition:} We say that a function $M(x,y)$ is homogeneous if, when we multiply each variable by a factor $\lambda$, we can factor it out:
+
+\bnn M(\lambda x,\lambda y) = \lambda^k M(x,y), \enn
+
+calling the constant $k$ the {\em degree} of the (homogeneous) function.
+
+{\bf Example:} The following function is homogeneous of degree two :
+
+\bnn N(x,y) = 10x^2+y^2\sin(x/y). \enn
+
+Multiplying both variables times $\lambda$ we can factorize out a term $\lambda^2$,
+
+\bnn  N(\lambda x,\lambda y) = 10(\lambda x)^2+(\lambda y)^2\sin(\lambda x/(\lambda y)) = \lambda^2(10x^2+y^2\sin(x/y)) = \lambda^2 N(x,y). \enn
+
+{\bf Example:}  If we look now for another homogeneous function of degree two, for instance $M(x,y)=xy$ (prove that this is true), we can propose a first-order homogeneous equation:
+
+\bnn (10x^2+y^2\sin(x/y))y'+ xy=0 \enn
+
+This equation is, however, non-linear. Would be possible to convert it into a linear one with the approximation we did for $\sin(x)$ in the example of the pendulum?
+
+{\bf Note:} If you compare the definition of separable and homogeneous ODEs, you will see that both have $Q(x)=0$. Then, the conditions over the functions $M(x,y)$ and $N(x,y)$ are a little bit uglier for homogeneous ODEs, but we will see that it is possible to convert homogeneous ODEs into separable ODEs.
+
+
+    
+\paragraph{c) Exact ODEs}
+
+We say that an ODE is {\em exact} if $Q(x)=0$ and if there exist a function $\Psi=\Psi(x,y)$ such that:
+
+
+\bnn 
+	\frac{\partial \Psi}{\partial x}= M(x,y) \\
+	\frac{\partial \Psi}{\partial y}= N(x,y). 
+\enn
+
+Why such a weird condition? Well, because if these conditions hold, we will be able to recognize
+our beloved chain rule:
+
+\bnn N(x,y)y' + M(x,y) = 0 \rightarrow \frac{\partial \Psi}{\partial x} +  \frac{\partial \Psi}{\partial y} \frac{dy}{dx} = 0 \rightarrow \frac{d}{dx}\Psi(x,y(x))=0 \enn
+
+And we know that the last equation has the solution $\Psi(x,y) = C$. 
+
+{\bf Note: } We have seen so far three types of ODEs having $Q(x)=0$ plus some properties on the functions $M$ and $N$ that will allow us to solve them analytically. What if $Q(x)\neq 0$?
+
+
+\paragraph{d) Linear ODEs}
+
+
+We say that the differential equation is {\em linear} if $N(x,y)=N(x)$ and $M(x,y)=M(x)y$ (otherwise, it is non-linear):
+
+\bnn N(x)y' + M(x)y = Q(x). \enn
+
+What we should note is that we do not have non-linear functions on $y$ or $y'$. For instance, the following ODE is non-linear: $yy'=Q(x)$ due to the product $yy'$.
+
+{\bf Example:} The ODE describing the oscillations of a pendulum is non-linear. Consider a pendulum of lenght $L$, that oscillates with an angle $\theta=\theta(t)$ driven by the acceleration of gravity $g$. Its motion is described by the equation:
+
+\bnn \frac{d^2\theta}{dt^2} + \frac{g}{L}\sin(\theta)= 0, \enn
+
+which is non-linear, due to the term $sin(\theta)$. Nevertheless, for small oscillations we can approximate $\sin(\theta)\approx \theta$ and it becomes linear. What would be the order of the error? (hint: think in MacLaurin series).
+
+{\bf Note:} Now the term $Q(x)$ is not equal to zero in general, as it was in the three previous types, but note that there are ODEs that are both homogeneous and linear!
+
+\subsection{Existence and uniqueness of solutions}
+
+It is apparent that, in order to solve things analytically, we need very particular conditions over the functions $M$, $N$, and $Q$. Why is this the case? Well, because, in general, it is difficult to solve differential equations. This is why there is intense research to understand if, given a differential equation, we are able to say (at least) that there exist a solution for some initial conditions (the problem of existence) and, if it exists, if the solution is unique (the problem of uniqueness). 
+
+For the sake of illustration and before we get into the world of easy-to-solve problems, we show here one theorem on the existence and uniqueness of solutions. Given the following initial value problem:
+
+\bnn \frac{dy}{dx}=f(x,y)  \quad \mbox{with } y(x_0)=y_0, \enn 
+
+when does a solution exist? If it exist, is it unique? The following conditions:
+
+\begin{enumerate}
+	\item  $f$ is continuous in some rectangle $R=\{(x,y) / |x-x_0|\leq a, |y-y_0|\leq b\}$, and
+	\item $\frac{\partial f}{\partial y}$ is continuous in $R$, 
+\end{enumerate}
+
+are {\em sufficient} to guarantee a solution in an interval $[x_0-h,x_0+h]$ with $h\leq a$.
+
+{\bf Notes:}
+\begin{enumerate}
+	\item  The above expression is kind of general, at least three out of four examples discussed above belong to this class.
+	\item This is only true for a neighbourhood around $(x_0,y_0)$ and we don't know how far we can go beyond that.
+	\item These are {\em sufficient} conditions but are not {\em necessary}, so there may be cases in which the solution exists and it is unique even if these conditions do not hold.
+\end{enumerate}
+
+
+\subsection{Separable ODEs}
+
+We consider ODEs that have the form
+
+\bnn N(y)y' + M(x) = 0. \enn
+
+In this case, we can separate the equation in terms on $y$ and $x$. Since $y'=dy/dx$ we get that
+
+\bnn N(y)dy=-M(x)dx, \enn
+
+that we can integrate independently and then solve for $y$.
+
+{\bf Example}. Solve the following ODE the initial value $y(0)=1$: 
+
+{\bf \bnn \frac{dy}{dx} = \frac{3x^2+4x+2}{2(y-1)}, \enn }
+
+The problem asks for a particular solution, the one corresponding to the initial value $x=0$ that it says should lead to $y=1$. The ODE is separable, rearranging a little bit we see it easily:
+
+\bnn 2(y-1)dy = (3x^2+4x+2) dx \enn
+
+integrating both sides we get,
+
+\bnn y^2 -2y = x^3 + 2x^2 +2x + C, \enn
+
+where we merged the constants arising from both integrals into $C$. We should determine the
+constant $C$ considering the initial value given by the problem. Since for $x=0$ we know that $y=1$ we get that $C=3$.
+
+Let's make the solution explicit:
+
+\bnn y=1\pm\sqrt{x^3+2x^2+2x+4}. \enn
+
+Do we have two solutions for the starting conditions given by the problem? Let's double check the initial conditions, because if we make $x=0$ we see that only the negative solution works, which would be the solution required.
+
+{\bf Example} Solve the following ODE for the initial value $y(0)=1$:
+
+{\bf \bnn \frac{dy}{dx} = \frac{y \cos x}{1+2y^2}. \enn }
+
+Again, rearranging the equation we see that it is separable,
+
+\bnn (1/y)dy + 2y dy = \cos x dx \enn
+
+which, after integration, leads to the general solution
+
+\bnn \ln |y| + y^2 = \sin x + C. \enn
+
+Looking for the particular solution requires to substitute $x=0$, and to find the value of the constant $C$ such that $y=1$, which is $C=1$. Therefore, the final solution is
+
+\bnn \ln |y| + y^2 = \sin x + 1, \enn
+
+that we can just keep implicit.
+
+\subsection{Homogeneous ODEs}
+
+
+Homogeneous ODEs have the form 
+
+\bnn N(x,y)y' + M(x,y) = 0, \enn
+
+where $N(x,y)$ and $M(x,y)$ are homogeneous functions of the same degree. This fact allows to rewrite the equation as follows:
+
+ \bnn y' =\ \frac{-M(x,y)}{N(x,y)} = f(y/x), \enn
+
+i.e. we will deal with a function $f(y/x)$ which makes the change of variables $u = y/x$ appropriate to transform the homogeneous ODE into a separable one. Indeed, since $y=ux \ \rightarrow \ y'=u'x+u$, we get for the above general expression
+
+\bnn x\frac{du}{dx}+u=f(u) \quad \rightarrow \frac{du}{f(u)-u}=\frac{dx}{x}. \enn
+
+Integrating the right hand side will always lead to $\ln |x|+c$, and the left side
+will depend on $f(u)-u$ which will be the function that will change through the different problems.
+
+{\bf Example: } Solve the following ODE:
+
+\bnn
+ 	\frac{dy}{dx}=\frac{x^2+xy+y^2}{x^2}.
+\enn
+
+Although the equation is not presented in the general form, it is easy to see that the functions in the numerator and denominator are both homogeneous of degree two. Since we know that the change $u = y/x$ works well for these equations, let's transform it first multiplying up and down times $x^2$, which leads to
+
+\bnn
+	\frac{dy}{dx}=\frac{1+y/x+y^2/x^2}{1}.
+\enn
+
+Making the suggested change $y=ux \ \rightarrow \ y'=u'x+u$ we get
+
+\bnn
+    x\frac{du}{dx}+u=u^2+u+1 \quad \rightarrow \int \frac{du}{u^2+1} = \int \frac{dx}{x},
+\enn
+
+which leads to the general solution,
+
+\bnn
+	\arctan(u)=\ln |u|+C \quad \rightarrow \arctan(y/x) - \ln |x| =C,
+\enn
+
+where, in the last step, we changed the variables back to the original ones.
+
+{\bf Example: }Solve the following ODE:
+
+\bnn
+	\left(x\sin\left(\frac{y}{x}\right)-y\cos\left(\frac{y}{x}\right)\right)dx+x\cos\left(\frac{y}{x}\right)dy=0
+\enn
+
+ Both functions are homogeneous of degree one and hence we can apply the usual change, getting 
+
+\bnn
+	\frac{dy}{dx}=-\left(\frac{x\sin\left(\frac{y}{x}\right)-y\cos\left(\frac{y}{x}\right)}{x\cos\left(\frac{y}{x}\right)}\right)\Rightarrow\frac{du}{dx}x+u=-\left(\frac{x\sin\left(u\right)-xu\cos\left(u\right)}{x\cos\left(u\right)}\right),
+\enn
+
+where it is possible to remove $x$ in the right-hand of the equation:
+
+\bnn
+	\frac{du}{dx}x=-\left(\frac{\sin\left(u\right)-u\cos\left(u\right)}{\cos\left(u\right)}\right)-u=-\frac{\sin u}{\cos u}
+\enn
+
+separate variables...
+
+\bnn
+	\frac{\cos u}{\sin u}du=-\frac{dx}{x}
+\enn
+
+and integrating we get
+
+\bnn
+	\ln|\sin u|=-\ln|x|+\ln|C|
+\enn
+
+and we can just leave the solution in implicit form, for instance as
+
+\bnn
+	\left|x\sin\left(\frac{y}{x}\right)\right|=C.
+\enn
+
+\subsection{Exact ODEs}
+
+We start with the same general expression than for homogeneous equations,
+\bnn N(x,y)y' + M(x,y) = 0, \enn
+
+but now the functions $N(x,y)$ and $M(x,y)$ fulfill the relation
+
+\bnn 
+	\frac{\partial \Psi}{\partial x}= M(x,y) \\
+	\frac{\partial \Psi}{\partial y}= N(x,y). 
+\enn
+
+Above we showed that if these conditions hold, a solution of the ODE is $\Psi(x,y)=C$. The question is, how
+can we obtain such a function? Well, since $\partial \Psi /\partial x= M(x,y)$ we could simply integrate
+$M(x,y)$ with respect to $x$ (or we could integrate $N(x,y)$ with respect to $y$, since the problem is
+symmetric). But this may not be enough, let's see why. Let's assume that $\Psi(x,y)=f(x,y)+h(y)$, if
+we do $\partial \Psi /\partial x= \partial f(x)/ \partial x = M(x,y) $ and, if we integrate back:
+
+\bnn
+	\int M(x,y) dx = \int \frac{\partial f(x)}{\partial x} dx = f(x) + C \neq \Psi(x,y) \quad \mbox{!!}
+\enn
+
+The problem is that, if $\Psi(x,y)$ has any term which depends only on the variable $y$, differentiating with respect
+to $x$ will make this term to dissapear like \href{https://www.youtube.com/watch?v=NoAzpa1x7jU}{tears in the rain}. Let's say then that $\Psi$ is the ouctome of integrating $M(x,y)$ with respect to $x$ plus possibly some function $h(y)$:
+
+\bnn
+	\Psi(x,y)=\int M(x,y) dx + h(y) = f(x,y)+h(y),
+\enn
+
+and now let's use the second condition, namely that $\partial \Psi /\partial y= N(x,y)$:
+
+\bnn
+	\frac{\partial \Psi(x,y)}{\partial y}= \frac{\partial f(x,y)}{\partial y} + h'(y)=N(x,y).
+\enn
+
+And we can get $h(y)$ just solving the above expression for $h'(y)$ and integrating.
+
+{\bf Example:} Solve the exact ODE:
+
+\bnn
+	\underbrace{(y\cos(x)+2xe^y)}_{M(x,y)}+\underbrace{(\sin(x)+x^2e^y-1)}_{N(x,y)}y'=0.
+\enn
+
+Let's first check if the ODE is indeed exact:
+
+\bnn
+    	\frac{\partial M(x,y)}{\partial x}=\cos(x)+2xe^y; \quad \frac{\partial N(x,y)}{\partial y}=\cos(x)+2xe^y.
+\enn
+
+It is! therefore there exist a function $\Psi$, let's look for the function:
+
+\bnn
+  \begin{array}{ccl}
+  	\Psi(x,y)&=&\int M(x,y) dx + h(y)=\int y\cos(x) dx +\int 2xe^y dx + h(y) \\
+  	         &=& y \sin(x) + x^2 e^y + h(y)+C.
+  \end{array}	
+\enn
+
+Now we should determine $h(y)$, using the relation $\partial \Psi /\partial y= N(x,y)$:
+
+\bnn
+	 \frac{\partial \Psi(x,y)}{\partial y}= \sin(x)+x^2 e^y +h'(y) = \underbrace{\sin(x)+x^2e^y-1}_{N(x,y)},
+\enn
+
+which means that $h'(y)=-1 \quad \rightarrow h(y)=-y+C$. Therefore, the final solution is
+
+\bnn
+   \Psi(x,y)= y \sin(x) + x^2 e^y -y +C.
+\enn  
+
+\subsection{Linear ODEs}
+ 
+Before we get into linear equations, we need to learn first an important concept: the {\em integrating factor}. Basically, it is a term that will multiply our ODE and will allow us to solve it, and it is a tool very frequently
+used to solve differential equations. In particular, for linear equations there is a general method to find such a factor. It is not difficult but, to introduce it properly, we
+will first get some intuition with an example of a separable ODE, then we will present the method and
+demonstrate why it works, and finally we will do some exercises.
+
+\paragraph{Intuition behind the integrating factor. } Let's start considering the ODE:
+
+\bnn
+	\frac{dy}{dx}+\frac{1}{2}y=\frac{3}{2}.
+\enn
+
+%% Comment the following for the students
+This equation is separable:
+
+\bnn
+	\int \frac{dy}{y-3}=\int \frac{-1}{2}dx \quad \rightarrow \ln |y-3| = e^{(-x/2+C)},
+\enn
+
+and leads to the solution 
+ 
+%% Comment the following for yourself
+%This equation is separable, so you should be able to easily find the solution (exercise):
+
+\bnn y=3+Ce^{-x/2}. \enn
+
+Now, let's multiply both sides of the solution by $e^{x/2}$:
+
+\bnn y e^{x/2} = 3 e^{x/2} +C \enn
+
+and take derivatives in both sides
+
+\bnn \underbrace{y'e^{x/2}+\frac{y}{2}e^{x/2}}_{\small{\frac{d(ye^{x/2})}{dx}}} = \frac{3}{2}e^{x/2} \quad \rightarrow 	y'+\frac{1}{2}y=\frac{3}{2}, \enn
+
+which is the starting ODE! Since from the solution we can get the original ODE back simply multiplying
+by $e^{x/2}$ and taking derivatives, it should be also easy to find the solution of the original ODE if
+we multiply by the same term, and we say that $e^{x/2}$ is an integrating factor. Let's see:
+
+\bnn
+	e^{x/2}y'+\frac{1}{2}ye^{x/2}=\frac{3}{2}e^{x/2} \quad \rightarrow \int \frac{d(ye^{x/2})}{dx} = \int  \frac{3}{2}e^{x/2}
+\enn
+
+And we get
+
+\bnn
+	y e^{x/2} = \frac{3}{2} 2e^{x/2} +C  \quad \rightarrow y=3+Ce^{-x/2}.
+\enn
+
+So far so good, but we found the integral factor after finding the solution! Is it any general method to find this factor in advance? For linear ODEs there is.
+
+\paragraph{Method to find the integrating factor in linear equations.} Let's start considering the general expression for linear equations presented above and divide both sides by $N(x)$:
+
+\bnn N(x)y' + M(x)y = Q(x) \quad \rightarrow y' + \underbrace{\frac{M(x)}{N(x)}}_{p(x)}y = \underbrace{\frac{Q(x)}{N(x)}}_{g(x)}, \enn
+
+where we are just renaming the functions for simplicity. With this notation the general expression for linear equations is now:
+
+\bnn
+  y'+p(x)y=g(x),
+\enn
+
+and the integrating factor $\mu(x)$ can be easily defined as
+
+\bnn
+  \mu(x)=e^{\int p(x)dx},
+\enn
+
+from which we can derive a general expression for the solution of linear ODEs:
+
+\bnn
+	y = \frac{\int \mu(x) g(x) dx +C}{\mu(x)}.
+\enn
+
+{\bf Proof:} One can memorize the above formula for the solution but it is not really needed. Let's multiply
+the general expression of linear ODEs by the integrating factor:
+
+\bnn
+    \underbrace{e^{\int p(x)dx}y'+p(x)e^{\int p(x)dx}y}_{\small{(uv)'=uv'+u'v}} = g(x) e^{\int p(x)dx},
+\enn
+
+we see that it happens as in the example we discussed above, that the left hand side of the equation is the result of the derivative of the product of two functions $u=e^{\int p(x)dx}$ and $v=y$, and hence
+
+\bnn 
+	 \underbrace{\frac{d}{dx}\left(e^{\int p(x)dx}y\right)}_{(uv)'}= g(x) e^{\int p(x)dx}
+\enn
+
+which, integrating both sides leads to
+\bnn 
+	 \underbrace{e^{\int p(x)dx}}_{\mu(x)}y+C= \int g(x) e^{\int p(x)dx}dx
+\enn
+
+and this is how we found the above solution
+
+\bnn
+	y = \frac{\int \mu(x) g(x) dx +C}{\mu(x)}.
+\enn
+
+
+{\bf Example: }Solve the ODE with starting conditions $y(0)=0$
+
+\bnn y'-2xy=x. \enn
+
+Since $p(x)=-2x$ the integrating factor is $\mu(x)=e^{\int -2x dx} = e^{-x^2}$. Multiplying both sides of the ODE by $\mu(x)$ we get
+
+\bnn 
+	\underbrace{e^{-x^2}y'-2xye^{-x^2}}_{\small{\mbox{is this } \frac{d}{dx}\left(e^{-x^2}y\right)\mbox{?}}}=xe^{-x^2},
+\enn
+
+and the answer to the above question is yes, so we can write
+
+\bnn 
+ \begin{array}{rcl}
+     \int d\left(e^{-x^2}y \right) & = \int x e^{-x^2} & \underbrace{=}_{\uparrow} \frac{1}{2}e^{-x^2}+.C\\
+	                               & \mbox{change vars:}& \begin{cases} u=-x^2 \rightarrow du=-2xdx \\ 
+	                                                                            -\int \frac{1}{2} e^u du = -\frac{1}{2}e^u
+	\end{cases}
+	\end{array}
+\enn
+
+The problem asks for the particular solution $y(0)=0$, from which we get $C=1/2$, and the final solution
+is:
+\bnn
+	y=\frac{1}{2}\left(e^{x^2}-1\right).
+\enn
+
+{\bf Exercise:} Solve the following ODE:
+
+\bnn
+	y'+\frac{1}{x}y = x^2.
+\enn
+
+The ODE is clearly linear so we start computing the integrating factor: $\mu(x)=e^{\int \frac{1}{x}dx}=e^{\ln|x|}=x$. We multiply both sides of the equation by $\mu(x)$ getting
+
+\bnn
+   \underbrace{xy'+y}_{\small{\mbox{Is }xy'+y=(xy)'?}}=x^3
+\enn
+
+Again, the answer is yes, so we can easily integrate:
+
+\bnn
+ \int d(xy)=\int x^3 dx \quad \rightarrow xy = \frac{x^4}{4}+C,
+\enn
+
+and, solving for $y$ we get
+
+\bnn
+ y= \frac{x^3}{4}+\frac{C}{x}.
+\enn
+
 
 \newpage
-{\bf Remarks:}
-\begin{itemize}
-\item We will proof later by Taylor expansion that the relation $\cos\varphi+i\,\sin\varphi=e^{i\,\varphi}$ is true.
-\item All basic computations such as addition, subtraction, multiplication or division are defined for $z \in \mathbb{C}$.
-\item The inverse relation $\varphi=\arctan\frac{b}{a}$ is not unique because $\frac{-b}{-a}=\frac{b}{a}$. However, the
-first number is the third quadrant whereas the second number is in the first quadrant.
-Most computer languages, therefore have a second
-function to calculate the inverse tangent (usually called atan2 or so) which accepts two arguments, i.e. $b$ and $a$
-and not only their ratio $\frac{b}{a}$ and returns the correct angle in the $[0, 2\pi]$ or $[-\pi, \pi]$ range.
-\item The number $i$ is called the imaginary unit and is defined as $i^2=-1$. It represents a very powerful tool to
-simplify calculations, in particular when trigonometric functions are involved. From its definition we find readily
-$i=\pm \sqrt{-1}, \;\; i^3=-i, \;\; \mbox{and} \;\; i^4=1$.
-\end{itemize}  \svs
 
-
-{\bf Rules for dealing with complex numbers:} $\qquad z=a + i\, b = r\, e^{i\, \varphi}$
-\bnn \begin{array}{crcl} \svs
-\mbox{Addition:} & \quad (a_1 + i\, b_1) + (a_2 + i\, b_2) & = & a_1 + a_2 + i\,(b_1+b_2) \\  \svs
-\mbox{Multiplication:} & \quad (a_1 + i\, b_1) \; (a_2 + i\, b_2) & = & a_1\,a_2-b_1\,b_2+i\,(a_1\,b_2+a_2\,b_1) \\
-       \quad & r_1\, e^{i\,\varphi_1} \; r_2\, e^{i\,\varphi_2} & = & r_1\, r_2\,e^{i\,(\varphi_1+\varphi_2)}
-\end{array} \enn
-
-\begin{figure}[!h]
-    \centerline{\epsfxsize=10cm  \epsfbox{matlab/fig40.eps}} \svs
-    \caption{Adding two complex numbers}  \label{fig50}
-\end{figure} \vs
-
-\begin{center}
-$\Rightarrow \quad$ Addition of two complex numbers is done by adding their corresponding vectors \\ \svs
-$\Rightarrow \quad$ Multiplication of two complex numbers results in the product of the individual \\
-                          amplitudes and the sum of the phases
-\end{center}
-
-\centerline{\bf All the properties of real numbers are still preserved!} \vs
-
-{\bf Examples:} $\qquad z_1=1+2\,i \qquad z_2=2-\,i$
-\bnn z_1+z_2=1+2+i\,(2-1)=3+i \qquad\quad z_1\, z_2=1\cdot2-2\cdot(-1)+i\,(1\cdot(-1)+2\cdot2)=4+3\,i \enn
-
-\subsection{Complex conjugate}
-The complex conjugate of $z=a+i\,b$ is defined as $z^*=a-i\,b$
-\bnn z^*=a+i\,b=r\,e^{-i\,\varphi} \qquad\quad z\,z^*=(a+i\,b)\,(a-i\,b)=a^2+b^2=\abs{z}^2 \neq z^2 \enn
-\begin{figure}[!h]
-    \centerline{\epsfxsize=9.5cm  \epsfbox{matlab/fig41.eps}} \svs
-    \caption{The complex number $z$ and its complex conjugate $z^*$}  \label{fig51}
-\end{figure}
-
-Compare the following:
-\bnn \begin{array}{ccccccccccc} \svs
-z^2 &=& z\,z &=& (a+i\,b)^2 &=& a^2-b^2+2\,i\,a\,b &=& (r\,e^{i\,\varphi})^2 &=& r^2\,e^{2\,i\,\varphi} \\
-\abs{z}^2 &=& z\,z^* &=& (a+i\,b)\,(a-i\,b) &=& a^2+b^2 &=& r\,e^{i\,\varphi}\;r\,e^{-i\,\varphi} &=& r^2
-\end{array} \enn \svs
-
-{\bf Some more rules:}
-
-\bnn \mbox{Complex division:} \quad \frac{z_1}{z_2}=\frac{a_1+i\,b_1}{a_2+i\,b_2}=\frac{z_1\,z_2^*}{z_2\,z_2^*}
-        =\frac{z_1\,z_2^*}{\abs{z_2}^2}=\frac{a_1\,a_2+b_1\,b_2+i\,(a_2\,b_1-a_1\,b_2)}{a_2^2+b_2^2} \enn \svs
-\bnn {\cal R}(z)=\frac{1}{2}(z+z^*)=\frac{1}{2}(a+i\,b+a-i\,b)=a \qquad\quad
-        {\cal I}(z)=\frac{1}{2}(z-z^*)=\frac{1}{2}(a+i\,b-(a-i\,b))=b  \enn \svs
-\bnn
-    e^{i\,\varphi}=\cos\varphi+i\,\sin\varphi \qquad \Rightarrow \quad
-    \cos\varphi=\frac{1}{2}(e^{i\,\varphi}+e^{-i\,\varphi}) \qquad
-    \sin\varphi=\frac{1}{2\,i}(e^{i\,\varphi}-e^{-i\,\varphi})
-\enn
