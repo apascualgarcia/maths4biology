@@ -2,12 +2,271 @@
 % \setcounter{page}{12}
 
 \section{Limits and Derivatives}\label{diff}
+
+
+\subsection{Limits}
+
+Many times we are interested in studying the behaviour of a function when
+it tends toward certain values. This value can be, in principle, any value, 
+but the use of limits typically concerns those values that are possibly pathological, perhaps because do not belong to the domain of the function or because we are interested
+in its behaviour at the infinity. A typical question of interest in biology, may be
+which is the expected behaviour of a population if we assume that its size is so large
+that we consider it infinite. In that case, we will take the limit of the function
+describing the population at the infinite, and this is many times useful because
+the function may be simplified, and will allow us to perform further analytical development.
+
+As we said, the limit of a function at an arbitrary point may be easy to compute. To compute
+the limit of a function $f(x)$ as $x$ approaches $a$, that we write $\lim_{x\rightarrow a}f(x)$,
+we start evaluating $f(a)$.
+
+{\bf Example:} 
+
+\bnn
+ \lim_{x\rightarrow 1} \frac{1}{2}(x+3) = \frac{1}{2}(1+3) = 2.
+\enn
+
+In this case, it was very easy and not very interesting. Let's see a precise 
+definition of limit which is, perhaps, the most abstract definition we will learn in this course, and how we can solve more complicated examples. Learning the definition will be a good training for our mind to get into the abstraction of concepts such as the infinity, and to open
+the door towards the important world of the derivatives. 
+
+{\bf Definition:} The limit of a function $f(x)$ as $x$ approaches $a$, that we write $\lim_{x\rightarrow a}f(x)$,
+is a number $l$ such that, given any target distance $\varepsilon$ between $f(x)$ and $l$, it is always possible to find a value $x$ such that its distance $\delta$ with respect to $a$ is such that the distance between $f(x)$ and $l$ remain lower than $\varepsilon$, i.e.
+
+\bnn
+\lim_{x\rightarrow a}f(x)\Leftrightarrow\forall\varepsilon>0\ \exists\delta>0\ /\ 0<|x-a|<\delta\Rightarrow |f(x)-l|<\varepsilon
+\enn
+\vs
+
+Wow, the definition is really ugly. Let's try to solve the above example with this definition.
+
+{\bf Example:} Demonstrate that the $\lim_{x\rightarrow 1} \frac{1}{2}(x+3)=2$ using the definition of limit.
+
+What we look for is a positive distance $\delta$ such that if we fix an arbitrary $\varepsilon$, if $|x-1|<\delta$ then $ |\frac{1}{2}(x+3)-2|<\varepsilon$. We can rewrite the latter condition:
+
+\bnn
+ |\frac{x+3-4}{2}|<\varepsilon \Rightarrow |\frac{x-1}{2}| < \varepsilon \Rightarrow |x-1|<\varepsilon.
+\enn
+
+And it looks like it is easy to find $\delta$, because if we make $\delta = 2\varepsilon$, it actually happens that:
+
+\bnn
+0<|x-1|<2\varepsilon \Rightarrow |\frac{1}{2}(x+3)-2|<\varepsilon,
+\enn
+
+which fulfills the definition of limit. Let's now look for a more interesting example, because
+we look for a limit at a pathological value.
+
+{\bf Example:} Demonstrate that the $\lim_{x\rightarrow 0} x\sin(1/x)=0$ using the definition of limit.
+
+Again, we look for a positive distance $\delta$ such that if $|x-0|<\delta$ then 
+$x\sin(1/x)-0 < \varepsilon$. Given that the image of the $\sin$ is bounded between
+zero and one, we note that $0 \leq \sin(1/x)\leq 1$ and, hence, $|x\sin(1/x)|\leq |x| \leq \varepsilon$. Therefore, it is true that this is the limit, because it is enough to say that
+$\delta = \varepsilon$ to see that if $|x| < \varepsilon$ also $|x\sin(1/x)|<\varepsilon$,
+which is what we were willing to demonstrate.
+
+\subsection{Lateral limits, continuity of functions and assymptotes}
+
+The lateral limit is the limit of a function when we approximate a value $a$ either from $x$ values smaller than $a$ (it is said \emph{from the left} and we write $\lim_{x\rightarrow a^{-}}f(x)$) or from $x$ values larger than $a$ (\emph{from the right}, $\lim_{x\rightarrow a^{+}}f(x)$). The
+formal definitions are:
+
+\bnn
+\lim_{x\rightarrow a^{-}}f(x)\Leftrightarrow\forall\varepsilon>0\ \exists\delta>0\ /\ 0<x-a<\delta\Rightarrow |f(x)-l|<\varepsilon \\
+\lim_{x\rightarrow a^{+}}f(x)\Leftrightarrow\forall\varepsilon>0\ \exists\delta>0\ /\ 0<a-x<\delta\Rightarrow |f(x)-l|<\varepsilon.
+\enn
+\vs
+
+The definition of lateral limits leads to two important theorems:
+
+{\bf Theorem: } The limit of a function exists if and only if its lateral limits exist and are equal.
+
+{\bf Theorem: } A function is {\em continuous} in $x_0$ if the limit exist and it is equal
+to the value of the function at $x_0$.
+
+With these theorems we can determine if a function is continuous (we will investigate its pathological values) and, if it is not continuous, which kind of discontinuity it has.
+
+{\bf Example: } Continuous function.
+
+\bnn 
+  f(x)=\begin{cases}
+    x+3 & \text{if $x <1$}.\\
+    4 & \text{if $x>1$}.
+  \end{cases}
+\enn
+
+In this case, we observe a possible pathological value at $x=1$. Nevertheless, the function
+is continuous because $\lim_{x\rightarrow 1^{+}}f(x) =\lim_{x\rightarrow 1^{-}}f(x) =f(1)$.
+
+{\bf Example: } Function with a "removable" discontinuity.
+
+\bnn 
+  g(x)=\begin{cases}
+    3 & \text{if $x \neq 0$}.\\
+    2 & \text{if $x = 0$}.
+  \end{cases}
+\enn
+
+With this function it happens that, at $x=0$, the lateral limits exists and are equal, but
+the function takes a different value, i.e. 
+$\lim_{x\rightarrow 0^{+}}g(x) =\lim_{x\rightarrow 0^{-}}g(x) \neq g(0)$. We say
+that the function is discontinuous but, since the limit exists and it  is finite, we call
+it a "removable" discontinuity (in some sense we think of the limit as the "true" value).
+
+{\bf Example: } Function with a "finite jump" discontinuity.
+
+\bnn 
+  h(x)=\begin{cases}
+    3 & \text{if $x < 0$}.\\
+    4 & \text{if $x > 0$}.\\
+    2 & \text{if $x = 0$}.
+  \end{cases}
+\enn
+
+This function it happens that, at $x=0$, the lateral limits exists but are not equal, but
+there is a finite difference between both values so we say that it is a finite discontinuity.
+
+{\bf Example: } Function with an infinite discontinuity.
+
+\bnn
+i(x)=\frac{x+1}{x-2}\Rightarrow \begin{cases}
+\lim_{x\rightarrow 2^{-}} i(x) = -\infty \\
+\lim_{x\rightarrow 2^{+}} i(x) = \infty 
+\end{cases}
+\enn
+
+{\bf Definition:} We will say that a function $fa(x)$ approaches assymptotically to a line (e.g. $y=a$ or $x=a$), or that the line is an assymptote of the function, if the distance between the function and
+the curve approaches to zero when one or both $x$ and $f(x)$ tend to infinity.
+
+{\bf Examples:}
+\begin{enumerate}
+	\item Vertical assymptote: $\lim_{x\rightarrow a} f(x) = \infty$
+	\item Horizontal assymptote: $\lim_{x\rightarrow \infty} f(x) = a$
+\end{enumerate}
+
+\subsection{Limits with an indeterminate form}
+
+In many situations, when we evaluate a limit we do not have enough information to
+determine if the limit exists, in which case we face an {\em indterminate form}. These
+forms are functions that, after being evaluated, lead to expressions of this kind:
+
+\bnn
+  	\frac{0}{0}, \frac{\infty}{\infty}, \infty-\infty, 1^\infty, 0^0, 0\infty, \infty^0, 
+\enn
+
+and require special techniques to solve them. In the following subsections we summarize
+some of the most common techniques.
+
+\subsubsection{Rational limits to infinity}
+
+For rational functions, we should consider how fast the functions in the numerator
+and in the denominator tend to infinity. There is an order on how fast functions tend
+to infinity:
+
+\bnn
+x^{kx}\  > b^x > x^m > \log x
+\enn
+
+Where the symbol $>$ means that one function grows faster than the other one, and $k>0$.
+
+{\bf Examples:}
+\begin{enumerate}
+\item $\lim_{x\rightarrow \infty} \frac{e^{3x}}{4x^2}=\infty$
+\item $\lim_{x\rightarrow \infty} \frac{\log(x)}{x}=0$
+\item $\lim_{x\rightarrow \infty} \frac{18x^2+1}{32x^2+3}=\frac{9}{16}$
+\end{enumerate}
+
+\subsubsection{Infinitesimal equivalents}
+
+On the other hand, when two functions become infinitesimally small when they
+converge towards the same point, we will say that they are {\em infinitesimal equivalents},
+and we can use this fact to find limits of rational functions. We say that $f(x)$ and 
+$g(x)$ are infinitesimal equivalents around $a$ if
+
+\bnn
+	\lim_{x\rightarrow a}\frac{f(x)}{g(x)}.	
+\enn
+
+Some common infinitesimal equivalents are:
+\begin{enumerate}
+ \item When $x \rightarrow 0$:
+   \bnn
+      x \simeq \sin(x); \mbox{  } x \simeq \tan(x); \mbox{  } x \simeq \log(1+x); \mbox{  } x \simeq e^x-1 \\
+      x \simeq \arcsin(x); \mbox{  } x \simeq \arctan(x); \mbox{  } 1-\cos(x) \simeq \frac{x^2}{2}
+   \enn
+    \item When $x \rightarrow 1$:
+   \bnn
+      x -1\simeq \log(x);
+   \enn
+\end{enumerate}
+
+{\bf Example:}
+\bnn
+ 	\lim_{x\rightarrow 0}\frac{\sin(x)}{\ln(1+x)} = 	\lim_{x\rightarrow 0}\frac{x}{x} =1
+\enn
+
+{\bf Example:}
+\bnn
+ 	\lim_{x\rightarrow 0}\frac{\tan(x)(1-\cos(x)}{x^3} = 	\lim_{x\rightarrow 0}\frac{x(1-\cos(x))}{x^3} = \lim_{x\rightarrow 0}\frac{x^2/2}{x^2} = \frac{1}{2}.
+\enn
+
+\subsubsection{Algebraic operations}
+
+Many times, we can simplify the expression or find an appropriate change of variables
+before we compute the limit, that will solve the indeterminacy.
+
+{\bf Example:} Rational factorization
+
+\bnn
+\lim_{x\rightarrow 3}\frac{x^2-9}{x^2-5x+6} = \lim_{x\rightarrow 3}\frac{(x+3)(x-3)}{(x-2)(x-3)}=\lim_{x\rightarrow 3}\frac{x+3}{x-2}=6.
+\enn
+
+{\bf Example:} Rational factorization
+
+\bnn
+\lim_{x\rightarrow 3}\frac{\sqrt{x+1}-2}{x-3} = \lim_{x\rightarrow 3}\frac{(\sqrt{x+1}-2)(\sqrt{x+1}+2)}{(x-3)(\sqrt{x+1}+2)}= \\
+=\lim_{x\rightarrow 3}\frac{(x+1)-4}{(x-3)(\sqrt{x+1}+2)}=\lim_{x\rightarrow 3}\frac{1}{\sqrt{x+1}+2}=\frac{1}{4}.
+\enn
+
+{\bf Example:} Change of variables
+
+\bnn 
+ \begin{array}{rcl}
+      \lim_{x\rightarrow 2}\frac{\sin(x^3-8)}{x-2}& \underbrace{=}_{\uparrow} \lim_{t\rightarrow 0}\frac{\sin(t+2)^3-8}{t}\\
+	                                \mbox{change vars:}& \begin{cases} t=x-2 \Rightarrow x=t+2 \\ 
+	                                                                   x \rightarrow 2 \Rightarrow t\rightarrow 0
+	\end{cases}
+	\end{array}
+\enn
+
+The change of variables does not seem to help much, but if we remind the formula for the cube
+of a binomial, which we recall here:
+
+\bnn
+ (a+b)^3 = a^3 + b^3 + 3a^2b + 3ab^2 \\
+ (a-b)^3 = a^3 - b^3 - 3a^2b + 3b^2a,
+\enn
+
+and we apply it to $(t+2)^3=t^3+6t^2+12t+8$, the numerator simplifies:
+
+\bnn
+ \begin{array}{rcl}
+ \lim_{t\rightarrow 0}\frac{\sin(t^3+6t^2+12t)}{t}& \underbrace{=}_{\uparrow} \lim_{t\rightarrow 0}\frac{t(t^2+6t+12)}{t}=12.\\
+ \mbox{Infinitesimal equivalents:}& \sin(f(x)) \simeq f(x)
+ \end{array}
+\enn
+
+
+\subsubsection{L'H{\^o}pital rule}
+
+For indeterminate forms of the type $0/0$ or $\infty/\infty$ there is a rule that may
+allow us to find a limit. But we need to learn first derivatives! We will come back to this
+question in the section of Applications of Derivatives.
+
+\subsection{Derivatives: the Difference Quotient}
 First derivatives of simple functions were studied by Galileo
 Galilei (1564-1642) and Johannes Kepler (1571-1630). A systematic
 theory of differential calculus was developed by Isaac Newton
 (1643-1727) and Gottfried Wilhelm Leibniz (1646-1710).
 
-\subsection{Difference Quotient}
 The difference quotient becomes the differential in the limit
 $h\rightarrow 0$ and describes the slope of a function $y=f(x)$
 at a given point $x$.
