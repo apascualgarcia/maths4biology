@@ -306,140 +306,140 @@ discontinuities are known as Gibbs' phenomenon.
 
 \newpage
 
-\subsection{Taylor Series}\label{taylor}
-
-A Taylor series is an approximation of a function $f(x)$ in the neighborhood of a given point
-
-in terms of its derivatives. This technique has been developed by Brook Taylor($1685-1731$)
-
-and first published in 1715.
-
-
-
-In a first step we can approximate the function $f(x)$ in the neighborhood around $x_0$ by the
-
-tangent through $x_0$
-
-\bnn f(x)=f(x_{0})+f'(x_{0}) \, (x-x_{0})+\mbox{error}
-\enn
-
-
-
-\begin{figure}[!h]
-
-    \centerline{\epsfxsize=12cm  \epsfbox{matlab/fig48.eps}}
-
-    \caption{Approximation of a curve at a point $x_0$ with the tangent at $x_0$} \label{fig58}
-
-\end{figure} \vs \vs
-
-
-
-\centerline{\bf Can we do better than this? Yes if higher order derivatives are considered!}
-
-\bnn f(x)=f(x_{0})+f'(x_0)\,(x-x_0)+\frac{1}{2!}\,F''(x_0)(x-x_0)^2+\frac{1}{3!}\,F'''(x_{0})(x-x_{0})^{3}+... \enn
-
-
-
-\bnn
-    \mbox{\bf Taylor series:} \qquad f(x)=\left. \sum^{\infty}_{n=0}\frac{1}{n!}
-    \,\frac{d^n f(x)}{dx^n}\right|_{x=x_0}\,(x-x_0)^n \qquad
-    \mbox{with}\quad n!=1\cdot2\cdot3\cdot ... \;\;\;\mbox{n-factorial}
-\enn
-
-
-
-A function $f(x)$ may be approximated by truncating a Taylor Expansion
-
-around $x_{0}$ at the m-th order.
-
-
-
-$\Rightarrow$ Polynomial representations of function work well if
-
-the error approaches $0$ as the order $n$ increases.
-
-
-
-{\bf Error estimate:}
-
-\bnn
-    f(x)=\left. \sum^n_{k=0}\frac{1}{k!}\,\frac{d^n f(x)}{dx^n}\right|_{x=x_0} \,(x-x_0)^k+\underbrace{R_n(x)}_{\mbox{error}}
-\enn
-
-
-
-Lagrange formulation of the error $R_n$ in a Taylor expansion that is truncated at order $n$
-
-\bnn
-    R_n(x)=\left. \frac{(x-x_0)^{n+1}}{(n+1)!}\,\frac{d^n f(x)}{dx^n}\right|_{x=\xi} \qquad
-    \xi=x_0+\delta\,(x-x_0) \quad 0< \delta <1
-\enn \vs
-
-
-
-{\bf Examples:}
-
-
-
-Approximate the  function $\sin x$ up to the 7-th order for $x$ around $x_0=0$ (Maclaurin series)
-
-using a Taylor expansion
-
-\bnn
-    \sin x\approx \underbrace{\sin 0}_{0}\; +\;\underbrace{\cos 0\cdot x}_{x}\;+\;\underbrace{-\sin
-    0\frac{1}{2!}\;x^{2}}_{0}\;-\;\frac{1}{3!}\;x^{3}\;+\;\frac{1}{5!}\;x^{5}-\;\frac{1}{7!}\;x^{7} \qquad
-    \mbox{symmetries!!}
-\enn
-
-
-
-\begin{figure}[!ht]
-
-    \centerline{\epsfxsize=10cm  \epsfbox{matlab/fig49.eps}}
-
-    \caption{Steps of a Taylor expansion of $\sin x$ around $x_0=0$}  \label{fig59}
-
-\end{figure} \svs
-
-
-
-The further away you move from the expansion point, the more significant the higher order terms!!
-
-
-
-
-
-\vs {\bf Specific expansion of important functions:}
-
-\bnn
-\sin x=x-\;\frac{1}{3!}\;x^3\;+\;\frac{1}{5!}\;x^5-\;....\;\frac{(-1)^{n+1}}{(2\,n+1)!}\;x^{2\,n+1} \qquad \mbox{only odd terms}
-\enn
-
-\bnn
-\cos x=1-\;\frac{1}{2!}\;x^2\;+\;\frac{1}{4!}\;x^4-\;....\;\frac{(-1)^n}{2\,n!}\;x^{2\,n} \qquad\qquad \mbox{only even terms}
-\enn
-
-\bnn e^{x}=1+\;\frac{1}{2!}\;x^2\;+\;\frac{1}{3!}\;x^3\;+\;....\;\frac{1}{n!}\;x^n \enn
-
-\bnn  \mbox{ln}(1+x)=x-\;\frac{x^{2}}{2!}\;+\;\frac{x^{3}}{3!}\;+\;....\;\frac{(-1)^{n+1}}{n!}\;x^{n+1}  \enn
-
-
-
-
-
-\vs {\bf Euler's Formula: {\boldmath $e^{i\theta}=\cos\theta+i\,\sin\theta$}}
-
-\bnn e^{i\,\theta}=1+i\theta +\frac{1}{2!}\underbrace{(i\,\theta)^2}_{-\theta^2}+ \frac{1}{3!}\underbrace{(i\,\theta)^3}_{-i\,\theta^3}+\frac{1}{4!}\underbrace{(i\,\theta)^4}_{\theta^4}+
-\frac{1}{5!}\underbrace{(i\theta)^5}_{i\,\theta^5}+...\qquad\mbox{Taylor expansion around $\theta=0$}
-\enn
-
-\bnn
-  \Rightarrow \qquad e^{i\,\theta}= \underbrace{1-\frac{1}{2!}\,\theta^2+\frac{1}{4!}\,\theta^4+...}_{\cos\theta} \quad
-    +i\,(\,\underbrace{\theta-\frac{1}{3!}\,\theta^3+\frac{1}{5!}\,\theta^5+...}_{\sin\theta}\,) \qquad\mbox{q.e.d.}
-\enn
-
-
+%\subsection{Taylor Series}\label{taylor}
+%
+%A Taylor series is an approximation of a function $f(x)$ in the neighborhood of a given point
+%
+%in terms of its derivatives. This technique has been developed by Brook Taylor($1685-1731$)
+%
+%and first published in 1715.
+%
+%
+%
+%In a first step we can approximate the function $f(x)$ in the neighborhood around $x_0$ by the
+%
+%tangent through $x_0$
+%
+%\bnn f(x)=f(x_{0})+f'(x_{0}) \, (x-x_{0})+\mbox{error}
+%\enn
+%
+%
+%
+%\begin{figure}[!h]
+%
+%    \centerline{\epsfxsize=12cm  \epsfbox{matlab/fig48.eps}}
+%
+%    \caption{Approximation of a curve at a point $x_0$ with the tangent at $x_0$} \label{fig58}
+%
+%\end{figure} \vs \vs
+%
+%
+%
+%\centerline{\bf Can we do better than this? Yes if higher order derivatives are considered!}
+%
+%\bnn f(x)=f(x_{0})+f'(x_0)\,(x-x_0)+\frac{1}{2!}\,F''(x_0)(x-x_0)^2+\frac{1}{3!}\,F'''(x_{0})(x-x_{0})^{3}+... \enn
+%
+%
+%
+%\bnn
+%    \mbox{\bf Taylor series:} \qquad f(x)=\left. \sum^{\infty}_{n=0}\frac{1}{n!}
+%    \,\frac{d^n f(x)}{dx^n}\right|_{x=x_0}\,(x-x_0)^n \qquad
+%    \mbox{with}\quad n!=1\cdot2\cdot3\cdot ... \;\;\;\mbox{n-factorial}
+%\enn
+%
+%
+%
+%A function $f(x)$ may be approximated by truncating a Taylor Expansion
+%
+%around $x_{0}$ at the m-th order.
+%
+%
+%
+%$\Rightarrow$ Polynomial representations of function work well if
+%
+%the error approaches $0$ as the order $n$ increases.
+%
+%
+%
+%{\bf Error estimate:}
+%
+%\bnn
+%    f(x)=\left. \sum^n_{k=0}\frac{1}{k!}\,\frac{d^n f(x)}{dx^n}\right|_{x=x_0} \,(x-x_0)^k+\underbrace{R_n(x)}_{\mbox{error}}
+%\enn
+%
+%
+%
+%Lagrange formulation of the error $R_n$ in a Taylor expansion that is truncated at order $n$
+%
+%\bnn
+%    R_n(x)=\left. \frac{(x-x_0)^{n+1}}{(n+1)!}\,\frac{d^n f(x)}{dx^n}\right|_{x=\xi} \qquad
+%    \xi=x_0+\delta\,(x-x_0) \quad 0< \delta <1
+%\enn \vs
+%
+%
+%
+%{\bf Examples:}
+%
+%
+%
+%Approximate the  function $\sin x$ up to the 7-th order for $x$ around $x_0=0$ (Maclaurin series)
+%
+%using a Taylor expansion
+%
+%\bnn
+%    \sin x\approx \underbrace{\sin 0}_{0}\; +\;\underbrace{\cos 0\cdot x}_{x}\;+\;\underbrace{-\sin
+%    0\frac{1}{2!}\;x^{2}}_{0}\;-\;\frac{1}{3!}\;x^{3}\;+\;\frac{1}{5!}\;x^{5}-\;\frac{1}{7!}\;x^{7} \qquad
+%    \mbox{symmetries!!}
+%\enn
+%
+%
+%
+%\begin{figure}[!ht]
+%
+%    \centerline{\epsfxsize=10cm  \epsfbox{matlab/fig49.eps}}
+%
+%    \caption{Steps of a Taylor expansion of $\sin x$ around $x_0=0$}  \label{fig59}
+%
+%\end{figure} \svs
+%
+%
+%
+%The further away you move from the expansion point, the more significant the higher order terms!!
+%
+%
+%
+%
+%
+%\vs {\bf Specific expansion of important functions:}
+%
+%\bnn
+%\sin x=x-\;\frac{1}{3!}\;x^3\;+\;\frac{1}{5!}\;x^5-\;....\;\frac{(-1)^{n+1}}{(2\,n+1)!}\;x^{2\,n+1} \qquad \mbox{only odd terms}
+%\enn
+%
+%\bnn
+%\cos x=1-\;\frac{1}{2!}\;x^2\;+\;\frac{1}{4!}\;x^4-\;....\;\frac{(-1)^n}{2\,n!}\;x^{2\,n} \qquad\qquad \mbox{only even terms}
+%\enn
+%
+%\bnn e^{x}=1+\;\frac{1}{2!}\;x^2\;+\;\frac{1}{3!}\;x^3\;+\;....\;\frac{1}{n!}\;x^n \enn
+%
+%\bnn  \mbox{ln}(1+x)=x-\;\frac{x^{2}}{2!}\;+\;\frac{x^{3}}{3!}\;+\;....\;\frac{(-1)^{n+1}}{n!}\;x^{n+1}  \enn
+%
+%
+%
+%
+%
+%\vs {\bf Euler's Formula: {\boldmath $e^{i\theta}=\cos\theta+i\,\sin\theta$}}
+%
+%\bnn e^{i\,\theta}=1+i\theta +\frac{1}{2!}\underbrace{(i\,\theta)^2}_{-\theta^2}+ \frac{1}{3!}\underbrace{(i\,\theta)^3}_{-i\,\theta^3}+\frac{1}{4!}\underbrace{(i\,\theta)^4}_{\theta^4}+
+%\frac{1}{5!}\underbrace{(i\theta)^5}_{i\,\theta^5}+...\qquad\mbox{Taylor expansion around $\theta=0$}
+%\enn
+%
+%\bnn
+%  \Rightarrow \qquad e^{i\,\theta}= \underbrace{1-\frac{1}{2!}\,\theta^2+\frac{1}{4!}\,\theta^4+...}_{\cos\theta} \quad
+%    +i\,(\,\underbrace{\theta-\frac{1}{3!}\,\theta^3+\frac{1}{5!}\,\theta^5+...}_{\sin\theta}\,) \qquad\mbox{q.e.d.}
+%\enn
+%
+%
 
 \subsection{Finally some fun with Math}
 
