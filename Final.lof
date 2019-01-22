@@ -26,8 +26,8 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {The functions $y\tmspace -\thinmuskip {.1667em}=\tmspace -\thinmuskip {.1667em}\qopname \relax o{tan}{x}$ and $y\tmspace -\thinmuskip {.1667em}=\tmspace -\thinmuskip {.1667em}\qopname \relax o{cot}{x}$. Note that these are $\pi $-periodic}}}{18}{figure.12}
 \contentsline {figure}{\numberline {13}{\ignorespaces Exponential functions}}{18}{figure.13}
 \contentsline {figure}{\numberline {14}{\ignorespaces Hyperbolic functions}}{19}{figure.14}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$y=\qopname \relax o{sinh}{x}\tmspace +\thickmuskip {.2777em}$ and $\tmspace +\thickmuskip {.2777em}y=x+\frac {1}{3!}\tmspace +\thinmuskip {.1667em}x^3$}}}{19}{figure.14}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$y=\qopname \relax o{cosh}{x}\tmspace +\thickmuskip {.2777em}$ and $\tmspace +\thickmuskip {.2777em}y=1+\frac {1}{2!}\tmspace +\thinmuskip {.1667em}x^2$}}}{19}{figure.14}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$y=\qopname \relax o{cosh}{x}\tmspace +\thickmuskip {.2777em}$ and $\tmspace +\thickmuskip {.2777em}y=1+\frac {1}{2!}\tmspace +\thinmuskip {.1667em}x^2$}}}{19}{figure.14}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$y=\qopname \relax o{sinh}{x}\tmspace +\thickmuskip {.2777em}$ and $\tmspace +\thickmuskip {.2777em}y=x+\frac {1}{3!}\tmspace +\thinmuskip {.1667em}x^3$}}}{19}{figure.14}
 \contentsline {figure}{\numberline {15}{\ignorespaces The logarithmic functions $y=\qopname \relax o{ln}(x)$, $y=\unhbox \voidb@x \hbox {lg}(x)$, $y=\unhbox \voidb@x \hbox {ld}(x)$, and $y=-\qopname \relax o{ln}(x)$.}}{20}{figure.15}
 \contentsline {figure}{\numberline {16}{\ignorespaces The inverse of the trigonometric functions}}{21}{figure.16}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Arc sine, and arc cosine}}}{21}{figure.16}

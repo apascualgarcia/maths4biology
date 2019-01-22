@@ -6,9 +6,9 @@
 
 \subsection{Limits}
 
-Many times we are interested in studying the behaviour of a function when
-it tends toward certain values. This value can be, in principle, any value, 
-but the use of limits typically concerns those values that are possibly pathological, perhaps because do not belong to the domain of the function or because we are interested
+Many times we are interested in studying the behaviour of a function in the proximity
+of a certain value. This value can be, in principle, any value, 
+but the use of limits typically concerns those values that are singular, perhaps because do not belong to the domain of the function or because we are interested
 in its behaviour at the infinity. A typical question of interest in biology, may be
 which is the expected behaviour of a population if we assume that its size is so large
 that we consider it infinite. In that case, we will take the limit of the function
@@ -22,7 +22,7 @@ we start evaluating $f(a)$.
 {\bf Example:} 
 
 \bnn
- \lim_{x\rightarrow 1} \frac{1}{2}(x+3) = \frac{1}{2}(1+3) = 2.
+ \lim_{x\rightarrow 1}f(x)= \lim_{x\rightarrow 1} \frac{1}{2}(x+3) \underbrace{=}_{f(1)} \frac{1}{2}(1+3) = 2.
 \enn
 
 In this case, it was very easy and not very interesting. Let's see a precise 
@@ -44,7 +44,7 @@ Wow, the definition is really ugly. Let's try to solve the above example with th
 What we look for is a positive distance $\delta$ such that if we fix an arbitrary $\varepsilon$, if $|x-1|<\delta$ then $ |\frac{1}{2}(x+3)-2|<\varepsilon$. We can rewrite the latter condition:
 
 \bnn
- |\frac{x+3-4}{2}|<\varepsilon \Rightarrow |\frac{x-1}{2}| < \varepsilon \Rightarrow |x-1|<\varepsilon.
+ |\frac{x+3-4}{2}|<\varepsilon \Rightarrow |\frac{x-1}{2}| < \varepsilon \Rightarrow |x-1|<2\varepsilon.
 \enn
 
 And it looks like it is easy to find $\delta$, because if we make $\delta = 2\varepsilon$, it actually happens that:
@@ -145,11 +145,11 @@ the curve approaches to zero when one or both $x$ and $f(x)$ tend to infinity.
 \subsection{Limits with an indeterminate form}
 
 In many situations, when we evaluate a limit we do not have enough information to
-determine if the limit exists, in which case we face an {\em indterminate form}. These
+determine if the limit exists, in which case we face an {\em indeterminate form}. These
 forms are functions that, after being evaluated, lead to expressions of this kind:
 
 \bnn
-  	\frac{0}{0}, \frac{\infty}{\infty}, \infty-\infty, 1^\infty, 0^0, 0\infty, \infty^0, 
+  	\frac{0}{0}, \frac{\infty}{\infty}, \infty-\infty, 1^\infty, 0^0, 0·\infty, \infty^0, 
 \enn
 
 and require special techniques to solve them. In the following subsections we summarize
@@ -470,7 +470,7 @@ This theorem will allow us to solve some limits that led to an indeterminate for
 {\bf Theorem:} If $f$ and $g$ are two functions derivable in a neighborhood of $a\in \mathbb{R}$ (meaning that it works even if there is a hole) and if $\lim_{x  \rightarrow a} \frac{f(x)}{g(x)}=\frac{\infty}{\infty} \mbox{ or }\frac{0}{0}$ (and $a$ could be $\infty$):
 
 \bnn
-	\lim_{x \rightarrow a} \frac{f'(x)}{g'(x)}=\lim_{x \rigightarrow a} \frac{f(x)}{g(x)},
+	\lim_{x \rightarrow a} \frac{f'(x)}{g'(x)}=\lim_{x \rightarrow a} \frac{f(x)}{g(x)},
 \enn
 
 provided that $\lim_{x \rightarrow a} \frac{f'(x)}{g'(x)}$ exists.

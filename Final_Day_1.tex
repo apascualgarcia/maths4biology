@@ -161,9 +161,10 @@ where the function $y$ is said to be a polynomial of order $N$.  \svs
 \bnn y = \sum_{n=0}^N a_n \, x^n  \qquad \mbox{where we assume} \;\; a_N>0 \enn
 
 \begin{description}
-\item[{\bf Step 1:}] If $N$ is even, then $x \rightarrow \pm\infty : y \rightarrow \pm \infty \, ; \quad$
-if $N$ is odd, then $x \rightarrow \pm \infty : y \rightarrow \mp \infty$. Note: If $a_N<0$,
-the behavior is the opposite.
+\item[{\bf Step 1:}] If $N$ is even, then $x \rightarrow \pm \infty : y \rightarrow ? \, ; \quad$ if $N$ is odd, then $x \rightarrow \pm \infty : y \rightarrow ?$. 
+{\bf Note:} If $a_N<0$, the behavior is the opposite. 
+{\bf Note:} I'm sorry about the question marks, but it is an exercise you should solve!
+
 \item[{\bf Step 2: (Fundamental theorem of algebra)}] A polynomial of order $N$ has $N$ roots which are the solutions of $f(x)=0$.
 
 Set $y=0: f(x) = x^N + a_{N-1}\, x^{N-1} + \dots + a_1 \,x + a_0 = 0 $
@@ -279,7 +280,7 @@ by the denominator! Calling $q(x)$ to the quotient and $r(x)$ to the remainder o
 \bnn
 	\frac{x}{x^2-3x+2}=\frac{x}{(x-1)(x-2)}
 \enn
-{\em Step 2 --} Rewrite the function as a sum of rational functions whose numerators are polynomials of degree zero, sum up the functions and group the terms by their degree on $x$.
+{\em Step 2 --} Rewrite the function as a sum of rational functions whose numerators are polynomials with one degree lower than those of the denominator whose coefficients are unknown. Then sum up the functions and group the terms by their degree on $x$.
 \bnn
 	\frac{x}{(x-1)(x-2)}=\frac{A}{(x-1)}+\frac{B}{(x-2)}=\\
 	=\frac{A(x-2)+B(x-1)}{(x-1)(x-2)}=\frac{(A+B)x-(2A+B)}{(x-1)(x-2)}
@@ -389,9 +390,9 @@ y=\coth{x}=\frac{\cosh{x}}{\sinh{x}}=\frac{e^{x}+e^{-x}}{e^{x}-e^{-x}}
 
 \begin{figure}[!h]
     \centering
-    \subfigure[$y=\sinh{x}\;$ and $\;y=x+\frac{1}{3!}\,x^3$]{\epsfxsize=7cm \epsfbox{matlab/fig14b.eps}}
+    \subfigure[$y=\cosh{x}\;$ and $\;y=1+\frac{1}{2!}\,x^2$]{\epsfxsize=7cm \epsfbox{matlab/fig14b.eps}}
     \hspace*{0.5cm}
-    \subfigure[$y=\cosh{x}\;$ and $\;y=1+\frac{1}{2!}\,x^2$]{\epsfxsize=7cm \epsfbox{matlab/fig14a.eps}} \svs
+    \subfigure[$y=\sinh{x}\;$ and $\;y=x+\frac{1}{3!}\,x^3$]{\epsfxsize=7cm \epsfbox{matlab/fig14a.eps}} \svs
     \caption{Hyperbolic functions} \label{fig14}
 \end{figure} \vs
 

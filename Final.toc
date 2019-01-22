@@ -36,7 +36,7 @@
 \contentsline {subsubsection}{\numberline {2.9.1}Maxima, minima, inflection points and convexity}{32}{subsubsection.2.9.1}
 \contentsline {subsubsection}{\numberline {2.9.2}L'H{\^o}pital theorem}{33}{subsubsection.2.9.2}
 \contentsline {subsubsection}{\numberline {2.9.3}A myriad of theorems}{33}{subsubsection.2.9.3}
-\contentsline {subsection}{\numberline {2.10}Taylor Series}{33}{subsection.2.10}
+\contentsline {subsubsection}{\numberline {2.9.4}Taylor Series}{33}{subsubsection.2.9.4}
 \contentsline {section}{\numberline {3}Integrals}{37}{section.3}
 \contentsline {subsection}{\numberline {3.1}Integral Calculus: Definite Integrals}{37}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Methods of Integration}{39}{subsection.3.2}
