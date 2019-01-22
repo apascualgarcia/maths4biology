@@ -12,6 +12,6 @@ plot([0 0],[xy(3) xy(4)],'k-.','LineWidth',2);
 set(gca,'XTick',[-2 -1 0 1 2 ],'YTick',[1 2 3 4],'FontSize',20,'FontWeight','bold');
 
 %assign labels for handles
-legend(h,'sinh x','x+1/2! x^{2}',4);
+legend(h,'cosh x','x+1/2! x^{2}',4);
 %export to eps (change path and file name accordingly)
-print('-depsc2',sprintf('C:\\Documents and Settings\\ajay\\Desktop\\BootCampFig_1203\\BC_2003\\matlab\\fig14b'));
+print('-depsc2',sprintf('/home/apascual/Nextcloud/Docencia/Projects/Maths4biology/matlab/fig14b'));
