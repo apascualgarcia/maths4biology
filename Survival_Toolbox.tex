@@ -1,0 +1,175 @@
+%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=2.5cm,lmargin=2.3cm,rmargin=2cm}
+\usepackage{amstext}
+\usepackage{amssymb}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newcommand{\lyxaddress}[1]{
+\par {\raggedright #1
+\vspace{1.4em}
+\noindent\par}
+}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+
+\title{SURVIVAL TOOLBOX - Maths for Biology}
+
+
+%\date{Course 2017-18}
+
+
+\author{Computational Methods in Ecology and Evolution \\ Imperial College
+London \\ Silwood Park}
+
+\maketitle
+
+\lyxaddress{Lecturer: Alberto Pascual-García. \\ }
+
+
+\lyxaddress{Correspondence: alberto.pascual.garcia@gmail.com}
+
+
+\subsection*{Trigonometric relationships}
+\begin{enumerate}
+\item $\sin(x+\frac{\pi}{2})=\cos x$; $\cos(x+\frac{\pi}{2})=-\sin x$;
+$\sin(x-\frac{\pi}{2})=-\cos x$; $\cos(x-\frac{\pi}{2})=\sin x$; 
+\item 
+\[
+\sin^{2}x+\cos^{2}x=1.
+\]
+
+\item 
+\[
+\sin(x+y)=\sin x\cos y+\sin y\cos x
+\]
+(Particularly important is $\sin2x=2\sin x\cos x$).
+\item 
+\[
+\cos(x+y)=\cos x\cos y-\sin x\sin y
+\]
+(Again, when $x=y$ we obtain $\cos(2x)=\cos^{2}x-\sin^{2}x$).
+\item 
+\[
+\tan(x+y)=\frac{\tan x+\tan y}{\text{1-\ensuremath{\tan}x\ensuremath{\tan}y}}
+\]
+(For $x=y$ leads to $\tan2x=\frac{2\tan x}{1-\tan^{2}x}$).
+\item 
+\[
+\sin x+\sin y=2\sin\frac{x+y}{2}\cos\frac{x-y}{2}.
+\]
+
+\item 
+\[
+\cos x+\cos y=2\cos\frac{x+y}{2}\cos\frac{x-y}{2}.
+\]
+
+\item 
+\[
+\cos x-\cos y=-2\sin\frac{x+y}{2}\sin\frac{x-y}{2}.
+\]
+
+\item 
+\[
+\sin^{2}x=\frac{1-\cos2x}{2}
+\]
+ and 
+\[
+\cos^{2}x=\frac{1+\cos2x}{2}.
+\]
+
+\item 
+\[
+\sin^{2}x=\frac{\tan^{2}x}{1+\tan^{2}x}
+\]
+ and 
+\[
+\cos^{2}x=\frac{1}{\text{1+\ensuremath{\tan}}^{2}x}.
+\]
+
+\item 
+\[
+\sin x=\frac{2\tan\left(x/2\right)}{1+\tan^{2}(x/2)}
+\]
+ and 
+\[
+\cos x=\frac{1-\tan(x/2)}{\text{1+\ensuremath{\tan}}^{2}(x/2)}.
+\]
+
+\end{enumerate}
+
+\subsection*{Logarithmic relationships}
+\begin{enumerate}
+\item For all $x,y\in\mathbb{\mathbb{R}}$ 
+\[
+\log_{2}xy=\log_{a}x+\log_{a}y
+\]
+ and 
+\[
+\log_{a}x^{y}=y\log_{a}x.
+\]
+
+\item For all $x,y\in\mathbb{\mathbb{R}}$ with $y\neq0$
+\[
+\log_{a}\frac{x}{y}=\log_{a}x-\log_{a}y.
+\]
+
+\item For all $x,y\in\mathbb{\mathbb{R}}$ with $y\neq0$
+\[
+\log_{b}x=\frac{\log_{a}x}{\log_{a}b}
+\]
+ and 
+\[
+a^{x}=b^{x\log_{b}a}.
+\]
+ These relationships are particularly important for the neperian logarithm:
+\item 
+\[
+\log_{b}x=\frac{\ln x}{\ln b}
+\]
+ and 
+\[
+a^{x}=e^{x\ln a}.
+\]
+
+\end{enumerate}
+
+\subsection*{Infinitesimal equivalences}
+
+The following are equivalent infinitesimal when $x\rightarrow0:$
+\begin{enumerate}
+\item 
+\[
+\sin x\approx x\approx\arcsin x.
+\]
+
+\item 
+\[
+\tan x\approx x\approx\arctan x.
+\]
+
+\item 
+\[
+1-\cos x\approx\frac{x^{2}}{2}.
+\]
+
+\item 
+\[
+\log(1+x)\approx x.
+\]
+
+\item 
+\[
+a^{x}-1\approx x\log a
+\]
+ for $a>0,a\neq1.$\end{enumerate}
+
+\end{document}
