@@ -33,7 +33,7 @@ the door towards the important world of the derivatives.
 is a number $l$ such that, given any target distance $\varepsilon$ between $f(x)$ and $l$, it is always possible to find a value $x$ such that its distance $\delta$ with respect to $a$ is such that the distance between $f(x)$ and $l$ remain lower than $\varepsilon$, i.e.
 
 \bnn
-\lim_{x\rightarrow a}f(x)\Leftrightarrow\forall\varepsilon>0\ \exists\delta>0\ /\ 0<|x-a|<\delta\Rightarrow |f(x)-l|<\varepsilon
+\lim_{x\rightarrow a}f(x) = l \Leftrightarrow (\forall\varepsilon>0\ \exists\delta>0\ /\ 0<|x-a|<\delta\Rightarrow |f(x)-l|<\varepsilon)
 \enn
 \vs
 
@@ -70,8 +70,8 @@ The lateral limit is the limit of a function when we approximate a value $a$ eit
 formal definitions are:
 
 \bnn
-\lim_{x\rightarrow a^{-}}f(x)\Leftrightarrow\forall\varepsilon>0\ \exists\delta>0\ /\ 0<x-a<\delta\Rightarrow |f(x)-l|<\varepsilon \\
-\lim_{x\rightarrow a^{+}}f(x)\Leftrightarrow\forall\varepsilon>0\ \exists\delta>0\ /\ 0<a-x<\delta\Rightarrow |f(x)-l|<\varepsilon.
+\lim_{x\rightarrow a^{-}}f(x)= l \Leftrightarrow (\forall\varepsilon>0\ \exists\delta>0\ /\ 0<x-a<\delta\Rightarrow |f(x)-l|<\varepsilon) \\
+\lim_{x\rightarrow a^{+}}f(x)= l \Leftrightarrow (\forall\varepsilon>0\ \exists\delta>0\ /\ 0<a-x<\delta\Rightarrow |f(x)-l|<\varepsilon).
 \enn
 \vs
 
@@ -88,7 +88,7 @@ With these theorems we can determine if a function is continuous (we will invest
 
 \bnn 
   f(x)=\begin{cases}
-    x+3 & \text{if $x <1$}.\\
+    x+3 & \text{if $x \leq 1$}.\\
     4 & \text{if $x>1$}.
   \end{cases}
 \enn
@@ -182,7 +182,7 @@ and we can use this fact to find limits of rational functions. We say that $f(x)
 $g(x)$ are infinitesimal equivalents around $a$ if
 
 \bnn
-	\lim_{x\rightarrow a}\frac{f(x)}{g(x)}.	
+	\lim_{x\rightarrow a}\frac{f(x)}{g(x)}=1.	
 \enn
 
 Some common infinitesimal equivalents are:
@@ -205,7 +205,7 @@ Some common infinitesimal equivalents are:
 
 {\bf Example:}
 \bnn
- 	\lim_{x\rightarrow 0}\frac{\tan(x)(1-\cos(x)}{x^3} = 	\lim_{x\rightarrow 0}\frac{x(1-\cos(x))}{x^3} = \lim_{x\rightarrow 0}\frac{x^2/2}{x^2} = \frac{1}{2}.
+ 	\lim_{x\rightarrow 0}\frac{\tan(x)(1-\cos(x))}{x^3} = 	\lim_{x\rightarrow 0}\frac{x(1-\cos(x))}{x^3} = \lim_{x\rightarrow 0}\frac{x^2/2}{x^2} = \frac{1}{2}.
 \enn
 
 \subsubsection{Algebraic operations}
@@ -230,7 +230,7 @@ before we compute the limit, that will solve the indeterminacy.
 
 \bnn 
  \begin{array}{rcl}
-      \lim_{x\rightarrow 2}\frac{\sin(x^3-8)}{x-2}& \underbrace{=}_{\uparrow} \lim_{t\rightarrow 0}\frac{\sin(t+2)^3-8}{t}\\
+      \lim_{x\rightarrow 2}\frac{\sin(x^3-8)}{x-2}& \underbrace{=}_{\uparrow} \lim_{t\rightarrow 0}\frac{\sin((t+2)^3-8)}{t}\\
 	                                \mbox{change vars:}& \begin{cases} t=x-2 \Rightarrow x=t+2 \\ 
 	                                                                   x \rightarrow 2 \Rightarrow t\rightarrow 0
 	\end{cases}
