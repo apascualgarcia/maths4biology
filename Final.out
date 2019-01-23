@@ -39,39 +39,48 @@
 \BOOKMARK [3][-]{subsubsection.2.9.4}{Taylor Series}{subsection.2.9}% 39
 \BOOKMARK [1][-]{section.3}{Integrals}{}% 40
 \BOOKMARK [2][-]{subsection.3.1}{Integral Calculus: Definite Integrals}{section.3}% 41
-\BOOKMARK [2][-]{subsection.3.2}{Methods of Integration}{section.3}% 42
-\BOOKMARK [2][-]{subsection.3.3}{Symmetries}{section.3}% 43
-\BOOKMARK [2][-]{subsection.3.4}{Orthogonality of trigonometric functions}{section.3}% 44
-\BOOKMARK [2][-]{subsection.3.5}{Integrals to Infinity}{section.3}% 45
-\BOOKMARK [2][-]{subsection.3.6}{Functions with no Antiderivative}{section.3}% 46
-\BOOKMARK [1][-]{section.4}{Differential equations}{}% 47
-\BOOKMARK [2][-]{subsection.4.1}{General classes of differential equations \205 and which ones we will NOT study}{section.4}% 48
-\BOOKMARK [2][-]{subsection.4.2}{Differential equations that we WILL study}{section.4}% 49
-\BOOKMARK [2][-]{subsection.4.3}{Existence and uniqueness of solutions}{section.4}% 50
-\BOOKMARK [2][-]{subsection.4.4}{Separable ODEs}{section.4}% 51
-\BOOKMARK [2][-]{subsection.4.5}{Homogeneous ODEs}{section.4}% 52
-\BOOKMARK [2][-]{subsection.4.6}{Exact ODEs}{section.4}% 53
-\BOOKMARK [2][-]{subsection.4.7}{Linear ODEs}{section.4}% 54
-\BOOKMARK [1][-]{section.5}{Algebra}{}% 55
-\BOOKMARK [2][-]{subsection.5.1}{Vectors}{section.5}% 56
-\BOOKMARK [2][-]{subsection.5.2}{Elementary Vector Operations}{section.5}% 57
-\BOOKMARK [3][-]{subsubsection.5.2.1}{Addition and Subtraction}{subsection.5.2}% 58
-\BOOKMARK [3][-]{subsubsection.5.2.2}{Multiplication of a Vector with a Scalar}{subsection.5.2}% 59
-\BOOKMARK [3][-]{subsubsection.5.2.3}{Scalar Product}{subsection.5.2}% 60
-\BOOKMARK [3][-]{subsubsection.5.2.4}{Vector Product}{subsection.5.2}% 61
-\BOOKMARK [2][-]{subsection.5.3}{Matrices}{section.5}% 62
-\BOOKMARK [2][-]{subsection.5.4}{Multiplication of Matrices}{section.5}% 63
-\BOOKMARK [2][-]{subsection.5.5}{Transposed Matrix}{section.5}% 64
-\BOOKMARK [2][-]{subsection.5.6}{Basis vectors}{section.5}% 65
-\BOOKMARK [2][-]{subsection.5.7}{Transformation of coordinate systems}{section.5}% 66
-\BOOKMARK [3][-]{subsubsection.5.7.1}{Translation}{subsection.5.7}% 67
-\BOOKMARK [3][-]{subsubsection.5.7.2}{Rotation}{subsection.5.7}% 68
-\BOOKMARK [3][-]{subsubsection.5.7.3}{Polar coordinates}{subsection.5.7}% 69
-\BOOKMARK [3][-]{subsubsection.5.7.4}{Non-orthogonal Coordinate Systems}{subsection.5.7}% 70
-\BOOKMARK [2][-]{subsection.5.8}{Determinants}{section.5}% 71
-\BOOKMARK [2][-]{subsection.5.9}{The Inverse of a Matrix A-1}{section.5}% 72
-\BOOKMARK [2][-]{subsection.5.10}{Linear Systems of Equations}{section.5}% 73
-\BOOKMARK [2][-]{subsection.5.11}{Eigenvalues and Eigenvectors}{section.5}% 74
-\BOOKMARK [1][-]{section.6}{Complex Number Theory}{}% 75
-\BOOKMARK [2][-]{subsection.6.1}{Representations and Basic Properties}{section.6}% 76
-\BOOKMARK [2][-]{subsection.6.2}{Complex conjugate}{section.6}% 77
+\BOOKMARK [2][-]{subsection.3.2}{Indefinite integral}{section.3}% 42
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Polynomials}{subsection.3.2}% 43
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Logarithms}{subsection.3.2}% 44
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Exponential functions}{subsection.3.2}% 45
+\BOOKMARK [3][-]{subsubsection.3.2.4}{Trigonometric functions}{subsection.3.2}% 46
+\BOOKMARK [3][-]{subsubsection.3.2.5}{Hyperbolic functions}{subsection.3.2}% 47
+\BOOKMARK [2][-]{subsection.3.3}{Properties of integrals}{section.3}% 48
+\BOOKMARK [2][-]{subsection.3.4}{Methods of Integration}{section.3}% 49
+\BOOKMARK [3][-]{subsubsection.3.4.1}{Guess and tables}{subsection.3.4}% 50
+\BOOKMARK [3][-]{subsubsection.3.4.2}{Partial integration}{subsection.3.4}% 51
+\BOOKMARK [2][-]{subsection.3.5}{Symmetries}{section.3}% 52
+\BOOKMARK [2][-]{subsection.3.6}{Orthogonality of trigonometric functions}{section.3}% 53
+\BOOKMARK [2][-]{subsection.3.7}{Integrals to Infinity}{section.3}% 54
+\BOOKMARK [2][-]{subsection.3.8}{Functions with no Antiderivative}{section.3}% 55
+\BOOKMARK [1][-]{section.4}{Differential equations}{}% 56
+\BOOKMARK [2][-]{subsection.4.1}{General classes of differential equations \205 and which ones we will NOT study}{section.4}% 57
+\BOOKMARK [2][-]{subsection.4.2}{Differential equations that we WILL study}{section.4}% 58
+\BOOKMARK [2][-]{subsection.4.3}{Existence and uniqueness of solutions}{section.4}% 59
+\BOOKMARK [2][-]{subsection.4.4}{Separable ODEs}{section.4}% 60
+\BOOKMARK [2][-]{subsection.4.5}{Homogeneous ODEs}{section.4}% 61
+\BOOKMARK [2][-]{subsection.4.6}{Exact ODEs}{section.4}% 62
+\BOOKMARK [2][-]{subsection.4.7}{Linear ODEs}{section.4}% 63
+\BOOKMARK [1][-]{section.5}{Algebra}{}% 64
+\BOOKMARK [2][-]{subsection.5.1}{Vectors}{section.5}% 65
+\BOOKMARK [2][-]{subsection.5.2}{Elementary Vector Operations}{section.5}% 66
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Addition and Subtraction}{subsection.5.2}% 67
+\BOOKMARK [3][-]{subsubsection.5.2.2}{Multiplication of a Vector with a Scalar}{subsection.5.2}% 68
+\BOOKMARK [3][-]{subsubsection.5.2.3}{Scalar Product}{subsection.5.2}% 69
+\BOOKMARK [3][-]{subsubsection.5.2.4}{Vector Product}{subsection.5.2}% 70
+\BOOKMARK [2][-]{subsection.5.3}{Matrices}{section.5}% 71
+\BOOKMARK [2][-]{subsection.5.4}{Multiplication of Matrices}{section.5}% 72
+\BOOKMARK [2][-]{subsection.5.5}{Transposed Matrix}{section.5}% 73
+\BOOKMARK [2][-]{subsection.5.6}{Basis vectors}{section.5}% 74
+\BOOKMARK [2][-]{subsection.5.7}{Transformation of coordinate systems}{section.5}% 75
+\BOOKMARK [3][-]{subsubsection.5.7.1}{Translation}{subsection.5.7}% 76
+\BOOKMARK [3][-]{subsubsection.5.7.2}{Rotation}{subsection.5.7}% 77
+\BOOKMARK [3][-]{subsubsection.5.7.3}{Polar coordinates}{subsection.5.7}% 78
+\BOOKMARK [3][-]{subsubsection.5.7.4}{Non-orthogonal Coordinate Systems}{subsection.5.7}% 79
+\BOOKMARK [2][-]{subsection.5.8}{Determinants}{section.5}% 80
+\BOOKMARK [2][-]{subsection.5.9}{The Inverse of a Matrix A-1}{section.5}% 81
+\BOOKMARK [2][-]{subsection.5.10}{Linear Systems of Equations}{section.5}% 82
+\BOOKMARK [2][-]{subsection.5.11}{Eigenvalues and Eigenvectors}{section.5}% 83
+\BOOKMARK [1][-]{section.6}{Complex Number Theory}{}% 84
+\BOOKMARK [2][-]{subsection.6.1}{Representations and Basic Properties}{section.6}% 85
+\BOOKMARK [2][-]{subsection.6.2}{Complex conjugate}{section.6}% 86

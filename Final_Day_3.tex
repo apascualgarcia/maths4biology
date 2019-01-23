@@ -25,7 +25,15 @@ Reconstruct the area $A$ as follows:
 A=\sum_{\nu=1}^N=A_{\nu}=\sum_{\nu=1}^N f(\xi_{\nu})\underbrace{(x_{\nu} - x_{\nu-1})}_{\Delta x}
 \enn
 
-This sum is called the {\em Riemann sum}. The limit of the Riemann sum is the area $A$ and defines the integral.
+This sum is called the {\em Riemann sum}. For instance, for $N=3$ the sum becomes
+
+\bnn
+A=f(\xi_1)(x_1-x_0)+f(\xi_2)(x_2-x_1)+f(\xi_3)(x_3-x_2),
+\enn
+but, if we take few terms, our approximation to the area will be poor. However, we know already
+how to take limits, so we can take the limit of the Riemann sum, and hence the area $A$ will
+be computed precisely, and it will allow us to define the integral.
+
 \bnn
 A=\underset{N\rightarrow\infty}{\lim} \sum_{\nu=1}^N f(\xi_{\nu})\Delta x=\int_{x=a}^{x=b} \: f(x)\: dx
 \enn
@@ -41,7 +49,7 @@ where $F(x)$ is called the {\em anti-derivative} of $f(x)$ and
 \bnn f(x) = \frac{dF(x)}{dx} = F'(x) \qquad\mbox{or, which is equivalent,}\qquad F(x)=\int \: f(x)\, dx+\mbox{const} \enn
 Integration is to some extend the inverse operation of differentiation. \vs
 
-{\bf Examples:}
+{\bf Example:} Try to guess the area under $f(x)=x^2$ within the interval $[-1,1]$.
 
 \svs\begin{figure}[!h]
     \centering
@@ -53,14 +61,17 @@ Integration is to some extend the inverse operation of differentiation. \vs
 
 \begin{description}
 \item[{\bf a)}]
-The shaded area is given by
+Looking at Fig. \ref{fig24}, the shaded area is given by
 \bnn A=\int_{-1}^1 f(x)\,dx= F(1)-F(-1) \enn
-We know $f(x)=x^2=F'(x)$. Now we guess $F(x)=1/3x^3+c$.
+
+In order to guess a solution, remember that we know that $f(x)=x^2=F'(x)$. Therefore, we guess $F(x)=1/3x^3+c$, and the are becomes:
 
 \bnn A= F(1)-F(-1)=\frac{1}{3} 1^3 + c - \{ \frac{1}{3} (-1)^3 + c \} = \frac{2}{3} \enn \vs
 
+{\bf Example:} Try to guess the area under $f(x)=x^3$ within the interval $[-1,1]$.
+
 \item[{\bf b)}]
-Again, the shaded area is given by
+Again, the shaded area shown in Fig. \ref{fig24} is given by
 \bnn A=\int_{-1}^1 f(x)\,dx=F(1)-F(-1)\enn
 We guess $F(x)=\frac{1}{4}x^4+c$ and find
 \bnn A=\int_{-1}^1 f(x)\,dx=F(1)-F(-1) = \frac{1}{4}1^4 + c - \{ \frac{1}{4} (-1)^4 + c \} =0 \enn
@@ -74,27 +85,153 @@ the same size, but opposite sign $A_1=-A_2$.
 we have to evaluate all pieces between intersections of the curve with the horizontal axis separately and add up their
 magnitudes. Here: $A=\abs{A_1}+\abs{A_2}=\abs{-\frac{1}{4}}+\abs{\frac{1}{4}}=\frac{1}{2}$. \vs
 
-\subsection{Methods of Integration}
-{\bf Properties of integrals:}
+\subsection{Indefinite integral}
+
+We say that $F(x)$ is the primitive function or antiderivative if $F'(x)=f(x)$ for all the
+domain of $f$.
+
+\subsubsection{Polynomials}
+\bnn
+ \int x^p dx = \frac{x^{p+1}}{p+1}+C\quad \mbox{for }p \neq -1
+\enn
+
+\subsubsection{Logarithms}
+\bnn
+\int \frac{1}{x}dx = \log |x| +C
+\enn
+
+\subsubsection{Exponential functions}
+\bnn
+\int e^x dx = e^x +C; \quad	\int f'(x) e^f(x) dx = e^f(x) +C
+\enn
+
+\subsubsection{Trigonometric functions}
+\bnn
+\int \sin x dx = -\cos x +C
+\enn
+
+\bnn
+\int \cos x dx = \sin x + C
+\enn
+
+\bnn
+\int \sec^2 x dx = \int \frac{dx}{\cos^2x} = \int (1+\tan^2 x) dx = \tan x +C
+\enn
+
+\bnn
+\int \csc^2 x dx = \int \frac{dx}{\sin^2x} = \int (1+\cot^2 x) dx = -\cot x +C
+\enn
+
+The following three are particularly important:
+
+\bnn
+\int \frac{dx}{1+x^2}=\arctan x +C
+\enn
+\bnn
+\int -\frac{dx}{\sqrt{1-x^2}}=\arccos x +C
+\enn
+\bnn
+\int \frac{dx}{\sqrt{1+x^2}}=\arcsin x +C
+\enn
+
+{\bf Note:} How did you end up with these last expressions? Let's see one example:
+
+\bnn
+y=\arcsin x \quad \rightarrow \sin y = x \quad \underbrace{\rightarrow}_{\mbox{Differentiate}} y'\cos y =1 \\
+y' =\frac{1}{\cos y} \underbrace{=}_{\sin^2 y+ \cos^2 y =1 } \frac{1}{\sqrt{1-\sin^2 y}} = \frac{1}{\sqrt{1-x^2}}.
+\enn
+
+\subsubsection{Hyperbolic functions}
+
+\bnn
+\int \sinh x dx = \cosh x + C
+\enn
+
+\bnn
+\int \cosh x dx = \sinh x + C
+\enn
+
+\subsection{Properties of integrals}
+
 \bnn \int_a^b f(x) \,dx = \int_a^c f(x) \:dx + \int_c^b f(x) \,dx \enn
 \bnn \int_a^b f(x) \,dx = F(b)-F(a)=-(F(a)-F(b))=- \int_b^a f(x) \,dx \enn
 \bnn \int_a^b (f_1(x)+f_2(x)) \:dx = \int_a^b \: f_1(x) \,dx + \int_a^b f(x)_2\,dx \enn
 \bnn \int_a^b  c \, f(x) \,dx=c \,\int_a^b f(x) \,dx \qquad \mbox{where $c$ is a constant} \enn \vs
 
-{\bf Approach (in order of preference):}
-\begin{itemize}
-\item {\bf Guess:} Find $F(x)$ such that $\frac{dF(x)}{dx} = f(x)$. For polynomials: $F(a\,x^n)=\frac{a}{n+1}\,x^{n+1}$.
+
+\subsection{Methods of Integration}
+
+\subsubsection{Guess and tables}
+Find $F(x)$ such that $\frac{dF(x)}{dx} = f(x)$. For polynomials: $F(a\,x^n)=\frac{a}{n+1}\,x^{n+1}$.
 \vspace*{2mm} \\ Note: Here $n$ can be negative or any rational number except -1. \\
-\item {\bf Tables:} $F(x)$ can be looked up in mathematical tables of anti-derivatives and/or definite integrals
-which can be found in e.g. Bronshteyn, Semendjajew or Gradsteyn.\\
-\item {\bf Partial integration:} Corresponds to the product rule but only works for special cases.
-\bnn \int f(x)\, g(x)dx = F(x)\, g(x)-\int \: F(x)\, g'(x)\,dx \enn
+%\item {\bf Tables:} 
+$F(x)$ may be also looked up in mathematical tables of anti-derivatives and/or definite integrals.
+%which can be found in e.g. Bronshteyn, Semendjajew or Gradsteyn.\\
+
+\subsubsection{Partial integration}
+Corresponds to the product rule but only works for special cases.
+\bnn 
+\int \underbrace{g(x)}_{u}\, \underbrace{f(x)dx}_{dv} = \underbrace{g(x)}_{u}\, \underbrace{F(x)}_{v}-\int \: \underbrace{F(x)}_{v}\, \underbrace{g'(x)\,dx}_{du} \\
+\int u dv = uv - \int v du 
+\enn
+
+{\bf Memo:} {\bf S}usan {\bf U}ses a {\bf D}e{\bf V}ice {\bf V}ery {\bf U}nique {\bf S}ince {\bf V}isualizes the {\bf D}eep {\bf U}niverse.
+
+Typically, we will have the products of two functions, one of which is easy to differentiate (logarithms, polynomials, $\arccos$-like functions) that will be $u$, and another one that is easy to integrate
+such as polynomials or $\sin$-like functions, will be $v$. 
+
+{\bf Example:} Solve the definite integral.
+
 \bnn
-\int_a^b x\, \cosh x \, dx = \underbrace{x}_{g}\underbrace{\sinh x}_{F} \, \arrowvert_a^b
-   - \int_a^b\underbrace{\sinh x}_{F} \underbrace{1}_{g'}\, dx
-   = b\sinh b - a \sinh a - (\cosh b - \cosh a)
+I=\int_a^b \underbrace{x}_{u}\, \underbrace{\cosh x \, dx}_{dv}
+\enn
+
+Again, we find $v$ and $du$, respectively:
+
+\bnn
+u=x \quad \rightarrow  du/dx=1 \\
+dv=\cosh x \, dx \quad \rightarrow v = \int \cosh x \, dx = \sinh x.
+\enn
+
+Now we substitute using the memo, be aware that the integral is definite!
+\bnn
+I =  x \sinh x \arrowvert_a^b -  \int_a^b \sinh x dx = \\
+  = b\sinh b - a \sinh a - (\cosh b - \cosh a).
 \enn \svs
-\item {\bf Substitution:} Corresponds to the chain rule but again only works for special cases.
+
+{\bf Example:} Solve the indefinite integral
+
+\bnn
+I=\int \underbrace{\arccot} x_{u} \underbrace{dx}_{dv}
+\enn
+
+First of all, to apply the memo we need to find $du$ and $v$:
+
+\bnn
+u = \arccot x \quad \rightarrow du=\frac{1}{1+x^2}dx\\
+dv = 1·dx \quad \rightarrow v = \int dx = x.
+\enn
+
+Then, we get
+
+\bnn
+I=x \arccot x - \underbrace{\int \frac{x}{1+x^2}dx}_{by substitution} =
+=x \arccot x + \frac{1}{2}\log (1+x^2) +C.
+\enn
+
+{\bf Example:} Solve the indefinite integral:
+
+\bnn
+\begin{eqnarray}
+I = \int x^3 e^x dx
+
+\end{eqnarray}
+\enn
+
+
+
+
+{\bf Substitution:} Corresponds to the chain rule but again only works for special cases.
 
 \bnn
 \int_{x=a}^{x=b} f(\phi(x)) \, \phi'(x)\, dx = \int_{u=\phi(a)}^{u=\phi(b)} f(u)\, du \qquad \mbox{where}\qquad u=\phi(x)
@@ -119,7 +256,7 @@ Insert them and perform the integration:
    =-\int_{u=1}^{u=-1} u^2 \, du = -\frac{1}{3}u^3 \! \left.\frac{}{}\right|_1^{-1} 
    = -\frac{1}{3}(-1)^3 + \frac{1}{3}1^3=\frac{2}{3}
 \enn
-\end{itemize} \vs
+%\end{itemize} \vs
 
 \subsection{Symmetries}
 A function $f(x)$ is called an {\em even function} if $f(-x)=f(x)$; a function $g(x)$ is called an {\em odd function}
