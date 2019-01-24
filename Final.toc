@@ -1,95 +1,96 @@
-\contentsline {section}{\numberline {1}Function Theory}{4}{section.1}
-\contentsline {subsection}{\numberline {1.1}Foundations}{4}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Domain, parity and periodicity of functions}{5}{subsection.1.2}
-\contentsline {subsection}{\numberline {1.3}Inverse Functions}{6}{subsection.1.3}
-\contentsline {subsection}{\numberline {1.4}Implicit Functions}{8}{subsection.1.4}
-\contentsline {subsection}{\numberline {1.5}Polynomials}{8}{subsection.1.5}
-\contentsline {subsection}{\numberline {1.6}Rational functions}{11}{subsection.1.6}
-\contentsline {subsection}{\numberline {1.7}Trigonometric Functions}{13}{subsection.1.7}
-\contentsline {subsection}{\numberline {1.8}Exponential Functions}{14}{subsection.1.8}
-\contentsline {subsection}{\numberline {1.9}Hyperbolic Functions}{15}{subsection.1.9}
-\contentsline {subsection}{\numberline {1.10}Basic Inverse Functions}{15}{subsection.1.10}
-\contentsline {subsubsection}{\numberline {1.10.1}Logarithms}{15}{subsubsection.1.10.1}
-\contentsline {subsubsection}{\numberline {1.10.2}Other inverse functions}{17}{subsubsection.1.10.2}
-\contentsline {subsection}{\numberline {1.11}Elementary Combinations of Functions}{17}{subsection.1.11}
-\contentsline {subsubsection}{\numberline {1.11.1}Superposition}{17}{subsubsection.1.11.1}
-\contentsline {subsubsection}{\numberline {1.11.2}Modulation}{17}{subsubsection.1.11.2}
-\contentsline {section}{\numberline {2}Limits and Derivatives}{19}{section.2}
-\contentsline {subsection}{\numberline {2.1}Limits}{19}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Lateral limits, continuity of functions and assymptotes}{20}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Limits with an indeterminate form}{21}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Rational limits to infinity}{21}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}Infinitesimal equivalents}{22}{subsubsection.2.3.2}
-\contentsline {subsubsection}{\numberline {2.3.3}Algebraic operations}{22}{subsubsection.2.3.3}
-\contentsline {subsubsection}{\numberline {2.3.4}L'H{\^o}pital rule}{23}{subsubsection.2.3.4}
-\contentsline {subsection}{\numberline {2.4}Derivatives: the Difference Quotient}{23}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}Derivatives of Elementary Functions}{25}{subsection.2.5}
-\contentsline {subsubsection}{\numberline {2.5.1}Polynomials}{25}{subsubsection.2.5.1}
-\contentsline {subsubsection}{\numberline {2.5.2}Trigonometric functions}{25}{subsubsection.2.5.2}
-\contentsline {subsubsection}{\numberline {2.5.3}Exponential functions}{25}{subsubsection.2.5.3}
-\contentsline {subsubsection}{\numberline {2.5.4}Hyperbolic functions}{25}{subsubsection.2.5.4}
-\contentsline {subsubsection}{\numberline {2.5.5}Logarithms}{25}{subsubsection.2.5.5}
-\contentsline {subsection}{\numberline {2.6}The Basic Rules for Calculating Derivatives}{25}{subsection.2.6}
-\contentsline {subsection}{\numberline {2.7}The Chain Rule}{26}{subsection.2.7}
-\contentsline {subsection}{\numberline {2.8}Selected problems (the page from hell):}{27}{subsection.2.8}
-\contentsline {subsection}{\numberline {2.9}Applications of derivatives}{28}{subsection.2.9}
-\contentsline {subsubsection}{\numberline {2.9.1}Maxima, minima, inflection points and convexity}{28}{subsubsection.2.9.1}
-\contentsline {subsubsection}{\numberline {2.9.2}L'H{\^o}pital theorem}{29}{subsubsection.2.9.2}
-\contentsline {subsubsection}{\numberline {2.9.3}A myriad of theorems}{29}{subsubsection.2.9.3}
-\contentsline {subsubsection}{\numberline {2.9.4}Taylor Series}{29}{subsubsection.2.9.4}
-\contentsline {section}{\numberline {3}Integrals}{33}{section.3}
-\contentsline {subsection}{\numberline {3.1}Integral Calculus: Definite Integrals}{33}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Indefinite integral}{35}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Polynomials}{35}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}Logarithms}{36}{subsubsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.3}Exponential functions}{36}{subsubsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.4}Trigonometric functions}{36}{subsubsection.3.2.4}
-\contentsline {subsubsection}{\numberline {3.2.5}Hyperbolic functions}{37}{subsubsection.3.2.5}
-\contentsline {subsection}{\numberline {3.3}Properties of integrals}{37}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Methods of Integration}{37}{subsection.3.4}
-\contentsline {subsubsection}{\numberline {3.4.1}Guess and tables}{37}{subsubsection.3.4.1}
-\contentsline {subsubsection}{\numberline {3.4.2}Partial integration}{37}{subsubsection.3.4.2}
-\contentsline {subsection}{\numberline {3.5}Symmetries}{39}{subsection.3.5}
-\contentsline {subsection}{\numberline {3.6}Orthogonality of trigonometric functions}{39}{subsection.3.6}
-\contentsline {subsection}{\numberline {3.7}Integrals to Infinity}{40}{subsection.3.7}
-\contentsline {subsection}{\numberline {3.8}Functions with no Antiderivative}{41}{subsection.3.8}
-\contentsline {section}{\numberline {4}Differential equations}{43}{section.4}
-\contentsline {subsection}{\numberline {4.1}General classes of differential equations -- and which ones we will NOT study}{43}{subsection.4.1}
-\contentsline {paragraph}{a) Ordinary differential equation (ODE) vs. partial differential equation (PDE).}{43}{section*.3}
-\contentsline {paragraph}{b) Order of a differential equation.}{44}{section*.4}
-\contentsline {paragraph}{c) Systems of differential equations}{44}{section*.5}
-\contentsline {subsection}{\numberline {4.2}Differential equations that we WILL study}{44}{subsection.4.2}
-\contentsline {paragraph}{a) Separable ODEs}{44}{section*.6}
-\contentsline {paragraph}{b) Homogeneous ODEs}{45}{section*.7}
-\contentsline {paragraph}{c) Exact ODEs}{45}{section*.8}
-\contentsline {paragraph}{d) Linear ODEs}{46}{section*.9}
-\contentsline {subsection}{\numberline {4.3}Existence and uniqueness of solutions}{46}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Separable ODEs}{47}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Homogeneous ODEs}{48}{subsection.4.5}
-\contentsline {subsection}{\numberline {4.6}Exact ODEs}{50}{subsection.4.6}
-\contentsline {subsection}{\numberline {4.7}Linear ODEs}{51}{subsection.4.7}
-\contentsline {paragraph}{Intuition behind the integrating factor. }{51}{section*.10}
-\contentsline {paragraph}{Method to find the integrating factor in linear equations.}{52}{section*.11}
-\contentsline {section}{\numberline {5}Algebra}{55}{section.5}
-\contentsline {subsection}{\numberline {5.1}Vectors}{55}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Elementary Vector Operations}{55}{subsection.5.2}
-\contentsline {subsubsection}{\numberline {5.2.1}Addition and Subtraction}{55}{subsubsection.5.2.1}
-\contentsline {subsubsection}{\numberline {5.2.2}Multiplication of a Vector with a Scalar}{57}{subsubsection.5.2.2}
-\contentsline {subsubsection}{\numberline {5.2.3}Scalar Product}{58}{subsubsection.5.2.3}
-\contentsline {subsubsection}{\numberline {5.2.4}Vector Product}{59}{subsubsection.5.2.4}
-\contentsline {subsection}{\numberline {5.3}Matrices}{60}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}Multiplication of Matrices}{61}{subsection.5.4}
-\contentsline {subsection}{\numberline {5.5}Transposed Matrix}{62}{subsection.5.5}
-\contentsline {subsection}{\numberline {5.6}Basis vectors}{62}{subsection.5.6}
-\contentsline {subsection}{\numberline {5.7}Transformation of coordinate systems}{63}{subsection.5.7}
-\contentsline {subsubsection}{\numberline {5.7.1}Translation}{63}{subsubsection.5.7.1}
-\contentsline {subsubsection}{\numberline {5.7.2}Rotation}{64}{subsubsection.5.7.2}
-\contentsline {subsubsection}{\numberline {5.7.3}Polar coordinates}{65}{subsubsection.5.7.3}
-\contentsline {subsubsection}{\numberline {5.7.4}Non-orthogonal Coordinate Systems}{65}{subsubsection.5.7.4}
-\contentsline {subsection}{\numberline {5.8}Determinants}{66}{subsection.5.8}
-\contentsline {subsection}{\numberline {5.9}The Inverse of a Matrix $\unhbox \voidb@x \hbox {\relax \mathversion {bold}$A^{-1}$}$}{68}{subsection.5.9}
-\contentsline {subsection}{\numberline {5.10}Linear Systems of Equations}{68}{subsection.5.10}
-\contentsline {subsection}{\numberline {5.11}Eigenvalues and Eigenvectors}{69}{subsection.5.11}
-\contentsline {section}{\numberline {6}Complex Number Theory}{72}{section.6}
-\contentsline {subsection}{\numberline {6.1}Representations and Basic Properties}{72}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Complex conjugate}{74}{subsection.6.2}
+\contentsline {section}{\numberline {1}Function Theory}{8}{section.1}
+\contentsline {subsection}{\numberline {1.1}Foundations}{8}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Domain, parity and periodicity of functions}{9}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Inverse Functions}{10}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Implicit Functions}{12}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Polynomials}{12}{subsection.1.5}
+\contentsline {subsection}{\numberline {1.6}Rational functions}{15}{subsection.1.6}
+\contentsline {subsection}{\numberline {1.7}Trigonometric Functions}{17}{subsection.1.7}
+\contentsline {subsection}{\numberline {1.8}Exponential Functions}{18}{subsection.1.8}
+\contentsline {subsection}{\numberline {1.9}Hyperbolic Functions}{19}{subsection.1.9}
+\contentsline {subsection}{\numberline {1.10}Basic Inverse Functions}{19}{subsection.1.10}
+\contentsline {subsubsection}{\numberline {1.10.1}Logarithms}{19}{subsubsection.1.10.1}
+\contentsline {subsubsection}{\numberline {1.10.2}Other inverse functions}{21}{subsubsection.1.10.2}
+\contentsline {subsection}{\numberline {1.11}Elementary Combinations of Functions}{21}{subsection.1.11}
+\contentsline {subsubsection}{\numberline {1.11.1}Superposition}{21}{subsubsection.1.11.1}
+\contentsline {subsubsection}{\numberline {1.11.2}Modulation}{21}{subsubsection.1.11.2}
+\contentsline {section}{\numberline {2}Limits and Derivatives}{23}{section.2}
+\contentsline {subsection}{\numberline {2.1}Limits}{23}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Lateral limits, continuity of functions and assymptotes}{24}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Limits with an indeterminate form}{25}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Rational limits to infinity}{25}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Infinitesimal equivalents}{26}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Algebraic operations}{26}{subsubsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.4}L'H{\^o}pital rule}{27}{subsubsection.2.3.4}
+\contentsline {subsection}{\numberline {2.4}Derivatives: the Difference Quotient}{27}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Derivatives of Elementary Functions}{29}{subsection.2.5}
+\contentsline {subsubsection}{\numberline {2.5.1}Polynomials}{29}{subsubsection.2.5.1}
+\contentsline {subsubsection}{\numberline {2.5.2}Trigonometric functions}{29}{subsubsection.2.5.2}
+\contentsline {subsubsection}{\numberline {2.5.3}Exponential functions}{29}{subsubsection.2.5.3}
+\contentsline {subsubsection}{\numberline {2.5.4}Hyperbolic functions}{29}{subsubsection.2.5.4}
+\contentsline {subsubsection}{\numberline {2.5.5}Logarithms}{29}{subsubsection.2.5.5}
+\contentsline {subsection}{\numberline {2.6}The Basic Rules for Calculating Derivatives}{29}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}The Chain Rule}{30}{subsection.2.7}
+\contentsline {subsection}{\numberline {2.8}Selected problems (the page from hell):}{31}{subsection.2.8}
+\contentsline {subsection}{\numberline {2.9}Applications of derivatives}{32}{subsection.2.9}
+\contentsline {subsubsection}{\numberline {2.9.1}Maxima, minima, inflection points and convexity}{32}{subsubsection.2.9.1}
+\contentsline {subsubsection}{\numberline {2.9.2}L'H{\^o}pital theorem}{33}{subsubsection.2.9.2}
+\contentsline {subsubsection}{\numberline {2.9.3}A myriad of theorems}{33}{subsubsection.2.9.3}
+\contentsline {subsubsection}{\numberline {2.9.4}Taylor Series}{33}{subsubsection.2.9.4}
+\contentsline {section}{\numberline {3}Integrals}{37}{section.3}
+\contentsline {subsection}{\numberline {3.1}Integral Calculus: Definite Integrals}{37}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Indefinite integral}{39}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Polynomials}{39}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Logarithms}{40}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Exponential functions}{40}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.4}Trigonometric functions}{40}{subsubsection.3.2.4}
+\contentsline {subsubsection}{\numberline {3.2.5}Hyperbolic functions}{41}{subsubsection.3.2.5}
+\contentsline {subsection}{\numberline {3.3}Properties of integrals}{41}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Methods of Integration}{41}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}Guess and tables}{41}{subsubsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.2}Substitution}{41}{subsubsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.4.3}Partial integration}{43}{subsubsection.3.4.3}
+\contentsline {subsection}{\numberline {3.5}Symmetries}{45}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Orthogonality of trigonometric functions}{45}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.7}Integrals to Infinity}{46}{subsection.3.7}
+\contentsline {subsection}{\numberline {3.8}Functions with no Antiderivative}{47}{subsection.3.8}
+\contentsline {section}{\numberline {4}Differential equations}{49}{section.4}
+\contentsline {subsection}{\numberline {4.1}General classes of differential equations -- and which ones we will NOT study}{49}{subsection.4.1}
+\contentsline {paragraph}{a) Ordinary differential equation (ODE) vs. partial differential equation (PDE).}{49}{section*.3}
+\contentsline {paragraph}{b) Order of a differential equation.}{50}{section*.4}
+\contentsline {paragraph}{c) Systems of differential equations}{50}{section*.5}
+\contentsline {subsection}{\numberline {4.2}Differential equations that we WILL study}{50}{subsection.4.2}
+\contentsline {paragraph}{a) Separable ODEs}{50}{section*.6}
+\contentsline {paragraph}{b) Homogeneous ODEs}{51}{section*.7}
+\contentsline {paragraph}{c) Exact ODEs}{51}{section*.8}
+\contentsline {paragraph}{d) Linear ODEs}{52}{section*.9}
+\contentsline {subsection}{\numberline {4.3}Existence and uniqueness of solutions}{52}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Separable ODEs}{53}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Homogeneous ODEs}{54}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Exact ODEs}{56}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}Linear ODEs}{57}{subsection.4.7}
+\contentsline {paragraph}{Intuition behind the integrating factor. }{57}{section*.10}
+\contentsline {paragraph}{Method to find the integrating factor in linear equations.}{58}{section*.11}
+\contentsline {section}{\numberline {5}Algebra}{61}{section.5}
+\contentsline {subsection}{\numberline {5.1}Vectors}{61}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Elementary Vector Operations}{61}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}Addition and Subtraction}{61}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2}Multiplication of a Vector with a Scalar}{63}{subsubsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.3}Scalar Product}{64}{subsubsection.5.2.3}
+\contentsline {subsubsection}{\numberline {5.2.4}Vector Product}{65}{subsubsection.5.2.4}
+\contentsline {subsection}{\numberline {5.3}Matrices}{66}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Multiplication of Matrices}{67}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Transposed Matrix}{68}{subsection.5.5}
+\contentsline {subsection}{\numberline {5.6}Basis vectors}{68}{subsection.5.6}
+\contentsline {subsection}{\numberline {5.7}Transformation of coordinate systems}{69}{subsection.5.7}
+\contentsline {subsubsection}{\numberline {5.7.1}Translation}{69}{subsubsection.5.7.1}
+\contentsline {subsubsection}{\numberline {5.7.2}Rotation}{70}{subsubsection.5.7.2}
+\contentsline {subsubsection}{\numberline {5.7.3}Polar coordinates}{71}{subsubsection.5.7.3}
+\contentsline {subsubsection}{\numberline {5.7.4}Non-orthogonal Coordinate Systems}{71}{subsubsection.5.7.4}
+\contentsline {subsection}{\numberline {5.8}Determinants}{72}{subsection.5.8}
+\contentsline {subsection}{\numberline {5.9}The Inverse of a Matrix $\unhbox \voidb@x \hbox {\relax \mathversion {bold}$A^{-1}$}$}{74}{subsection.5.9}
+\contentsline {subsection}{\numberline {5.10}Linear Systems of Equations}{74}{subsection.5.10}
+\contentsline {subsection}{\numberline {5.11}Eigenvalues and Eigenvectors}{75}{subsection.5.11}
+\contentsline {section}{\numberline {6}Complex Number Theory}{78}{section.6}
+\contentsline {subsection}{\numberline {6.1}Representations and Basic Properties}{78}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Complex conjugate}{80}{subsection.6.2}

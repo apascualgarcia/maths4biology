@@ -168,6 +168,80 @@ Find $F(x)$ such that $\frac{dF(x)}{dx} = f(x)$. For polynomials: $F(a\,x^n)=\fr
 $F(x)$ may be also looked up in mathematical tables of anti-derivatives and/or definite integrals.
 %which can be found in e.g. Bronshteyn, Semendjajew or Gradsteyn.\\
 
+\subsubsection{Substitution}
+
+We find an integral containing a function multiplying something that looks
+like its derivative. It is somehow the counterpart of the chain rule. 
+
+{\bf Example: } Let's start taking the derivatives of a nested function, $v(u(x))$, such as $e^2x$.
+
+\bnn
+ \frac{dv(u(x))}{dx}=\frac{d(e^{x^2})}{dx}=\frac{dv}{du}\frac{du}{dx}=e^{x^2}2x \quad \rightarrow \int e^{\overbrace{x^2}^u}\underbrace{2xdx}_{du}\\ 
+ \rightarrow \int e^u du = e^u +C \rightarrow e^{x^2}+C.
+\enn 
+
+A little bit more general, considering also the integral boundaries.
+\bnn
+\int_{x=a}^{x=b} v(u(x)) \, u'(x)\, dx = \int_{u=u(a)}^{u=u(b)} v(u)\, du 
+\enn 
+
+{\bf Example:} Solve the integral:
+
+\begin{eqnarray*}
+%\begin{array}{cl}
+\int x\sqrt{1-x^2}dx  \underbrace{=}_{\uparrow}& \\
+ \mbox{{\small change of vars:}} & \begin{cases} z=1-x^2 \\
+ \frac{dz}{dx}=-2x \rightarrow xdx = -\frac{1}{2}dz. \end{cases}\\
+ = -\frac{1}{2}\int z^{1/2}dz = &-\frac{1}{2}\frac{2}{3}z^{\frac{3}{2}}+C=-\frac{1}{3}(1-x^2)^{\frac{3}{2}}+C. 
+% \end{array}
+\end{eqnarray*}
+
+{\bf Example:} Solve the integral:
+
+\begin{eqnarray*}
+%\begin{array}{rcl}
+\int \frac{\cos x}{2-3\sin x}dx\underbrace{=}_{\uparrow}&  \\ 
+\mbox{{\small (change of vars.)}} &\begin{cases} z= \sin x \\ \frac{dz}{dx}=\cos x \rightarrow dx \cos x = dz\end{cases} \\
+\\
+=\int \frac{dz}{2-3z} \underbrace{=}_{\uparrow}&  \\
+\mbox{{\small (2nd change of vars.)}} & \begin{cases} u = 2-3z \\ \frac{du}{dz}=-3 \rightarrow dz = \frac{-du}{3} \end{cases} \\
+\\
+=-\frac{1}{3} \int \frac{du}{u} = \frac{1}{3}\log |u|+C &=  -\frac{1}{3}\log |2-3z|+C  =-\frac{1}{3}\log |3-3\sin x|+C 
+%\end{array}
+\end{eqnarray*}
+
+{\bf Example:} Solve the integral:
+
+\begin{eqnarray*}
+%\begin{array}{rl}
+\int_0^{\pi} \cos^2 x \; \sin x \, dx \underbrace{=}_{\uparrow} -\int_{x=0}^{x=\pi} u^2 \,du   \\
+\quad \quad {\mbox{\small change of vars.}}  \begin{cases} u = \cos x \\ \frac{du}{dx}=-\sin x \rightarrow \sin x dx = -du \end{cases} \\
+%\end{array}
+\end{eqnarray*}
+
+%\vs
+%\bnn \int_0^{\pi} \cos^2 x \; \sin x \, dx \quad \mbox{substitute:} \quad u=\cos x=\phi(x) \enn \vs
+%\bnn
+%  u'=\frac{du}{dx}=-\sin x = \phi'(x) \quad \rightarrow \quad
+%  du = -\sin x dx = \phi'(x) dx \quad \rightarrow\quad dx = -\frac{du}{\sin x}
+%\enn \vs
+%
+%Substitute the integral:
+%\bnn
+%\int_{x=0}^{x=\pi} \cos^2 x \; \sin x \, \frac{-du}{\sin x}=-\int_{x=0}^{x=\pi} \cos^2 x \,du=-\int_{x=0}^{x=\pi} u^2 \,du
+%\enn \vs
+
+Since it is a definite integral, we should express the boundaries in terms of $u$:
+\bnn x=0 \quad \rightarrow\quad u=\cos 0=1 \qquad\qquad\qquad\qquad x=\pi \quad \rightarrow\quad u=\cos \pi =-1 \enn \svs
+
+Insert them and perform the integration:
+\bnn
+\int_0^{\pi} \cos^2 x \; \sin x \, dx
+   =-\int_{u=1}^{u=-1} u^2 \, du = -\frac{1}{3}u^3 \! \left.\frac{}{}\right|_1^{-1} 
+   = -\frac{1}{3}(-1)^3 + \frac{1}{3}1^3=\frac{2}{3}
+\enn
+%\end{itemize} \vs
+
 \subsubsection{Partial integration}
 Corresponds to the product rule but only works for special cases.
 \bnn 
@@ -175,7 +249,7 @@ Corresponds to the product rule but only works for special cases.
 \int u dv = uv - \int v du 
 \enn
 
-{\bf Memo:} {\bf S}usan {\bf U}ses a {\bf D}e{\bf V}ice {\bf V}ery {\bf U}nique {\bf S}ince {\bf V}isualizes the {\bf D}eep {\bf U}niverse.
+{\bf Memo:} {\LARGE {\bf S}}usan {\bf U}ses a {\bf D}e{\bf V}ice = {\bf V}ery {\bf U}nique -{\LARGE{\bf S}}ince {\bf V}isualizes the {\bf D}eep {\bf U}niverse.
 
 Typically, we will have the products of two functions, one of which is easy to differentiate (logarithms, polynomials, $\arccos$-like functions) that will be $u$, and another one that is easy to integrate
 such as polynomials or $\sin$-like functions, will be $v$. 
@@ -202,7 +276,7 @@ I =  x \sinh x \arrowvert_a^b -  \int_a^b \sinh x dx = \\
 {\bf Example:} Solve the indefinite integral
 
 \bnn
-I=\int \underbrace{\arccot} x_{u} \underbrace{dx}_{dv}
+I=\int \underbrace{\arccot x}_{u} \underbrace{dx}_{dv}
 \enn
 
 First of all, to apply the memo we need to find $du$ and $v$:
@@ -215,48 +289,48 @@ dv = 1·dx \quad \rightarrow v = \int dx = x.
 Then, we get
 
 \bnn
-I=x \arccot x - \underbrace{\int \frac{x}{1+x^2}dx}_{by substitution} =
+I=x \arccot x - \underbrace{\int \frac{x}{1+x^2}dx}_{\mbox{by substitution}} =
 =x \arccot x + \frac{1}{2}\log (1+x^2) +C.
 \enn
 
 {\bf Example:} Solve the indefinite integral:
 
-\bnn
-\begin{eqnarray}
-I = \int x^3 e^x dx
+%\bnn
+\begin{eqnarray*}
+I = \underbrace{\int x^3 e^x dx} &  \\
+\mbox{change vars.}& \begin{cases} 
+   u=x^3 \quad \rightarrow du=3x^2 dx\\
+   dv = e^x dx  \quad \rightarrow  v= e^x 
+\end{cases}  \\
+\end{eqnarray*}
+%\enn
+Substitute and repeat the procedure, because the new integral should be solved similarly:
+\begin{eqnarray*}
+I = x^3 e^x - \underbrace{\int 3x^2 e^x dx} &  \\
+\mbox{change vars.}& \begin{cases} 
+   u=3x^2 \quad \rightarrow du=6x dx\\
+   dv = e^x dx  \quad \rightarrow  v= e^x 
+\end{cases}  \\
+\end{eqnarray*}
 
-\end{eqnarray}
+And once more!
+\begin{eqnarray*}
+I = x^3 e^x -(3x^2 e^x - \underbrace{\int 6x e^x dx}) &  \\
+\mbox{change vars.}& \begin{cases} 
+   u=6x \quad \rightarrow du=6 dx\\
+   dv = e^x dx  \quad \rightarrow  v= e^x 
+\end{cases}  \\
+\end{eqnarray*}
+
+And, finally, the last integral is immediate:
+
+\bnn
+I = x^3 e^x -(3x^2 e^x - (6x e^x - \underbrace{\int 6 e^x dx}_{\mbox{immediate}})) &  \\
+  =e^x(x^3-3x^2+6x-6)+C.
 \enn
 
 
 
-
-{\bf Substitution:} Corresponds to the chain rule but again only works for special cases.
-
-\bnn
-\int_{x=a}^{x=b} f(\phi(x)) \, \phi'(x)\, dx = \int_{u=\phi(a)}^{u=\phi(b)} f(u)\, du \qquad \mbox{where}\qquad u=\phi(x)
-\enn \vs
-\bnn \int_0^{\pi} \cos^2 x \; \sin x \, dx \quad \mbox{substitute:} \quad u=\cos x=\phi(x) \enn \vs
-\bnn
-  u'=\frac{du}{dx}=-\sin x = \phi'(x) \quad \rightarrow \quad
-  du = -\sin x dx = \phi'(x) dx \quad \rightarrow\quad dx = -\frac{du}{\sin x}
-\enn \vs
-
-Substitute the integral:
-\bnn
-\int_{x=0}^{x=\pi} \cos^2 x \; \sin x \, \frac{-du}{\sin x}=-\int_{x=0}^{x=\pi} \cos^2 x \,du=-\int_{x=0}^{x=\pi} u^2 \,du
-\enn \vs
-
-Express the boundaries in terms of $u$:
-\bnn x=0 \quad \rightarrow\quad u=\cos 0=1 \qquad\qquad\qquad\qquad x=\pi \quad \rightarrow\quad u=\cos \pi =-1 \enn \svs
-
-Insert them and perform the integration:
-\bnn
-\int_0^{\pi} \cos^2 x \; \sin x \, dx
-   =-\int_{u=1}^{u=-1} u^2 \, du = -\frac{1}{3}u^3 \! \left.\frac{}{}\right|_1^{-1} 
-   = -\frac{1}{3}(-1)^3 + \frac{1}{3}1^3=\frac{2}{3}
-\enn
-%\end{itemize} \vs
 
 \subsection{Symmetries}
 A function $f(x)$ is called an {\em even function} if $f(-x)=f(x)$; a function $g(x)$ is called an {\em odd function}
