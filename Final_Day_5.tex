@@ -173,7 +173,7 @@ In this case, we can separate the equation in terms on $y$ and $x$. Since $y'=dy
 
 that we can integrate independently and then solve for $y$.
 
-{\bf Example}. Solve the following ODE the initial value $y(0)=1$: 
+{\bf Example}. Solve the following ODE the initial value $y(0)=-1$: 
 
 {\bf \bnn \frac{dy}{dx} = \frac{3x^2+4x+2}{2(y-1)}, \enn }
 
@@ -186,7 +186,7 @@ integrating both sides we get,
 \bnn y^2 -2y = x^3 + 2x^2 +2x + C, \enn
 
 where we merged the constants arising from both integrals into $C$. We should determine the
-constant $C$ considering the initial value given by the problem. Since for $x=0$ we know that $y=1$ we get that $C=3$.
+constant $C$ considering the initial value given by the problem. Since for $x=0$ we know that $y=-1$ we get that $C=3$.
 
 Let's make the solution explicit:
 
@@ -308,10 +308,10 @@ Above we showed that if these conditions hold, a solution of the ODE is $\Psi(x,
 can we obtain such a function? Well, since $\partial \Psi /\partial x= M(x,y)$ we could simply integrate
 $M(x,y)$ with respect to $x$ (or we could integrate $N(x,y)$ with respect to $y$, since the problem is
 symmetric). But this may not be enough, let's see why. Let's assume that $\Psi(x,y)=f(x,y)+h(y)$, if
-we do $\partial \Psi /\partial x= \partial f(x)/ \partial x = M(x,y) $ and, if we integrate back:
+we do $\partial \Psi /\partial x= \partial f(x,y)/ \partial x = M(x,y) $ and, if we integrate back:
 
 \bnn
-	\int M(x,y) dx = \int \frac{\partial f(x)}{\partial x} dx = f(x) + C \neq \Psi(x,y) \quad \mbox{!!}
+	\int M(x,y) dx = \int \frac{\partial f(x,y)}{\partial x} dx = f(x) + C \neq \Psi(x,y) \quad \mbox{!!}
 \enn
 
 The problem is that, if $\Psi(x,y)$ has any term which depends only on the variable $y$, differentiating with respect
@@ -338,7 +338,7 @@ And we can get $h(y)$ just solving the above expression for $h'(y)$ and integrat
 Let's first check if the ODE is indeed exact:
 
 \bnn
-    	\frac{\partial M(x,y)}{\partial x}=\cos(x)+2xe^y; \quad \frac{\partial N(x,y)}{\partial y}=\cos(x)+2xe^y.
+    	\frac{\partial M(x,y)}{\partial y}=\cos(x)+2xe^y; \quad \frac{\partial N(x,y)}{\partial x}=\cos(x)+2xe^y.
 \enn
 
 It is! therefore there exist a function $\Psi$, let's look for the function:
@@ -379,7 +379,7 @@ demonstrate why it works, and finally we will do some exercises.
 This equation is separable:
 
 \bnn
-	\int \frac{dy}{y-3}=\int \frac{-1}{2}dx \quad \rightarrow \ln |y-3| = e^{(-x/2+C)},
+	\int \frac{dy}{y-3}=\int \frac{-1}{2}dx \quad \rightarrow \ln |y-3| = -x/2+C,
 \enn
 
 and leads to the solution 
