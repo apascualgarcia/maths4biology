@@ -37,7 +37,7 @@ sudo apt-get install git
 If `git` is already installed, change to a directory of your choice and clone the repository
 
 ```bash
-git clone https://github.com/vjirsa/bootcamp.git
+git clone https://github.com/apascualgarcia/maths4biology.git
 ```
 
 ## Requirements and Installation
